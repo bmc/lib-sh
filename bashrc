@@ -80,6 +80,10 @@ umask 022
 
 max_prompt_len=30
 
+# Automatic correction for minor spelling mistakes.
+
+shopt -s cdspell
+
 # ---------------------------------------------------------------------------
 # Aliases and functions that implement aliases
 
