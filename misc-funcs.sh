@@ -101,9 +101,9 @@ getHome()
 
 function mkprompt
 {
-    if [ $TERM == xterm* ]
+    if [[ $TERM == xterm* ]]
     then
-	echo "\033]2;${HOST}:${PWD/$HOME/~}\007\c"
+	echo -e "\033]2;${HOST}:${PWD/$HOME/~}\007\c"
     fi
 
     PS1="($HOST:$USER) ${PWD/$HOME/~} $_prompt "
