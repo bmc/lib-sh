@@ -8,7 +8,7 @@
 
 xdisplay()
 {
-    if [ -n $1 ]
+    if [ -n "$1" ]
     then
         export DISPLAY=${1/:0.0/}:0.0
     else
