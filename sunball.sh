@@ -67,8 +67,6 @@ alias play="/usr/lib/oss/bin/ossplay"
 alias www='varcd www'
 alias xinit="$XWINHOME/bin/xinit -- -bpp 16"
 
-unalias whois
-
 # ---------------------------------------------------------------------------
 # Development stuff
 

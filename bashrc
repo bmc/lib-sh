@@ -117,7 +117,6 @@ alias psme='ps -ef | egrep "^USER|$user"'
 alias r="fc -s"     # emulate Korn shell's "r" command
 alias rot13='tr "[a-m][n-z][A-M][N-Z]" "[n-z][a-m][N-Z][A-M]"'
 alias smtpr=smtp-test-relay
-alias whois=nwhois
 alias which=type
 alias xrdb="xrdb -DHOME='$HOME'"
 alias xs='eval `resize -u`'

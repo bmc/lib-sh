@@ -22,3 +22,9 @@ alias ftp=ncftp3
 alias vi=vim
 alias www='varcd www'
 alias wwwtest='varcd wwwtest'
+
+# ---------------------------------------------------------------------------
+# Development stuff
+
+export ANT_HOME=/usr/local/ant
+load_file ~/bash/java.sh
