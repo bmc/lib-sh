@@ -81,30 +81,14 @@ term()
 }
 
 # ---------------------------------------------------------------------------
-# Get user's home directory, irrespective of setting of $HOME. Queries
-# /etc/passwd. Useful when home dir is a symlink to something else.
+# Get user's real home directory. Useful when home dir is a symlink to
+# something else.
 
 getHome()
 {
-    eval $1=""
-    declare oldIFS=$IFS
-    IFS=:
-    exec 3</etc/passwd
-    while read user pw uid gid name home shell <&3
-    do
-        if [ "$user" = "$USER" ]
-        then
-	    break
-	fi
-    done
-    IFS=$oldIFS
-
-    if [ -n "$home" ]
-    then
-	builtin cd -P $home
-	eval $1=$PWD
-	cd $OLDPWD
-    fi
+    builtin cd -P ~
+    eval $1=$PWD
+    cd $OLDPWD
 }
 
 # ---------------------------------------------------------------------------
