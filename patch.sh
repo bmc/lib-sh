@@ -17,7 +17,7 @@ $PATH:\
 
 # Local aliases
 
-alias frm="$(type-P frm) -S"
+alias frm="$(type -P frm) -S"
 alias ftp=ncftp3
 alias vi=vim
 alias www='varcd www'
