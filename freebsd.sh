@@ -83,6 +83,6 @@ function pki
 
 function psf
 {
-    ps -ax -opid,ppid,vsz,rss,user,command|egrep "PID|$1"
+    ps -ax -opid,ppid,vsz,rss,user,tty,command|egrep "PID|$1"
 }
 
