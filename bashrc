@@ -142,8 +142,8 @@ fi
 # Other files
 
 load_file	~/bash/$PLATFORM.sh
-load_file	~/bash/$HOST.sh
 load_file	~/bash/$DOMAIN.sh
+load_file	~/bash/$HOST.sh
 
 #cleanpath --rm . PATH
 cleanpath PATH
