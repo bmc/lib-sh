@@ -84,6 +84,12 @@ max_prompt_len=30
 
 shopt -s cdspell
 
+# Local to this set of files: This variable contains the mapping for
+# "stty erase". By default, it's "^h", but files pulled in by load_file
+# can override it.
+
+stty_erase="^h"
+
 # ---------------------------------------------------------------------------
 # Aliases and functions that implement aliases
 
@@ -195,7 +201,7 @@ mkprompt
 
 # NOTE: -istrip has to be set for xterm to pass through 8-bit characters.
 
-stty erase '^h' kill '^u' intr '^c' echok echoe -istrip
+stty erase $stty_erase kill '^u' intr '^c' echok echoe -istrip
 
 fi # interactive
 

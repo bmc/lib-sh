@@ -13,6 +13,13 @@ export APACHE_HOME=$www
 export TOMCAT_HOME=$APACHE_HOME/tomcat
 
 # ---------------------------------------------------------------------------
+
+# Linux prefers ^? for the backspace key. The stty command is actually issued
+# in bashrc, but the erase character is taken from the stty_erase variable.
+
+stty_erase="^?"
+
+# ---------------------------------------------------------------------------
 # Java-related environment variables
 
 export JAVA_ROOT=/usr/local/java
@@ -49,7 +56,7 @@ alias ftp=ncftp
 alias mllog="sudo tail -f /var/log/maillog"
 alias mslog="sudo tail -f /var/log/messages"
 alias nslookup="$(type -P nslookup) -silent"
-#alias play="/usr/lib/oss/play"
+alias play="/usr/lib/oss/bin/ossplay"
 alias www='varcd www'
 alias xinit="$XWINHOME/bin/xinit -- -bpp 16"
 
@@ -64,3 +71,8 @@ alias jsrc='varcd jsrc'
 
 export ANT_HOME=/usr/local/java/ant
 load_file ~/bash/java.sh
+load_file ~/bash/fulltilt.sh
+
+PATH=$PATH:/usr/lib/oss/sbin:/usr/lib/oss/bin # ADDED_BY_OSS
+SDL_DSP_NOSELECT=1 # ADDED_BY_OSS
+export PATH SDL_DSP_NOSELECT # ADDED_BY_OSS
