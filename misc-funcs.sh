@@ -12,7 +12,7 @@ xdisplay()
     then
         export DISPLAY=${1/:0.0/}:0.0
     else
-        print DISPLAY=$DISPLAY
+        echo DISPLAY=$DISPLAY
     fi
 }
 
