@@ -9,15 +9,11 @@ export JAVAC="jikes +E"
 #export JAVA_COMPILER=shujit
 #export JAVA_COMPILER_OPT=quiet
 #export JAVA_COMPILER=OpenJIT
-export JAR=fastjar
 
 export LD_LIBRARY_PATH=$JAVA_HOME/lib/i386:${LD_LIBRARY_PATH}
 
 export ANT_HOME=/usr/local/ant
 export ANT_ARGS="-logger org.apache.tools.ant.NoBannerLogger -emacs"
-
-alias javac="$JAVAC"
-alias jar="$JAR"
 
 if [ -z $JAVA_HOME ]
 then
@@ -30,6 +26,16 @@ then
 else
     export JAVA_HOME=$JAVA_ROOT/jdk
 fi
+
+JAR=$(type -p fastjar)
+if [ -z $JAR ]
+then
+    JAR=$JAVA_HOME/bin/jar
+fi
+export JAR
+
+alias javac="$JAVAC"
+alias jar="$JAR"
 
 # Note: Some FreeBSD packages also load a "classpath" executable in
 # /usr/local/bin.
