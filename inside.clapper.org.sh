@@ -4,7 +4,12 @@ export FTP_PASSIVE_MODE=on
 export FTP_PASSIVE=true		# for perl
 export CVSEDITOR=`type -P vi`
 
-export PERL5LIB="/usr/local/lib/perl:/usr/local/site/lib/perl:$HOME/lib/perl"
+if [ -z $PERL5LIB ]
+then
+    PERL5LIB="/usr/local/lib/perl:/usr/local/site/lib/perl"
+fi
+PERL5LIB=${PERL5LIB}:$HOME/lib/perl
+export PERL5LIB
 cleanpath PERL5LIB
 
 export PATH=/usr/local/site/bin:$PATH

@@ -29,12 +29,12 @@ then
     term xterm
 fi
 
-if [[ -z $PERLLIB ]]
+if [[ -z $PERL5LIB ]]
 then
-    export PERLLIB=/usr/local/lib/perl
+    export PERL5LIB=/usr/local/lib/perl
 fi
 
-export PERLLIB=${PERLLIB}:$HOME/lib/perl
+export PERL5LIB=${PERL5LIB}:$HOME/lib/perl
 export LSCOLORS='3x6x5x2x2x3x3x2x2x3x3x'
 
 unset MANPATH	# /etc/manpath.config takes care of it
