@@ -32,6 +32,7 @@ alias gzcat='gunzip -c'
 alias ls='ls --color=tty -CF'
 alias psme="ps -ef|grep $USER"
 alias md5=md5sum
+alias time='/usr/bin/time --portability'
 
 _vipw=`type -P vipw`
 alias vipw='EDITOR=vi VISUAL=vi sudo $_vipw'
