@@ -1,5 +1,10 @@
 # $Id$
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
 # `console_vt_pattern' defines the device name pattern for virtual terminals
 # on the console.  `.login' uses it and `console_term' to set the default
 # terminal type.  If the O/S doesn't support virtual terminals from the
@@ -33,20 +38,10 @@ alias vipw='EDITOR=vi VISUAL=vi sudo $_vipw'
 
 function psf
 {
-    ps -ef|grep $*
+    ps -efww|grep $*
 }
 
-# Need a sudo-enabled version of taillog for Linux
-taillog()
-{
-    : ${1?'missing log file parameter'}
-
-    echo "+ sudo tail -f $1"
-    sudo tail -f $1
-}
-
-
-if [[ -z $?TERM ]]
+if [[ -z "$TERM" ]]
 then
     TERM="dumb"
 fi
@@ -54,10 +49,11 @@ export TERM
 
 # Use xterm1, which avoids the alternate screen buffer. (See /etc/termcap)
 
-if [[ "$TERM" == xterm* ]]
-then
-    TERM=xterm1
-fi
+case "$TERM" in
+    xterm*)
+        TERM=xterm1
+	;;
+esac
 
 # ---------------------------------------------------------------------------
 # Linux-specific environment settings
@@ -70,8 +66,8 @@ fi
 #	xtelnet will honor that variable, though xterm(1) proper won't.
 #
 #		XTerm*geometry:	80x44
-#export XTERM=~/bin/myxterm
-export XTERM=xterm
+export XTERM=~/bin/myxterm
+#export XTERM=xterm
 
 # xterm uses two text pages.  To prevent loss of last page of less'd output,
 # tell less(1) to pause once at EOF.
