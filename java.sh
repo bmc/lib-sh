@@ -10,8 +10,6 @@ export JAVAC="jikes +E"
 #export JAVA_COMPILER_OPT=quiet
 #export JAVA_COMPILER=OpenJIT
 
-export LD_LIBRARY_PATH=$JAVA_HOME/lib/i386:${LD_LIBRARY_PATH}
-
 if [ -z $ANT_HOME ]
 then
     ANT_HOME=/usr/local/ant
@@ -30,6 +28,8 @@ then
 else
     export JAVA_HOME=$JAVA_ROOT/jdk
 fi
+
+export LD_LIBRARY_PATH=$JAVA_HOME/jre/lib/i386:${LD_LIBRARY_PATH}
 
 JAR=$(type -p fastjar)
 if [ -z $JAR ]
