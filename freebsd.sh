@@ -67,7 +67,7 @@ unset _fetch
 
 alias hping2=hping
 alias ls='gnuls --color=tty -CF'
-alias psme='ps -U bmc -ouser,pid,ppid,command'
+alias psme='ps -U bmc -ouser,pid,ppid,tty,command'
 alias sha1='digest sha1'
 alias time='/usr/bin/time --portability'
 alias unshar=gunshar
@@ -83,6 +83,6 @@ function pki
 
 function psf
 {
-    ps -agx -opid,ppid,user,command | grep "$@"
+    ps -ax -opid,ppid,vsz,rss,user,command|egrep "PID|$1"
 }
 
