@@ -20,7 +20,7 @@ alias ftclass='varcd ftclass'
 export FULLTILT_BUILD_ROOT=$ftsrc/build
 export FULLTILT_CLASS_ROOT=$ft/classes
 export FULLTILT_DOC_ROOT=$ft/javadocs
-export FULLTILT_PLATFORM=unix.freebsd.4.3.x86
+export FULLTILT_PLATFORM=unix.$PLATFORM.4.3.x86
 
 export ftclass=$FULLTILT_CLASS_ROOT
 
