@@ -57,15 +57,3 @@ alias xinit="$XWINHOME/bin/xinit -- -bpp 16"
 # Development stuff
 
 load_file ~/bash/development.sh
-
-# ---------------------------------------------------------------------------
-# X stuff
-
-# Where have I logged in from?
-
-where=`login-from`
-case "$where" in
-    z|z.inside.clapper.org)
-        xdisplay $where
-	;;
-esac

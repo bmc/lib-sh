@@ -147,18 +147,20 @@ MAILCHECK=0
 
 set -o emacs			# Use GNU Emacs bindings
 
-function checkKey
-{
-    case "${.sh.edchar}" in
+# ---------------------------------------------------------------------------
+# X stuff
 
-    ) clear
+# Where have I logged in from?
+
+where=`login-from`
+case "$where" in
+    localhost|""|$HOST.$DOMAIN)
+        xdisplay :0.0
         ;;
-
-    esac        
-}
-
-# NOTE: This messes with the META sequences.
-#trap 'checkKey' KEYBD
+    *)
+        xdisplay $where
+	;;
+esac
 
 # ---------------------------------------------------------------------------
 # Set the prompt string.
