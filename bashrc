@@ -115,6 +115,22 @@ alias xs='eval `resize -u`'
 alias z="echo Rereading $HOME/.bashrc ... ; source $HOME/.bashrc"
 
 # ---------------------------------------------------------------------------
+# X stuff
+
+# Where have I logged in from? Note: LOGIN_RHOST must be set before the
+# platform, host and domain files are pulled in, below.
+
+export LOGIN_RHOST=`login-from`
+case "$LOGIN_RHOST" in
+    localhost|""|$HOST.$DOMAIN)
+        xdisplay :0.0
+        ;;
+    *)
+        xdisplay $where
+	;;
+esac
+
+# ---------------------------------------------------------------------------
 # Other files
 
 load_file	~/bash/$PLATFORM.sh
@@ -146,21 +162,6 @@ MAILCHECK=0
 # Shell key bindings.
 
 set -o emacs			# Use GNU Emacs bindings
-
-# ---------------------------------------------------------------------------
-# X stuff
-
-# Where have I logged in from?
-
-where=`login-from`
-case "$where" in
-    localhost|""|$HOST.$DOMAIN)
-        xdisplay :0.0
-        ;;
-    *)
-        xdisplay $where
-	;;
-esac
 
 # ---------------------------------------------------------------------------
 # Set the prompt string.
