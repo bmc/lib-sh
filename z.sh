@@ -19,6 +19,8 @@ export NETHACKOPTIONS='pickup_types:$?+!=/'
 export www='/usr/local/site/www/apache'
 export wwwtest="$www/wwwtest"
 
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/site/lib
+
 # ---------------------------------------------------------------------------
 # PATH
 
@@ -45,7 +47,8 @@ alias frm="$(type -P frm) -S"
 alias ftp=ncftp3
 alias lynx=links
 alias mplayerxp="mplayerxp -xp -double"
-alias play="/usr/lib/oss/play"
+alias mplayer=gmplayer
+alias play="/usr/local/lib/oss/play"
 alias vi=vim
 alias xinit="$XWINHOME/bin/xinit -- -bpp 16"
 alias www='varcd www'
@@ -56,7 +59,5 @@ alias xcolorsel="echo 'try colordemo, instead'"
 # ---------------------------------------------------------------------------
 # Development stuff
 
-export wsrc='/usr/local/src/mystuff/working'
-alias wsrc='varcd wsrc'
-
-load_file ~/bash/development.sh
+load_file ~/bash/java.sh
+load_file ~/bash/fulltilt.sh
