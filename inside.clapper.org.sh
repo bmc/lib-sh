@@ -10,3 +10,4 @@ cleanpath PERL5LIB
 export PATH=/usr/local/site/bin:$PATH
 
 alias camf=check-alt-mail-folders
+alias photos="cd /usr/local/site/public/photos"
