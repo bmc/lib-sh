@@ -12,13 +12,15 @@ alias ftclass='varcd ftclass'
 # new
 export FULLTILT_BUILD_ROOT=$ftsrc/build
 export FULLTILT_CLASS_ROOT=$ft/classes
-export FULLTILT_CUSTOM_CLASS_ROOT=$FULLTILT_CLASS_ROOT/custom
 export FULLTILT_DOC_ROOT=$ft/javadocs
 export FULLTILT_PLATFORM=unix.freebsd.4.3.x86
 #export JAVAC="$JAVA_HOME/bin/javac"
 export JAVAC="jikes +E"
-export JAVA_COMPILER=shujit
+
+# Shujit has some problems. rssget will cause it to dump. Using OpenJIT for now.
+#export JAVA_COMPILER=shujit
 export JAVA_COMPILER_OPT=quiet
+export JAVA_COMPILER=OpenJIT
 export JAR=fastjar
 
 export ftclass=$FULLTILT_CLASS_ROOT
@@ -90,7 +92,7 @@ case "$JAVAC" in
 	# what JDK its compiling against. Setting EXTDIRS tells Jikes where to
 	# find the Java extensions, since it's not part of the JDK.
 
-	export JIKESPATH=$JAVA_HOME/jre/lib/rt.jar:$CLASSPATH
+	#export JIKESPATH=$JAVA_HOME/jre/lib/rt.jar:$CLASSPATH
 	export EXTDIRS=$JAVA_HOME/jre/lib/ext
 	;;
 esac
