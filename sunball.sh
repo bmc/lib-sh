@@ -62,4 +62,5 @@ alias mystuff="varcd mystuff"
 export jsrc="$mystuff/java"
 alias jsrc='varcd jsrc'
 
+export ANT_HOME=/usr/local/java/ant
 load_file ~/bash/java.sh

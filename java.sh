@@ -12,7 +12,11 @@ export JAVAC="jikes +E"
 
 export LD_LIBRARY_PATH=$JAVA_HOME/lib/i386:${LD_LIBRARY_PATH}
 
-export ANT_HOME=/usr/local/ant
+if [ -z $ANT_HOME ]
+then
+    ANT_HOME=/usr/local/ant
+fi
+export ANT_HOME
 export ANT_ARGS="-logger org.apache.tools.ant.NoBannerLogger -emacs"
 
 if [ -z $JAVA_HOME ]

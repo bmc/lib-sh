@@ -59,5 +59,6 @@ alias xcolorsel="echo 'try colordemo, instead'"
 # ---------------------------------------------------------------------------
 # Development stuff
 
+export ANT_HOME=/usr/local/ant
 load_file ~/bash/java.sh
 load_file ~/bash/fulltilt.sh
