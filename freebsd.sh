@@ -39,6 +39,22 @@ export LSCOLORS='3x6x5x2x2x3x3x2x2x3x3x'
 
 unset MANPATH	# /etc/manpath.config takes care of it
 
+# LOGIN_RHOST is set by bashrc
+
+if [ -z "$LOGIN_RHOST" ]
+then
+    # Local login. Check tty. If it's not a pseudo-tty, then assume we're
+    # not running under X, and clear the display.
+
+    case "`tty`" in
+	/dev/ttyp*)
+	    ;;
+	*)
+	    unset DISPLAY
+	    ;;
+    esac
+fi
+
 # ---------------------------------------------------------------------------
 # Aliases and functions
 
