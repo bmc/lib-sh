@@ -12,3 +12,5 @@ case "$TERM" in
         term vt100
         ;;
 esac
+
+load_file $HOME/bash/wincommon.sh
