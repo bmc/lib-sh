@@ -1,16 +1,16 @@
 # $Id$
 
-if [ -n "$_xinit" ]
+# _read_etc_profile is set in /etc/profile, if it's been read already
+if [ -z "$_read_etc_profile" ]
 then
-    echo "Fired up from within xinit(1). Pulling in /etc files manually."
     . /etc/profile
 fi
 
-. ~bmc/bash/csh-funcs.sh
-. ~bmc/bash/misc-funcs.sh
-. ~bmc/bash/path.sh
+. ~/bash/csh-funcs.sh
+. ~/bash/misc-funcs.sh
+. ~/bash/path.sh
 
-load_file ~bmc/bash/dir-functions.sh
+load_file ~/bash/dir-functions.sh
 
 # ---------------------------------------------------------------------------
 # Path setting
@@ -30,6 +30,7 @@ fi
 
 # Ensure that $HOME is set to the real thing, even if what's in /etc/passwd
 # specifies a symlink
+
 
 getHome HOME
 export HOME
@@ -129,9 +130,9 @@ taillog()
 # ---------------------------------------------------------------------------
 # Other files
 
-load_file	~bmc/bash/$PLATFORM.sh
-load_file	~bmc/bash/$HOST.sh
-load_file	~bmc/bash/$DOMAIN.sh
+load_file	~/bash/$PLATFORM.sh
+load_file	~/bash/$HOST.sh
+load_file	~/bash/$DOMAIN.sh
 
 cleanpath --rm . PATH
 cleanpath CLASSPATH LD_LIBRARY_PATH
