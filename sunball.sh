@@ -85,3 +85,11 @@ load_file ~/bash/fulltilt.sh
 PATH=$PATH:/usr/lib/oss/sbin:/usr/lib/oss/bin # ADDED_BY_OSS
 SDL_DSP_NOSELECT=1 # ADDED_BY_OSS
 export PATH SDL_DSP_NOSELECT # ADDED_BY_OSS
+
+# ---------------------------------------------------------------------------
+# Local stuff
+
+# Change public directory, then reload domain stuff
+
+export public=/mnt/condor/pub
+load_file ~/bash/$DOMAIN.sh
