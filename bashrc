@@ -36,7 +36,7 @@ getHome HOME
 export HOME
 
 export XWINHOME=/usr/X11R6
-export DISPLAY=":0.0"
+#export DISPLAY=":0.0"
 export PLATFORM=`platform`
 export pager="less"
 export PAGER="$pager -s"
@@ -121,14 +121,18 @@ alias z="echo Rereading $HOME/.bashrc ... ; source $HOME/.bashrc"
 # platform, host and domain files are pulled in, below.
 
 export LOGIN_RHOST=`login-from`
-case "$LOGIN_RHOST" in
-    localhost|""|$HOST.$DOMAIN)
-        xdisplay :0.0
-        ;;
-    *)
-        xdisplay $where
-	;;
-esac
+
+if [ -z "$DISPLAY" ]
+then
+    case "$LOGIN_RHOST" in
+        localhost|""|$HOST.$DOMAIN)
+            xdisplay :0.0
+            ;;
+        *)
+            xdisplay $LOGIN_RHOST
+	    ;;
+    esac
+fi
 
 # ---------------------------------------------------------------------------
 # Other files
