@@ -22,30 +22,35 @@
 function popd
 {
     builtin popd $*
+    owd=$OLDPWD
     mkprompt
 }
 
 function pushd
 {
     builtin pushd $*
+    owd=$OLDPWD
     mkprompt
 }
 
 function lrotd
 {
     pushd +1
+    owd=$OLDPWD
     mkprompt
 }
 
 function rrotd
 {
     pushd -1
+    owd=$OLDPWD
     mkprompt
 }		
 
 function exchd
 {
     pushd
+    owd=$OLDPWD
     mkprompt
 }
 
@@ -63,6 +68,7 @@ alias rsd=rrotd
 function back
 {
     cd "$OLDPWD"
+    owd=$OLDPWD
 }
 
 function abspath
