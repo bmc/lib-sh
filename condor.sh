@@ -3,7 +3,6 @@
 # ---------------------------------------------------------------------------
 export www='/usr/local/site/www/apache'
 export wwwtest="$www/wwwtest"
-export DISPLAY=z:0.0
 export CVSROOT=/usr/local/src/my-stuff/CVS-tree
 
 export PATH=\
