@@ -8,7 +8,7 @@
 # Misc. environment variables
 
 export PERL5LIB=/usr/local/lib/perl
-export www=/usr/local/www/apache
+export www=/usr/local/www
 export APACHE_HOME=$www
 export TOMCAT_HOME=$APACHE_HOME/tomcat
 
