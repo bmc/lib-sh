@@ -78,7 +78,7 @@ alias vipw='EDITOR=vi VISUAL=vi sudo $_vipw'
 
 function pki
 {
-    pkg_glob -O $*
+    pkg_glob -O -a | grep -i $*
 }
 
 function psf
