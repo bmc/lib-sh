@@ -11,6 +11,7 @@ export PERL5LIB=/usr/local/lib/perl
 export www=/usr/local/www
 export APACHE_HOME=$www
 export TOMCAT_HOME=$APACHE_HOME/tomcat
+export CVSROOT=":pserver:bmc@condor.inside.clapper.org:/usr/local/src/my-stuff/CVS-tree"
 
 # ---------------------------------------------------------------------------
 
@@ -65,6 +66,8 @@ alias nslookup="$(type -P nslookup) -silent"
 alias play="/usr/lib/oss/bin/ossplay"
 alias www='varcd www'
 alias xinit="$XWINHOME/bin/xinit -- -bpp 16"
+
+unalias whois
 
 # ---------------------------------------------------------------------------
 # Development stuff
