@@ -17,7 +17,12 @@ export TOMCAT_HOME=$APACHE_HOME/tomcat
 # Linux prefers ^? for the backspace key. The stty command is actually issued
 # in bashrc, but the erase character is taken from the stty_erase variable.
 
-stty_erase="^?"
+if [ "$LOGIN_RHOST" = "localhost" -o \
+     "$LOGIN_RHOST" = "$HOSTNAME" -o \
+     "$LOGIN_RHOST" = "$HOST" ]
+then
+    stty_erase="^?"
+fi
 
 # ---------------------------------------------------------------------------
 # Java-related environment variables
@@ -45,7 +50,8 @@ $JAVA_HOME/bin:\
 /usr/sbin:\
 /sbin:\
 $ORACLE_HOME/bin:\
-$ANT_HOME/bin
+$ANT_HOME/bin:\
+/usr/local/Acrobat5/bin
 
 # ---------------------------------------------------------------------------
 # Aliases and functions
