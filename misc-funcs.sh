@@ -231,3 +231,22 @@ varcd()
     fi
     unset _dir _i
 }
+
+# ---------------------------------------------------------------------------
+# Format man page on the fly
+
+manf()
+{
+    nroff -man $1.[1-8m]* | $pager
+}
+
+# ---------------------------------------------------------------------------
+# Tail a log file
+
+taillog()
+{
+    : ${1?'missing log file parameter'}
+
+    echo "+ tail -f $1"
+    tail -f $1
+}

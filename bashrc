@@ -114,19 +114,6 @@ alias xrdb="xrdb -DHOME='$HOME'"
 alias xs='eval `resize -u`'
 alias z="echo Rereading $HOME/.bashrc ... ; source $HOME/.bashrc"
 
-manf()
-{
-    nroff -man $1.[1-8m]* | $pager
-}
-
-taillog()
-{
-    : ${1?'missing log file parameter'}
-
-    echo "+ tail -f $1"
-    tail -f $1
-}
-
 # ---------------------------------------------------------------------------
 # Other files
 
