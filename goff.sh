@@ -1,10 +1,8 @@
 # ---------------------------------------------------------------------------
-# Settings and overrides specific to host "tributary"
+# Settings and overrides specific to host "goff"
 # ---------------------------------------------------------------------------
-export www='/usr/local/site/www/apache'
-export wwwtest="$www/wwwtest"
 export DISPLAY=z:0.0
-export CVSROOT=/usr/local/src/my-stuff/CVS-tree
+export CVSROOT=pserver:bclapper@192.168.1.5:/home/repository
 export CLASSPATH="/tmp"
 
 export PATH=\
@@ -14,12 +12,11 @@ $PATH:\
 /usr/sbin:\
 /sbin:\
 /usr/X11R6/bin:\
-/usr/local/spamassassin/bin
+/cygdrive/d/java/jdk1.3.1/bin
 
 # Local aliases
 
-alias frm="$(type -P frm) -S"
 alias ftp=ncftp3
+alias login-from="loginfrom $(tty)"
 alias vi=vim
-alias www='varcd www'
-alias wwwtest='varcd wwwtest'
+

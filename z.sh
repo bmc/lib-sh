@@ -9,7 +9,7 @@ then
 else
     export PERL5LIB=$PERL5LIB:/usr/local/lib/perl
 fi
-export MAKE_BASE="/usr/local/src/willscreek/working/libs"
+export MAKE_BASE="/usr/local/src/mystuff/working/libs"
 export MAKE_CFG="$MAKE_BASE/make"
 #export EMACS_SHOW_TIME="yes"
 
@@ -45,7 +45,6 @@ alias frm="$(type -P frm) -S"
 alias ftp=ncftp3
 alias lynx=links
 alias mplayerxp="mplayerxp -xp -double"
-alias phoenix="/usr/local/phoenix/bin/phoenix"
 alias play="/usr/lib/oss/play"
 alias vi=vim
 alias xinit="$XWINHOME/bin/xinit -- -bpp 16"
@@ -57,10 +56,7 @@ alias xcolorsel="echo 'try colordemo, instead'"
 # ---------------------------------------------------------------------------
 # Development stuff
 
-export wsrc='/usr/local/src/willscreek/working'
+export wsrc='/usr/local/src/mystuff/working'
 alias wsrc='varcd wsrc'
 
 load_file ~/bash/development.sh
-
-# ---------------------------------------------------------------------------
-# Misc.
