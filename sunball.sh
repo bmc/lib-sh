@@ -13,6 +13,10 @@ export APACHE_HOME=$www
 export TOMCAT_HOME=$APACHE_HOME/tomcat
 export CVSROOT=":pserver:bmc@condor.inside.clapper.org:/usr/local/src/my-stuff/CVS-tree"
 
+# For OSS sound driver.
+export PATH=$PATH:/usr/lib/oss/bin
+export SDL_DSP_NOSELECT=1
+
 # ---------------------------------------------------------------------------
 
 # Linux prefers ^? for the backspace key. The stty command is actually issued
