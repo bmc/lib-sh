@@ -54,14 +54,44 @@ $JAVA_ROOT/javacc-3.0/bin:
 
 case "$JAVAC" in
     jikes*)
-	CLASSPATH="$JAVA_HOME/jre/lib/rt.jar:$CLASSPATH"
-
 	# For Jikes: Must also include path to JDK's classes, so Jikes knows
 	# what JDK its compiling against. Setting EXTDIRS tells Jikes where to
 	# find the Java extensions, since it's not part of the JDK.
 
-	#export JIKESPATH=$JAVA_HOME/jre/lib/rt.jar:$CLASSPATH
-	export EXTDIRS=$JAVA_HOME/jre/lib/ext
+	# WARNING: Putting rt.jar in the classpath screws things up royally
+	# on JDK 1.4, because that JDK ships with a version of the org.w3c
+	# interfaces that is incompatible with the version in XMLC. Leave
+	# rt.jar out of CLASSPATH, and make sure it's in -bootclasspath,
+	# and all seems to be well.
+
+        java_version=`java -version 2>&1 | sed -e 's/"//g' -e 's/^java version //' -e 1q`
+        case "$java_version" in
+	    1.4*)
+	        JIKESPATH=
+		sep=
+		for i in jce.jar jsse.jar
+		  do
+		  if [ -f $JAVA_HOME/jre/lib/$i ]
+		      then
+		      JIKESPATH="$JIKESPATH$sep$JAVA_HOME/jre/lib/$i"
+		      sep=:
+		  fi
+		done
+		unset sep
+		JIKESPATH=$CLASSPATH:$JIKESPATH
+		export JIKESPATH
+		export CLASSPATH=$JIKESPATH
+                export EXTDIRS=$JAVA_HOME/jre/lib/ext
+		;;
+	    1.3*)
+	        export JIKESPATH=$JAVA_HOME/jre/lib/rt.jar:$CLASSPATH
+		export CLASSPATH=$JIKESPATH
+                export EXTDIRS=$JAVA_HOME/jre/lib/ext
+		;;
+	esac
+
+	# the following seems to be necessary for jikes
+	export JAVAC_EXTRA_FLAGS_ENV="-bootclasspath $JAVA_HOME/jre/lib/rt.jar +Pno-shadow +Pno-switchcheck +Pno-serial"
 	;;
 esac
 
