@@ -16,6 +16,8 @@ export NETHACKOPTIONS='pickup_types:$?+!=/'
 export www='/usr/local/site/www/apache'
 export wwwtest="$www/wwwtest"
 
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/site/lib
+
 # ---------------------------------------------------------------------------
 # PATH
 
