@@ -62,4 +62,4 @@ alias mystuff="varcd mystuff"
 export jsrc="$mystuff/java"
 alias jsrc='varcd jsrc'
 
-#load_file ~/bash/development.sh
+load_file ~/bash/java.sh
