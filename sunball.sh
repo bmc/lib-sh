@@ -44,8 +44,8 @@ $ANT_HOME/bin
 # Aliases and functions
 
 alias camf="check-alt-mail-folders"
+alias dfspace="dfspace -t ext3"
 alias ftp=ncftp
-alias phoenix="/usr/local/phoenix/phoenix"
 alias mllog="sudo tail -f /var/log/maillog"
 alias mslog="sudo tail -f /var/log/messages"
 alias nslookup="$(type -P nslookup) -silent"
@@ -56,4 +56,10 @@ alias xinit="$XWINHOME/bin/xinit -- -bpp 16"
 # ---------------------------------------------------------------------------
 # Development stuff
 
-load_file ~/bash/development.sh
+export mystuff=$HOME/src/my-stuff/working
+alias mystuff="varcd mystuff"
+
+export jsrc="$mystuff/java"
+alias jsrc='varcd jsrc'
+
+#load_file ~/bash/development.sh
