@@ -56,7 +56,7 @@ alias xinit="$XWINHOME/bin/xinit -- -bpp 16"
 # ---------------------------------------------------------------------------
 # Development stuff
 
-export mystuff=$HOME/src/my-stuff/working
+export mystuff=$HOME/src/my-stuff
 alias mystuff="varcd mystuff"
 
 export jsrc="$mystuff/java"
