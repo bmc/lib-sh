@@ -45,6 +45,13 @@ alias jar="$JAR"
 # /usr/local/bin.
 eval `classpath -k -J`
 
+case "$PLATFORM" in
+    freebsd)
+	# Use the javavmwrapper, instead of the native JDK java
+	PATH=$PATH:/usr/local/bin
+	;;
+esac
+
 export PATH=\
 $PATH:\
 $JAVA_HOME/bin:\
