@@ -145,7 +145,8 @@ load_file	~/bash/$PLATFORM.sh
 load_file	~/bash/$HOST.sh
 load_file	~/bash/$DOMAIN.sh
 
-cleanpath --rm . PATH
+#cleanpath --rm . PATH
+cleanpath PATH
 cleanpath CLASSPATH LD_LIBRARY_PATH
 
 # ***************************************************************************
