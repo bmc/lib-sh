@@ -94,5 +94,9 @@ export PATH SDL_DSP_NOSELECT # ADDED_BY_OSS
 
 # Change public directory, then reload domain stuff
 
-export public=/mnt/condor/pub
+export usr_local_site=/mnt/condor/usr/local/site
+export public=${usr_local_site}/public
 load_file ~/bash/$DOMAIN.sh
+
+export wwwtest="${usr_local_site}/www/apache/wwwtest"
+alias wwwtest='varcd wwwtest'
