@@ -54,8 +54,6 @@ $JAVA_HOME/bin:\
 /usr/local/sbin:\
 /usr/sbin:\
 /sbin:\
-$ORACLE_HOME/bin:\
-$ANT_HOME/bin:\
 /usr/local/Acrobat5/bin:\
 /opt/cxoffice/bin
 
@@ -81,11 +79,23 @@ alias mystuff="varcd mystuff"
 export jsrc="$mystuff/java"
 alias jsrc='varcd jsrc'
 
-export ANT_HOME=/usr/local/java/ant
+export ANT_HOME=$JAVA_ROOT/ant
+export MAVEN_HOME=$JAVA_ROOT/maven
+export GROOVY_HOME=$JAVA_ROOT/groovy
+
+PATH=\
+$PATH:\
+$ANT_HOME/bin:\
+$MAVEN_HOME/bin:\
+$GROOVY_HOME/bin
+
 load_file ~/bash/java.sh
 load_file ~/bash/fulltilt.sh
 
-PATH=$PATH:/usr/lib/oss/sbin:/usr/lib/oss/bin # ADDED_BY_OSS
+# ---------------------------------------------------------------------------
+# OSS
+
+$PATH:/usr/lib/oss/sbin:/usr/lib/oss/bin # ADDED_BY_OSS
 SDL_DSP_NOSELECT=1 # ADDED_BY_OSS
 export PATH SDL_DSP_NOSELECT # ADDED_BY_OSS
 
