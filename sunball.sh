@@ -95,7 +95,7 @@ load_file ~/bash/fulltilt.sh
 # ---------------------------------------------------------------------------
 # OSS
 
-$PATH:/usr/lib/oss/sbin:/usr/lib/oss/bin # ADDED_BY_OSS
+PATH=$PATH:/usr/lib/oss/sbin:/usr/lib/oss/bin # ADDED_BY_OSS
 SDL_DSP_NOSELECT=1 # ADDED_BY_OSS
 export PATH SDL_DSP_NOSELECT # ADDED_BY_OSS
 
