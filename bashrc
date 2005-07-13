@@ -201,6 +201,11 @@ mkprompt
 
 stty erase $stty_erase kill '^u' intr '^c' echok echoe -istrip
 
+# Ignore CVS subdirectories when processing TAB expansions for the "cd" command
+
+complete -X 'CVS' -A directory cd
+complete -X '*/CVS' -A directory cd
+
 fi # interactive
 
 # ***************************************************************************
