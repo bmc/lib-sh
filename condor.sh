@@ -18,7 +18,8 @@ $PATH:\
 # Local aliases
 
 alias frm="$(type -P frm) -S"
-alias ftp=ncftp3
+alias ftp=ncftp
+alias play="/usr/local/lib/oss/play"
 alias vi=vim
 alias www='varcd www'
 alias wwwtest='varcd wwwtest'
