@@ -40,7 +40,13 @@ export XWINHOME=/usr/X11R6
 export PLATFORM=`platform`
 export pager="less"
 export PAGER="$pager -s"
-export LESS='-aEfwiP?f%f:-- More --. ?pB(%pB\%). '
+
+# Less, version 352 (or thereabouts)
+#export LESS='-aEfwiP?f%f:-- More --. ?pB(%pB\%). '
+
+# Newer versions of less
+export LESS='-ME -PM -- More ?PB(%PB\%) :--'
+
 export LESSCHARSET="latin1"
 export editor="ew"
 export EDITOR=emacs
