@@ -2,8 +2,8 @@
 
 export JAVA_ROOT=/usr/local/java
 
-#export JAVAC="$JAVA_HOME/bin/javac"
-export JAVAC="jikes +E"
+export JAVAC="$JAVA_HOME/bin/javac"
+#export JAVAC="jikes +E"
 
 # Shujit has some problems. rssget will cause it to dump. Using OpenJIT for now.
 #export JAVA_COMPILER=shujit
@@ -58,6 +58,10 @@ $JAVA_HOME/bin:\
 $ANT_HOME/bin:\
 $JAVA_ROOT/jython:\
 $JAVA_ROOT/javacc-3.0/bin:
+
+# IntelliJ Idea
+export IDEA_JDK=/usr/local/java/jdk1.5.0
+export PATH=$PATH:$HOME/Idea/idea/bin
 
 case "$JAVAC" in
     jikes*)
