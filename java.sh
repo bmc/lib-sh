@@ -12,7 +12,7 @@ export JAVAC="$JAVA_HOME/bin/javac"
 
 if [ -z $ANT_HOME ]
 then
-    ANT_HOME=/usr/local/ant
+    ANT_HOME=/usr/local/java/ant
 fi
 export ANT_HOME
 export ANT_ARGS="-logger org.apache.tools.ant.NoBannerLogger -emacs"
@@ -53,9 +53,9 @@ case "$PLATFORM" in
 esac
 
 export PATH=\
+$ANT_HOME/bin:\
 $PATH:\
 $JAVA_HOME/bin:\
-$ANT_HOME/bin:\
 $JAVA_ROOT/jython:\
 $JAVA_ROOT/javacc-3.0/bin:
 
