@@ -87,7 +87,8 @@ PATH=\
 $PATH:\
 $ANT_HOME/bin:\
 $MAVEN_HOME/bin:\
-$GROOVY_HOME/bin
+$GROOVY_HOME/bin:\
+$HOME/Eclipse/eclipse
 
 load_file ~/bash/java.sh
 load_file ~/bash/fulltilt.sh
