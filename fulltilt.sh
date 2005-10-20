@@ -7,7 +7,7 @@ then
     load_file $HOME/bash/java.sh
 fi
 
-export ft=/usr/local/fulltilt
+export ft=/home/bmc/src/fulltilt
 export ftsrc=$ft/com/fulltiltinc
 export ftetc=$ft/etc
 
