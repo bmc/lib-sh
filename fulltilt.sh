@@ -8,7 +8,7 @@ then
 fi
 
 export ft=/home/bmc/src/fulltilt
-export ftsrc=$ft/com/fulltiltinc
+export ftsrc=$ft/pps/src/com/fulltiltinc
 export ftetc=$ft/etc
 
 alias ftsrc='varcd ftsrc'
