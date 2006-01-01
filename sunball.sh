@@ -111,3 +111,5 @@ load_file ~/bash/$DOMAIN.sh
 
 export wwwtest="${usr_local_site}/www/apache/wwwtest"
 alias wwwtest='varcd wwwtest'
+
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
