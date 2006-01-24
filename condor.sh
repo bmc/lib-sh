@@ -1,6 +1,7 @@
 # ---------------------------------------------------------------------------
 # Settings and overrides specific to host "tributary"
 # ---------------------------------------------------------------------------
+export blog="$BLOG_CHROOT_TOP/usr/local/apache2/htdocs/bmc/blog"
 export www='/usr/local/site/www/apache'
 export wwwtest="$www/wwwtest"
 export CVSROOT=/usr/local/src/my-stuff/CVS-tree
@@ -18,6 +19,9 @@ $PATH:\
 
 # Local aliases
 
+. /etc/rc.conf
+
+alias blog='varcd blog'
 alias frm="$(type -P frm) -S"
 alias ftp=ncftp
 alias play="/usr/local/lib/oss/play"
