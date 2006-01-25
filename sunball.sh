@@ -9,6 +9,7 @@
 
 export PERL5LIB=/usr/local/lib/perl
 export www=/usr/local/www
+export blog="/mnt/condor/usr2/local/site/chroot/apache/usr/local/apache2/htdocs/bmc/blog"
 export APACHE_HOME=$www
 export TOMCAT_HOME=$APACHE_HOME/tomcat
 export CVSROOT=":pserver:bmc@condor.inside.clapper.org:/usr/local/src/my-stuff/CVS-tree"
@@ -60,6 +61,7 @@ $JAVA_HOME/bin:\
 # ---------------------------------------------------------------------------
 # Aliases and functions
 
+alias blog='varcd blog'
 alias camf="check-alt-mail-folders"
 alias dfspace="dfspace -t ext3"
 alias ftp=ncftp
