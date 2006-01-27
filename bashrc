@@ -212,6 +212,7 @@ stty erase $stty_erase kill '^u' intr '^c' echok echoe -istrip
 
 complete -X 'CVS' -A directory cd
 complete -X '*/CVS' -A directory cd
+complete -X '.svn' -A directory cd
 
 fi # interactive
 
