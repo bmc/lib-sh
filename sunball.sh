@@ -9,7 +9,7 @@
 
 export PERL5LIB=/usr/local/lib/perl
 export www=/usr/local/www
-export blog="/mnt/condor/usr2/local/site/chroot/apache/usr/local/apache2/htdocs/bmc/blog"
+export blog="/mnt/condor/usr/local/site/chroot/apache/usr/local/apache2/htdocs/bmc/blog"
 export APACHE_HOME=$www
 export TOMCAT_HOME=$APACHE_HOME/tomcat
 export CVSROOT=":pserver:bmc@condor.inside.clapper.org:/usr/local/src/my-stuff/CVS-tree"
@@ -65,6 +65,8 @@ alias blog='varcd blog'
 alias camf="check-alt-mail-folders"
 alias dfspace="dfspace -t ext3"
 alias ftp=ncftp
+alias gv="kghostview"
+alias ghostview="kghostview"
 alias mllog="sudo tail -f /var/log/maillog"
 alias mslog="sudo tail -f /var/log/messages"
 alias nslookup="$(type -P nslookup) -silent"
