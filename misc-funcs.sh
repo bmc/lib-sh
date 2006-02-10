@@ -250,3 +250,19 @@ taillog()
     echo "+ tail -f $1"
     tail -f $1
 }
+
+# ---------------------------------------------------------------------------
+# Determine whether to recommend tethereal over tcpdump
+
+unset -f tcpdump
+tethereal=$(type -P tethereal)
+
+tcpdump()
+{
+    echo "Try tethereal ($tethereal)"
+}
+
+if [ -z $tethereal ]
+then
+    unset -f tcpdump
+fi
