@@ -56,7 +56,7 @@ $JAVA_HOME/bin:\
 /usr/sbin:\
 /sbin:\
 /usr/local/Acrobat5/bin:\
-/opt/cxoffice/bin
+$HOME/cxoffice/bin
 
 # ---------------------------------------------------------------------------
 # Aliases and functions
