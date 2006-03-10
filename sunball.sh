@@ -18,6 +18,8 @@ export CVSROOT=":pserver:bmc@condor.inside.clapper.org:/usr/local/src/my-stuff/C
 export PATH=$PATH:/usr/lib/oss/bin
 export SDL_DSP_NOSELECT=1
 
+export HTML_TIDY=$HOME/.tidyrc
+
 # ---------------------------------------------------------------------------
 
 # Linux prefers ^? for the backspace key. The stty command is actually issued
