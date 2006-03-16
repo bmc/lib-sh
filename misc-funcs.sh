@@ -162,7 +162,7 @@ function mkprompt
 		done
 		p="$p $_prompt "
                 p=$(echo "$p" | sed 's/?/ /g')
-		PS1=$_prefix$p" $_suffix"
+		PS1=$_prefix$p"$_suffix"
 	    fi
         fi
     fi
