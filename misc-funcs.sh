@@ -106,7 +106,7 @@ function mkprompt
 	echo -e "\033]2;${HOST}:${PWD/$HOME/~}\007\c"
     fi
 
-    PS1="($HOST:$USER) ${PWD/$HOME/~} $_prompt "
+    PS1='\[\e[1m\]($HOST:$USER) ${PWD/$HOME/~} '"$_prompt"' \[\e[m\]'
 
     if [ -n "$max_prompt_len" ]
     then
