@@ -106,7 +106,9 @@ function mkprompt
 	echo -e "\033]2;${HOST}:${PWD/$HOME/~}\007\c"
     fi
 
-    PS1='\[\e[1m\]($HOST:$USER) ${PWD/$HOME/~} '"$_prompt"' \[\e[m\]'
+    _prefix='\[\e[1m\]'
+    _suffix='\[\e[m\]'
+    PS1="$_prefix"'($HOST:$USER) ${PWD/$HOME/~} '"$_prompt $_suffix"
 
     if [ -n "$max_prompt_len" ]
     then
@@ -160,7 +162,7 @@ function mkprompt
 		done
 		p="$p $_prompt "
                 p=$(echo "$p" | sed 's/?/ /g')
-		PS1=$p
+		PS1=$_prefix$p" $_suffix"
 	    fi
         fi
     fi
