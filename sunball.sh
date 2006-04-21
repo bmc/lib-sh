@@ -65,7 +65,7 @@ $HOME/cxoffice/bin
 
 alias blog='varcd blog'
 alias camf="check-alt-mail-folders"
-alias dfspace="dfspace -t ext3"
+alias dfspace="dfspace -t ext3 -t ext2"
 alias ftp=ncftp
 alias gv="kghostview"
 alias ghostview="kghostview"
