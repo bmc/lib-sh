@@ -7,7 +7,7 @@ export CLASSPATH=""
 export JAVA_HOME="/cygdrive/d/j2sdk1.4.2_09"
 
 sep=
-_opwd=$(pwd)
+
 cd $HOME/java/classes
 for i in *.jar
 do
@@ -31,5 +31,4 @@ alias ftp=ncftp3
 #alias login-from="loginfrom $(tty)"
 alias vi=vim
 
-cd $_opwd
-unset _opwd
+cd ~
