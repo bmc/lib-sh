@@ -22,7 +22,7 @@ $PATH:\
 /usr/sbin:\
 /sbin:\
 /usr/X11R6/bin:\
-/cygdrive/Borland/BCC55/Bin:\
+/cygdrive/c/Borland/BCC55/Bin:\
 $JAVA_HOME/bin
 
 # Local aliases
