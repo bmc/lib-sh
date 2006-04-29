@@ -1,6 +1,8 @@
 # ---------------------------------------------------------------------------
 # Settings and overrides specific to host "tributary"
 # ---------------------------------------------------------------------------
+. /etc/rc.conf
+
 export blog="$BLOG_CHROOT_TOP/usr/local/apache2/htdocs/bmc/blog"
 export www='/usr/local/site/www/apache'
 export wwwtest="$www/wwwtest"
@@ -18,8 +20,6 @@ $PATH:\
 /usr/local/spamassassin/bin
 
 # Local aliases
-
-. /etc/rc.conf
 
 alias blog='varcd blog'
 alias frm="$(type -P frm) -S"
