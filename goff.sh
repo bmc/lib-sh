@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------------
 # Settings and overrides specific to host "goff"
 # ---------------------------------------------------------------------------
-export DISPLAY=z:0.0
+export DISPLAY=goff:0.0
 export CVSROOT=pserver:bclapper@10.0.1.24:/home/repository
 export CLASSPATH=""
 export JAVA_HOME="/cygdrive/d/j2sdk1.4.2_09"
