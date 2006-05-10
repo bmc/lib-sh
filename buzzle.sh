@@ -11,6 +11,7 @@ export PERL5LIB=/usr/local/lib/perl
 export www=/usr/local/www/apache
 export APACHE_HOME=$www
 export TOMCAT_HOME=/usr/local/www/tomcat
+export HTML_TIDY=$HOME/.tidyrc
 
 # ---------------------------------------------------------------------------
 # Java-related environment variables
@@ -42,8 +43,10 @@ $ORACLE_HOME/bin:\
 $ANT_HOME/bin:\
 $HOME/OpenOffice.org:\
 /usr/local/firefox:\
-/opt/cxoffice/bin:\
-/usr/local/thunderbird
+$HOME/cxoffice/bin:\
+/usr/local/thunderbird:\
+$JAVA_ROOT/jython:\
+$JAVA_ROOT/groovy/bin
 
 # ---------------------------------------------------------------------------
 # MQ Series-specific
@@ -78,6 +81,6 @@ alias xinit="$XWINHOME/bin/xinit -- -bpp 16"
 # ---------------------------------------------------------------------------
 # Development stuff
 
-load_file ~/bash/development.sh
+load_file ~/bash/ft-development.sh
 
 export TIBEMS_ROOT=/opt/tibco/ems
