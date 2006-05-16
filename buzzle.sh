@@ -46,7 +46,7 @@ $HOME/OpenOffice.org:\
 $HOME/cxoffice/bin:\
 /usr/local/thunderbird:\
 $JAVA_ROOT/jython:\
-$JAVA_ROOT/groovy/bin
+$JAVA_ROOT/findclasses/bin
 
 # ---------------------------------------------------------------------------
 # MQ Series-specific
