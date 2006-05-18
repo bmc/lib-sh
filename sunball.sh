@@ -74,7 +74,7 @@ alias mslog="sudo tail -f /var/log/messages"
 alias nslookup="$(type -P nslookup) -silent"
 alias play="/usr/lib/oss/bin/ossplay"
 alias www='varcd www'
-alias xinit="$XWINHOME/bin/xinit -- -bpp 16"
+alias xinit="/usr/bin/xinit -- -bpp 16"
 
 # ---------------------------------------------------------------------------
 # Development stuff
