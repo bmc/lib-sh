@@ -10,11 +10,13 @@ fi
 export ft=/home/bmc/src/fulltilt
 export ftsrc=$ft/pps/src/com/fulltiltinc
 export ftetc=$ft/etc
+export pps=$ft/pps
 
 alias ftsrc='varcd ftsrc'
 alias ft='varcd ft'
 alias ftetc='varcd ftetc'
 alias ftclass='varcd ftclass'
+alias pps='varcd pps'
 
 # new
 export FULLTILT_BUILD_ROOT=$ftsrc/build
