@@ -38,7 +38,6 @@ export LD_LIBRARY_PATH=$JAVA_HOME/jre/lib/i386:${LD_LIBRARY_PATH}
 #fi
 #export JAR
 JAR=$JAVA_HOME/bin/jar
-unalias jar
 
 alias javac="$JAVAC"
 alias jar="$JAR"
