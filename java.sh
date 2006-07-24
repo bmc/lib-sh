@@ -31,12 +31,14 @@ fi
 
 export LD_LIBRARY_PATH=$JAVA_HOME/jre/lib/i386:${LD_LIBRARY_PATH}
 
-JAR=$(type -p fastjar)
-if [ -z $JAR ]
-then
-    JAR=$JAVA_HOME/bin/jar
-fi
-export JAR
+#JAR=$(type -p fastjar)
+#if [ -z $JAR ]
+#then
+#    JAR=$JAVA_HOME/bin/jar
+#fi
+#export JAR
+JAR=$JAVA_HOME/bin/jar
+unalias jar
 
 alias javac="$JAVAC"
 alias jar="$JAR"
