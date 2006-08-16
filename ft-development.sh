@@ -1,11 +1,11 @@
 # $Id: development.ksh,v 1.3 2001/02/10 17:13:59 bmc Exp $
 
 export ft=$HOME/src/fulltilt
-export ftsrc=$ft/com/fulltiltinc
-export ftetc=$ft/etc
-export iaccel=/usr/local/www/iaccel
 export pps=$ft/pps
 export ftpps=$pps
+export ftsrc=$pps/com/fulltiltinc
+export ftetc=$ft/etc
+export iaccel=/usr/local/www/iaccel
 
 alias ftsrc='varcd ftsrc'
 alias ft='varcd ft'
@@ -34,7 +34,14 @@ export JAVADOC_VERSION="1.2"
 export JAVAC_EXTRA_FLAGS_ENV="-g"
 export XMLC=xmlc
 
-export CLASSPATH="${CLASSPATH}:${FULLTILT_CLASS_ROOT}:$FULLTILT_CLASS_ROOT/ibm:$FULLTILT_CLASS_ROOT/custom"
+_CL=$CLASSPATH
+export CLASSPATH=$pps/build/classes
+for i in $(find $pps/binaries/external -type f -name '*.jar' -print)
+do
+    CLASSPATH=$CLASSPATH:$i
+done
+CLASSPATH=$CLASSPATH:$_CL
+unset _CL
 
 case "$JAVAC" in
     jikes*)
