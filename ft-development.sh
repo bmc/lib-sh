@@ -3,7 +3,7 @@
 export ft=$HOME/src/fulltilt
 export pps=$ft/pps
 export ftpps=$pps
-export ftsrc=$pps/com/fulltiltinc
+export ftsrc=$pps/src/com/fulltiltinc
 export ftetc=$ft/etc
 export iaccel=/usr/local/www/iaccel
 
