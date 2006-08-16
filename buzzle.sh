@@ -12,6 +12,7 @@ export www=/usr/local/www/apache
 export APACHE_HOME=$www
 export TOMCAT_HOME=/usr/local/www/tomcat
 export HTML_TIDY=$HOME/.tidyrc
+export AUDIOSERVER=tcp/condor:8011
 
 # ---------------------------------------------------------------------------
 # Java-related environment variables
