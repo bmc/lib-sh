@@ -17,7 +17,8 @@ $PATH:\
 /usr/sbin:\
 /sbin:\
 /usr/X11R6/bin:\
-/usr/local/spamassassin/bin
+/usr/local/spamassassin/bin:\
+$photos
 
 # Local aliases
 
