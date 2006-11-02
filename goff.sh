@@ -4,7 +4,7 @@
 export DISPLAY=goff:0.0
 export CVSROOT=pserver:bclapper@10.0.1.24:/home/repository
 export CLASSPATH=""
-export JAVA_HOME="/cygdrive/d/j2sdk1.4.2_09"
+export JAVA_HOME="/cygdrive/d/jdk1.5.0_04"
 
 sep=
 
@@ -16,14 +16,14 @@ do
 done
 
 export PATH=\
+$JAVA_HOME/bin:\
 $PATH:\
 /usr/local/site/sbin:\
 /usr/local/sbin:\
 /usr/sbin:\
 /sbin:\
 /usr/X11R6/bin:\
-/cygdrive/c/Borland/BCC55/Bin:\
-$JAVA_HOME/bin
+/cygdrive/c/Borland/BCC55/Bin
 
 # Local aliases
 
