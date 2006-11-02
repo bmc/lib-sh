@@ -25,12 +25,13 @@ export HTML_TIDY=$HOME/.tidyrc
 # Linux prefers ^? for the backspace key. The stty command is actually issued
 # in bashrc, but the erase character is taken from the stty_erase variable.
 
-if [ "$LOGIN_RHOST" = "localhost" -o \
-     "$LOGIN_RHOST" = "$HOSTNAME" -o \
-     "$LOGIN_RHOST" = "$HOST" ]
-then
-    stty_erase="^?"
-fi
+#if [ "$LOGIN_RHOST" = "localhost" -o \
+#     "$LOGIN_RHOST" = "$HOSTNAME" -o \
+#     "$LOGIN_RHOST" = "$HOST" ]
+#then
+#    stty_erase="^?"
+#fi
+stty_erase="^h"
 
 # ---------------------------------------------------------------------------
 # Java-related environment variables
@@ -51,8 +52,8 @@ eval `classpath -k -J`
 # PATH
 
 export PATH=\
-$PATH:\
 $JAVA_HOME/bin:\
+$PATH:\
 /usr/local/site/sbin:\
 /usr/local/sbin:\
 /usr/sbin:\
@@ -73,7 +74,9 @@ alias ghostview="kghostview"
 alias mllog="sudo tail -f /var/log/maillog"
 alias mslog="sudo tail -f /var/log/messages"
 alias nslookup="$(type -P nslookup) -silent"
-alias play="/usr/lib/oss/bin/ossplay"
+
+# Only necessary if using OSS drivers. FC6 sound drivers seem to work.
+#alias play="/usr/lib/oss/bin/ossplay"
 alias www='varcd www'
 alias xinit="/usr/bin/xinit -- -bpp 16"
 
