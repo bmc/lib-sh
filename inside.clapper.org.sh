@@ -23,7 +23,6 @@ alias public="varcd public"
 
 export photos=$public/photos
 alias photos="varcd photos"
-alias new-photo-dir=$photos/new-photo-dir
 
 if [ -z $mystuff ]
 then
