@@ -15,15 +15,10 @@ export PERL5LIB=$HOME/lib/perl
 # ---------------------------------------------------------------------------
 # Java-related environment variables
 
-export JAVA_ROOT=/usr/local/java
-export ANT_HOME=/usr/local/java/ant
-
-if [ -n "$JAVA_HOME" ]
-then
-    rmpath PATH "$JAVA_ROOT/jdk*/bin"
-else
-    export JAVA_HOME=/usr/local/java/jdk
-fi
+export JAVA_ROOT=$HOME/java
+export ANT_HOME=$JAVA_ROOT/ant
+#export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/Current
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
 
 eval `classpath -k -J`
 
@@ -31,6 +26,7 @@ eval `classpath -k -J`
 # PATH
 
 export PATH=\
+$JAVA_HOME/bin:\
 $HOME/bin:\
 $PATH:\
 /sw/bin
@@ -86,8 +82,7 @@ export PATH SDL_DSP_NOSELECT # ADDED_BY_OSS
 
 # Change public directory, then reload domain stuff
 
-export usr_local_site=/mnt/condor/usr/local/site
-export public=${usr_local_site}/public
+export public=/Volumes/CLAPPER-ORG';'CONDOR-1
 load_file ~/bash/$DOMAIN.sh
 
 export wwwtest="${usr_local_site}/www/apache/wwwtest"

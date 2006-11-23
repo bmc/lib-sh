@@ -1,6 +1,9 @@
 # $Id$
 
-export JAVA_ROOT=/usr/local/java
+if [ -z $JAVA_ROOT ]
+then
+    export JAVA_ROOT=/usr/local/java
+fi
 
 export JAVAC="$JAVA_HOME/bin/javac"
 #export JAVAC="jikes +E"
@@ -12,7 +15,7 @@ export JAVAC="$JAVA_HOME/bin/javac"
 
 if [ -z $ANT_HOME ]
 then
-    ANT_HOME=/usr/local/java/ant
+    ANT_HOME=$JAVA_ROOT/ant
 fi
 export ANT_HOME
 export ANT_ARGS="-logger org.apache.tools.ant.NoBannerLogger -emacs"
@@ -55,10 +58,8 @@ esac
 
 export PATH=\
 $ANT_HOME/bin:\
-$PATH:\
 $JAVA_HOME/bin:\
-$JAVA_ROOT/jython:\
-$JAVA_ROOT/javacc-3.0/bin:
+$PATH:
 
 # IntelliJ Idea
 export IDEA_JDK=/usr/local/java/jdk1.5.0

@@ -14,7 +14,7 @@ console_term=cons25
 # Environment variables
 
 # Path setting
-export PATH=/sw/bin:/opt/local/bin:$PATH:/usr/sbin:/sbin 
+export PATH=/sw/bin:/opt/local/bin:$PATH:/usr/sbin:/sbin
 
 export MAIL=/var/mail/$USER
 
