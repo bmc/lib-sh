@@ -9,7 +9,8 @@
 
 # ---------------------------------------------------------------------------
 
-export photos="/Volumes/CLAPPER-ORG;CONDOR-1"
+usr_local_site="/mnt/condor/site"
+export public=$usr_local_site/public
 export PERL5LIB=$HOME/lib/perl
 
 # ---------------------------------------------------------------------------
@@ -17,8 +18,8 @@ export PERL5LIB=$HOME/lib/perl
 
 export JAVA_ROOT=$HOME/java
 export ANT_HOME=$JAVA_ROOT/ant
-#export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/Current
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/Current/Home
+#export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
 
 eval `classpath -k -J`
 
@@ -28,6 +29,7 @@ eval `classpath -k -J`
 export PATH=\
 $JAVA_HOME/bin:\
 $HOME/bin:\
+/usr/X11R6/bin:\
 $PATH:\
 /sw/bin
 
@@ -71,19 +73,9 @@ load_file ~/bash/java.sh
 load_file ~/bash/fulltilt.sh
 
 # ---------------------------------------------------------------------------
-# OSS
-
-PATH=$PATH:/usr/lib/oss/sbin:/usr/lib/oss/bin # ADDED_BY_OSS
-SDL_DSP_NOSELECT=1 # ADDED_BY_OSS
-export PATH SDL_DSP_NOSELECT # ADDED_BY_OSS
-
-# ---------------------------------------------------------------------------
 # Local stuff
 
 # Change public directory, then reload domain stuff
-
-export public=/Volumes/CLAPPER-ORG';'CONDOR-1
-load_file ~/bash/$DOMAIN.sh
 
 export wwwtest="${usr_local_site}/www/apache/wwwtest"
 alias wwwtest='varcd wwwtest'
