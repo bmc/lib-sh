@@ -31,7 +31,8 @@ $JAVA_HOME/bin:\
 $HOME/bin:\
 /usr/X11R6/bin:\
 $PATH:\
-/sw/bin
+/sw/bin:\
+$photos
 
 # ---------------------------------------------------------------------------
 # Aliases and functions
