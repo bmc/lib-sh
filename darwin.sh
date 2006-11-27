@@ -26,7 +26,7 @@ export TERM
 
 if [[ "$TERM" == xterm* ]]
 then
-    term xterm
+    term xterm1
 fi
 
 if [[ -z $PERL5LIB ]]
