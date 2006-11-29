@@ -135,7 +135,7 @@ alias z="echo Rereading $HOME/.bashrc ... ; source $HOME/.bashrc"
 # Where have I logged in from? Note: LOGIN_RHOST must be set before the
 # platform, host and domain files are pulled in, below.
 
-export LOGIN_RHOST=`login-from`
+export LOGIN_RHOST=`login-from | sed 's/\..*$//'`
 
 if [ -z "$DISPLAY" ]
 then
