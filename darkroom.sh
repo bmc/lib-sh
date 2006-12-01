@@ -10,6 +10,7 @@
 # ---------------------------------------------------------------------------
 
 usr_local_site="/mnt/condor/site"
+photos=$usr_local_site/public/photos
 export public=$usr_local_site/public
 export PERL5LIB=$HOME/lib/perl
 
@@ -18,8 +19,8 @@ export PERL5LIB=$HOME/lib/perl
 
 export JAVA_ROOT=$HOME/java
 export ANT_HOME=$JAVA_ROOT/ant
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/Current/Home
-#export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
+#export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/Current/Home
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
 
 eval `classpath -k -J`
 
@@ -44,10 +45,8 @@ alias ftp=ncftp
 alias mllog="sudo tail -f /var/log/maillog"
 alias mslog="sudo tail -f /var/log/messages"
 alias nslookup="$(type -P nslookup) -silent"
-
-# Only necessary if using OSS drivers. FC6 sound drivers seem to work.
-#alias play="/usr/lib/oss/bin/ossplay"
 alias www='varcd www'
+alias xine="/Applications/XinePlayer.app/Contents/MacOS/XinePlayer"
 alias xinit="/usr/bin/xinit -- -bpp 16"
 
 # ---------------------------------------------------------------------------
