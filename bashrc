@@ -171,7 +171,8 @@ then
 
 # Allow a larger history
 
-HISTSIZE=1024
+HISTFILESIZE=1000000000
+HISTSIZE=1000000
 
 # Don't bother checking mail from the shell. We have nice graphics tools for
 # that.
