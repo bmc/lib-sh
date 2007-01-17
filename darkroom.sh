@@ -13,6 +13,7 @@ usr_local_site="/mnt/condor/site"
 photos=$usr_local_site/public/photos
 export public=$usr_local_site/public
 export PERL5LIB=$HOME/lib/perl
+export NETHACKOPTIONS='pickup_types=$!?=/,gender=male'
 
 # ---------------------------------------------------------------------------
 # Java-related environment variables
