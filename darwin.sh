@@ -69,7 +69,7 @@ alias hping2=hping
 alias ls='/sw/bin/ls --color=tty -CF'
 alias mllog="sudo tail -f /var/log/mail.log"
 alias mslog="sudo tail -f /var/log/system.log"
-alias psme='ps -U bmc -ouser,pid,ppid,tty,command'
+alias psme='ps -U bmc -ww -ouser,pid,ppid,tty,command'
 alias sha1='digest sha1'
 alias time='/usr/bin/time --portability'
 alias unshar=gunshar
