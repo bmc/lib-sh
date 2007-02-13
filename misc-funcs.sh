@@ -108,7 +108,7 @@ function mkprompt
 
     _prefix='\[\e[1m\]'
     _suffix='\[\e[m\]'
-    PS1="$_prefix"'($HOST:$USER) ${PWD/$HOME/~} '"$_prompt $_suffix"
+    PS1="$_prefix"'(\h:\u) ${PWD/$HOME/~} '"$_prompt $_suffix"
 
     if [ -n "$max_prompt_len" ]
     then
