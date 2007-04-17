@@ -1,4 +1,4 @@
-# $Id: development.ksh,v 1.3 2001/02/10 17:13:59 bmc Exp $
+# $Id$
 
 export ft=$HOME/src/fulltilt
 export pps=$ft/pps

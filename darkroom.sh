@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------------
 # Settings and overrides specific to host "darkroom"
 #
-# $Id: sunball.sh 6539 2006-11-02 14:45:36Z bmc $
+# $Id$
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -13,15 +13,15 @@ usr_local_site="/mnt/condor/site"
 photos=$usr_local_site/public/photos
 export public=$usr_local_site/public
 export PERL5LIB=$HOME/lib/perl
-export NETHACKOPTIONS='pickup_types=$!?=/,gender=male'
+export NETHACKOPTIONS='pickup_types=$!?=/,gender=male,fruit=kiwi'
 
 # ---------------------------------------------------------------------------
 # Java-related environment variables
 
 export JAVA_ROOT=$HOME/java
 export ANT_HOME=$JAVA_ROOT/ant
-#export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/Current/Home
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
+#export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
+export JAVA_HOME=/Library/Java/Home
 
 eval `classpath -k -J`
 
@@ -33,7 +33,6 @@ $JAVA_HOME/bin:\
 $HOME/bin:\
 /usr/X11R6/bin:\
 $PATH:\
-/sw/bin:\
 $photos
 
 # ---------------------------------------------------------------------------

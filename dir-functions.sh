@@ -16,7 +16,7 @@
 #    dirs        - print out current directory stack
 #
 # $Revision$
-# $Date$
+# $Date: 2006-11-22 12:31:14 -0500 (Wed, 22 Nov 2006) $
 # ---------------------------------------------------------------------------
 
 function popd

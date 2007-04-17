@@ -1,4 +1,4 @@
-# $Id: freebsd.sh 1719 2005-03-26 02:35:49Z bmc $
+# $Id$
 
 # ---------------------------------------------------------------------------
 # Local variables
@@ -14,8 +14,9 @@ console_term=cons25
 # Environment variables
 
 # Path setting
-export PATH=/sw/bin:/opt/local/bin:$PATH:/usr/sbin:/sbin
-
+export PATH=/opt/local/bin:/usr/local/bin:/sw/bin:$PATH:/usr/sbin:/sbin
+#export PKG_CONFIG_PATH=/sw/lib/pkgconfig:/usr/local/lib/pkgconfig:/opt/local/lib/pkgconfig
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/local/lib/pkgconfig
 export MAIL=/var/mail/$USER
 
 if [[ -z $?TERM ]]
