@@ -19,6 +19,66 @@
 # $Date: 2006-11-22 12:31:14 -0500 (Wed, 22 Nov 2006) $
 # ---------------------------------------------------------------------------
 
+# ---------------------------------------------------------------------------
+# Personal version of cd(1)
+
+alias cd=chdir
+
+chdir()
+{
+    _rc=0
+
+    if [ $# = 0 ]
+    then
+	builtin cd -P ~
+	if [ $? != 0 ]
+	then
+	    echo "Bad directory: $HOME" >&2
+	    _rc=1
+	fi
+    else
+	builtin cd -P "$*"
+	if [ $? != 0 ]
+	then
+	    #echo "Bad directory: $*" >&2
+	    _rc=1
+	fi
+    fi
+    owd=$OLDPWD
+    cwd=$PWD
+    mkprompt
+    return $_rc
+}
+
+# ---------------------------------------------------------------------------
+# Manage aliases for directories that are driven from environment variable
+# settings. Aliases that use this function are defined as follows:
+#
+#     alias www='envcd www'
+#
+# This permits command 'www' that changes to the directory defined by
+# variable $www. Additional parameters are applied to the 'cd' command as
+# subdirectories.
+
+varcd()
+{
+    : ${1?'missing environment variable parameter'}
+
+    eval _dir='$'$1
+    shift
+    for _i in $*
+    do
+        _dir="$_dir/$_i"
+    done
+
+    chdir $_dir
+    if [ $? != 0 ]
+    then
+        echo "$_dir: bad directory" >&2
+    fi
+    unset _dir _i
+}
+
 function popd
 {
     builtin popd $*
@@ -28,7 +88,7 @@ function popd
 
 function pushd
 {
-    builtin pushd $*
+    builtin pushd "$*"
     owd=$OLDPWD
     mkprompt
 }
