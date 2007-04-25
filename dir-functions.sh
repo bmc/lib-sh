@@ -88,7 +88,14 @@ function popd
 
 function pushd
 {
-    builtin pushd "$*"
+    case $# in
+        0)
+            builtin pushd
+            ;;
+        *)
+            builtin pushd "$@"
+            ;;
+    esac
     owd=$OLDPWD
     mkprompt
 }
