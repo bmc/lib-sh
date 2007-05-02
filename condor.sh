@@ -29,6 +29,7 @@ alias play="/usr/local/lib/oss/play"
 alias vi=vim
 alias www='varcd www'
 alias wwwtest='varcd wwwtest'
+alias tar=gtar
 
 # ---------------------------------------------------------------------------
 # Development stuff
