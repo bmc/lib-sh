@@ -23,6 +23,7 @@
 # Personal version of cd(1)
 
 alias cd=chdir
+alias up="cd .."
 
 chdir()
 {
