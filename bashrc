@@ -123,6 +123,7 @@ alias pign=ping
 alias psme='ps -ef | egrep "^USER|$user"'
 alias r="fc -s"     # emulate Korn shell's "r" command
 alias rot13='tr "[a-m][n-z][A-M][N-Z]" "[n-z][a-m][N-Z][A-M]"'
+alias rm-rf="rm -rf"
 alias smtpr=smtp-test-relay
 alias which=type
 alias xrdb="xrdb -DHOME='$HOME'"
@@ -218,6 +219,3 @@ fi # interactive
 # ***************************************************************************
 # ***************************************************************************
 # ***************************************************************************
-PATH=$PATH:/usr/lib/oss/bin # ADDED_BY_OSS
-SDL_DSP_NOSELECT=1 # ADDED_BY_OSS
-export PATH SDL_DSP_NOSELECT # ADDED_BY_OSS
