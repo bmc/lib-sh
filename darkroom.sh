@@ -12,6 +12,8 @@
 usr_local_site="/mnt/condor/site"
 photos=$usr_local_site/public/photos
 export public=$usr_local_site/public
+mnt=$HOME/mnt
+export condor_home=$mnt/condor-home
 export PERL5LIB=$HOME/lib/perl
 export NETHACKOPTIONS='pickup_types=$!?=/,gender=male,fruit=kiwi'
 
@@ -55,6 +57,8 @@ $photos
 
 alias blog='varcd blog'
 alias camf="check-alt-mail-folders"
+alias condor-home='varcd condor_home'
+alias condor_home='varcd condor_home'
 #alias dfspace="dfspace -t ext3 -t ext2"
 alias ftp=ncftp
 alias nslookup="$(type -P nslookup) -silent"
