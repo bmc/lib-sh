@@ -16,6 +16,7 @@ mnt=$HOME/mnt
 export condor_home=$mnt/condor-home
 export PERL5LIB=$HOME/lib/perl
 export NETHACKOPTIONS='pickup_types=$!?=/,gender=male,fruit=kiwi'
+export www=$HOME/Sites
 
 # ---------------------------------------------------------------------------
 # Java-related environment variables
@@ -43,12 +44,11 @@ eval `classpath -k -J`
 # ---------------------------------------------------------------------------
 # PATH
 
-# On Darwin, use /usr/bin/java, not what's in JAVA_HOME.
-
 export PATH=\
 $JAVA_HOME/bin:\
 $HOME/bin:\
 /usr/X11R6/bin:\
+/usr/local/mysql/bin:\
 $PATH:\
 $photos
 
