@@ -1,7 +1,7 @@
 # $Id$
 
 export ft=$HOME/src/fulltilt
-export pps=$ft/pps
+export pps=$ft/pps-release/pps
 export ftpps=$pps
 export ftsrc=$pps/src/com/fulltiltinc
 export ftetc=$ft/etc
@@ -95,16 +95,8 @@ then
     export JAVA_ROOT=/tmp
 fi
 
-# JDK_HOME is for IntelliJ IDEA
-export JDK_HOME=$JAVA_HOME
-export PATH=$PATH:$HOME/Idea/idea/bin
-
 alias javac="$JAVAC"
 
-function jdbc
-{
-    echo "Try 'sqlcmd' instead." >&2
-    return 1
-}
-
 cleanpath JIKESPATH
+
+

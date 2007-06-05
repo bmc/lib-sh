@@ -13,6 +13,7 @@ export APACHE_HOME=$www
 export TOMCAT_HOME=/usr/local/www/tomcat
 export HTML_TIDY=$HOME/.tidyrc
 export AUDIOSERVER=tcp/condor:8011
+export mystuff=$HOME/src/mystuff
 
 # ---------------------------------------------------------------------------
 # Java-related environment variables
@@ -50,17 +51,11 @@ $JAVA_ROOT/jython:\
 $JAVA_ROOT/findclasses/bin
 
 # ---------------------------------------------------------------------------
-# MQ Series-specific
-
-PATH=$PATH:/opt/mqm/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/mqm/java/lib
-
-# ---------------------------------------------------------------------------
 # Aliases and functions
 
 alias camf="check-alt-mail-folders"
 alias ftp=ncftp
-alias phoenix="/usr/local/phoenix/phoenix"
+alias mystuff="varcd mystuff"
 
 # fastjar's -u option is broken. Don't use it
 #_jar=`type -P fastjar`
