@@ -31,6 +31,43 @@ fi
 
 eval `classpath -k -J`
 
+function switch-jdk
+{
+    case $# in
+        1)
+            ;;
+        *)
+            echo "Usage: switch-jdk jdk" >&2
+            return 1
+            ;;
+    esac
+
+    case "$1" in
+        6|1.6|jdk6|jdk1.6*)
+           _n=$JAVA_ROOT/jdk1.6.0
+           ;;
+        5|1.5|jdk5|jdk1.5*)
+           _n=$JAVA_ROOT/jdk1.5.0
+           ;;
+        4|1.4|jdk4|jdk1.4*)
+           _n=$JAVA_ROOT/jdk1.4.2
+           ;;
+        *)
+           if [ -d $1 ]
+           then
+               _n=$1
+           else
+               echo "No such JDK -- $1" >&2
+               return 1
+           fi
+           ;;
+    esac
+
+    export PATH=$(echo $PATH | sed "s+$JAVA_HOME/bin:++g")
+    export JAVA_HOME=$_n
+    PATH=$JAVA_HOME/bin:$PATH
+}
+
 # ---------------------------------------------------------------------------
 # PATH
 
