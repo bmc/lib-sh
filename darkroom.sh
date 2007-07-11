@@ -36,10 +36,51 @@ export ANT_HOME=$JAVA_ROOT/ant
 # /System/Library/Frameworks/JavaVM.framework/Versions/1.x/Commands for
 # shell script based invocations of Java tools."
 
+export JDK_ROOT=/System/Library/Frameworks/JavaVM.framework/Versions
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
 #export JAVA_HOME=/Library/Java/Home
 
 eval `classpath -k -J`
+function switch-jdk
+{
+    case $# in
+        1)
+            ;;
+        *)
+            echo "Usage: switch-jdk jdk" >&2
+            return 1
+            ;;
+    esac
+
+    case "$1" in
+        6|1.6|jdk6|jdk1.6*)
+           _n=$JDK_ROOT/1.6.0/Home
+           ;;
+        5|1.5|jdk5|jdk1.5*)
+           _n=$JDK_ROOT/1.5.0/Home
+           ;;
+        4|1.4|1.4.2|jdk4|jdk1.4*)
+           _n=$JDK_ROOT/1.4.2/Home
+           ;;
+        3|1.3|jdk3|jdk1.3*)
+           _n=$JDK_ROOT/1.3/Home
+           ;;
+        *)
+           ;;
+    esac
+
+    if [ ! -d $_n ]
+    then
+        echo "No such JDK -- $1 ($_n)" >&2
+        return 1
+    fi
+
+    export PATH=$(echo $PATH | sed "s+$JAVA_HOME/bin:++g")
+    export JAVA_HOME=$_n
+    PATH=$JAVA_HOME/bin:$PATH
+}
+
+alias set-jdk=switch-jdk
 
 # ---------------------------------------------------------------------------
 # PATH
@@ -97,4 +138,4 @@ load_file ~/bash/fulltilt.sh
 export wwwtest="${usr_local_site}/www/apache/wwwtest"
 alias wwwtest='varcd wwwtest'
 
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib:/opt/local/lib
