@@ -49,7 +49,7 @@ function switch-jdk
         5|1.5|jdk5|jdk1.5*)
            _n=$JAVA_ROOT/jdk1.5.0
            ;;
-        4|1.4|jdk4|jdk1.4*)
+        4|1.4|1.4.2|jdk4|jdk1.4*)
            _n=$JAVA_ROOT/jdk1.4.2
            ;;
         *)
@@ -68,6 +68,7 @@ function switch-jdk
     PATH=$JAVA_HOME/bin:$PATH
 }
 
+alias set-jdk=switch-jdk
 # ---------------------------------------------------------------------------
 # PATH
 
