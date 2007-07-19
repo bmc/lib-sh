@@ -116,6 +116,9 @@ alias mystuff="varcd mystuff"
 export jsrc="$mystuff/java"
 alias jsrc='varcd jsrc'
 
+export etsrc=$jsrc/expense-time
+alias etsrc='varcd etsrc'
+
 export ANT_HOME=$JAVA_ROOT/ant
 export MAVEN_HOME=$JAVA_ROOT/maven
 export GROOVY_HOME=$JAVA_ROOT/groovy
