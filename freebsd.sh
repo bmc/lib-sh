@@ -68,6 +68,8 @@ unset _fetch
 alias hping2=hping
 alias ls='gnuls --color=tty -CF'
 alias psme='ps -U bmc -ouser,pid,ppid,tty,command'
+alias nsr='netstat -rn -f inet'
+alias routes=nsr
 alias sha1='digest sha1'
 alias time='/usr/bin/time --portability'
 alias unshar=gunshar

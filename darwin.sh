@@ -70,6 +70,8 @@ alias hping2=hping
 alias ls='/sw/bin/ls --color=tty -CF'
 alias mllog="sudo tail -f /var/log/mail.log"
 alias mslog="sudo tail -f /var/log/system.log"
+alias nsr='netstat -rn -f inet'
+alias routes=nsr
 alias psme='ps -U bmc -ww -ouser,pid,ppid,tty,command'
 alias sha1='digest sha1'
 alias time='/usr/bin/time --portability'
