@@ -66,6 +66,7 @@ function switch-jdk
     export PATH=$(echo $PATH | sed "s+$JAVA_HOME/bin:++g")
     export JAVA_HOME=$_n
     PATH=$JAVA_HOME/bin:$PATH
+    echo $_n
 }
 
 alias set-jdk=switch-jdk
