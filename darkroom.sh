@@ -91,7 +91,8 @@ $HOME/bin:\
 /usr/X11R6/bin:\
 /usr/local/mysql/bin:\
 $PATH:\
-$photos
+$photos:\
+$JAVA_ROOT/jython
 
 # ---------------------------------------------------------------------------
 # Aliases and functions
