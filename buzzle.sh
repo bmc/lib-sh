@@ -87,7 +87,7 @@ $HOME/OpenOffice.org:\
 $HOME/cxoffice/bin:\
 /usr/local/thunderbird:\
 $JAVA_ROOT/jython:\
-$JAVA_ROOT/scala:\
+$JAVA_ROOT/scala/bin:\
 $JAVA_ROOT/findclasses/bin
 
 # ---------------------------------------------------------------------------
