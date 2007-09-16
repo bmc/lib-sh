@@ -52,6 +52,12 @@ function switch-jdk
         4|1.4|1.4.2|jdk4|jdk1.4*)
            _n=$JAVA_ROOT/jdk1.4.2
            ;;
+	ibm-5|ibm5|ibm1.5)
+           _n=$JAVA_ROOT/ibm-java2-i386-50
+           ;;
+	ibm-6|ibm6|ibm1.6)
+           _n=$JAVA_ROOT/ibm-java2-i386-60
+           ;;
         *)
            if [ -d $1 ]
            then
@@ -87,6 +93,7 @@ $HOME/OpenOffice.org:\
 $HOME/cxoffice/bin:\
 /usr/local/thunderbird:\
 $JAVA_ROOT/jython:\
+$JAVA_ROOT/scala/bin:\
 $JAVA_ROOT/findclasses/bin
 
 # ---------------------------------------------------------------------------
