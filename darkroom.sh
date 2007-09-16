@@ -92,7 +92,9 @@ $HOME/bin:\
 /usr/local/mysql/bin:\
 $PATH:\
 $photos:\
-$JAVA_ROOT/jython
+$JAVA_ROOT/jython:\
+$JAVA_ROOT/scala/bin:\
+/opt/local/Library/Frameworks/Python.framework/Versions/2.4/bin
 
 # ---------------------------------------------------------------------------
 # Aliases and functions
