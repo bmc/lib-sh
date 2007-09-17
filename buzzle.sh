@@ -34,6 +34,10 @@ eval `classpath -k -J`
 function switch-jdk
 {
     case $# in
+        0)
+           (cd $JAVA_HOME; pwd)
+	   return 0
+	   ;;
         1)
             ;;
         *)
@@ -43,6 +47,9 @@ function switch-jdk
     esac
 
     case "$1" in
+        7|1.7|jdk7|jdk1.7*)
+           _n=$JAVA_ROOT/jdk1.7.0
+           ;;
         6|1.6|jdk6|jdk1.6*)
            _n=$JAVA_ROOT/jdk1.6.0
            ;;
