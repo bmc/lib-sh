@@ -125,6 +125,7 @@ alias r="fc -s"     # emulate Korn shell's "r" command
 alias rot13='tr "[a-m][n-z][A-M][N-Z]" "[n-z][a-m][N-Z][A-M]"'
 alias rm-rf="rm -rf"
 alias smtpr=smtp-test-relay
+alias svnurl="svn info|grep -i url"
 alias which=type
 alias xrdb="xrdb -DHOME='$HOME'"
 alias xs='eval `resize -u`'
