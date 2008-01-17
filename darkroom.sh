@@ -37,13 +37,16 @@ export ANT_HOME=$JAVA_ROOT/ant
 # shell script based invocations of Java tools."
 
 export JDK_ROOT=/System/Library/Frameworks/JavaVM.framework/Versions
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
-#export JAVA_HOME=/Library/Java/Home
+#export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.5/Home
 
 eval `classpath -k -J`
 function switch-jdk
 {
     case $# in
+        0)
+            echo $JAVA_HOME
+            ;;
         1)
             ;;
         *)
@@ -76,6 +79,10 @@ function switch-jdk
     fi
 
     export PATH=$(echo $PATH | sed "s+$JAVA_HOME/bin:++g")
+    if [ -n "$JAVA_HOME" ]
+    then
+	rmpath PATH $JAVA_HOME/bin
+    fi
     export JAVA_HOME=$_n
     PATH=$JAVA_HOME/bin:$PATH
 }
