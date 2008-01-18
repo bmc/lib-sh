@@ -9,6 +9,7 @@ export wwwtest="$www/wwwtest"
 export CVSROOT=/usr/local/src/my-stuff/CVS-tree
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/site/lib
 export CATALINA_HOME=/usr/local/jakarta-tomcat5.0
+export mystuff=$HOME/src/mystuff
 
 export PATH=\
 $PATH:\
