@@ -60,7 +60,7 @@ term()
     tput is1
     tput is2
 
-    if [ $TERM == xterm* ]
+    if [ $TERM == 'xterm*' ]
     then
         eval xs
     fi
