@@ -52,8 +52,8 @@ export TERM
 
 case "$TERM" in
     xterm*)
-        #TERM=xterm1
-        export TERM=xterm
+        TERM=xterm1
+        #export TERM=xterm
 	;;
 esac
 
