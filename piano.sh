@@ -9,8 +9,10 @@
 
 export PERL5LIB=$HOME/lib/perl
 export www=/usr/local/www
-export blog="/mnt/condor/usr/local/site/chroot/apache/usr/local/apache2/htdocs/bmc/blog"
+export blog="/mnt/condor/site/chroot/apache/usr/local/apache2/htdocs/bmc/blog"
 export APACHE_HOME=$www
+export invsrc=$HOME/src/invitemedia
+export usr_local_site=/mnt/condor/site
 
 # ---------------------------------------------------------------------------
 
@@ -35,7 +37,6 @@ eval `classpath -k -J`
 export PATH=\
 $JAVA_HOME/bin:\
 $PATH:\
-/usr/local/site/sbin:\
 /usr/local/sbin:\
 /usr/sbin:\
 /sbin
@@ -47,6 +48,7 @@ alias dfspace="dfspace -t ext3 -t ext2"
 alias ftp=ncftp
 alias gv="kghostview"
 alias ghostview="kghostview"
+alias invsrc='varcd invsrc'
 alias mllog="sudo tail -f /var/log/maillog"
 alias mslog="sudo tail -f /var/log/messages"
 alias nslookup="$(type -P nslookup) -silent"

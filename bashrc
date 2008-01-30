@@ -129,7 +129,7 @@ alias svnurl="svn info|awk '/^URL:/ {print \$2}'"
 alias which=type
 alias xrdb="xrdb -DHOME='$HOME'"
 alias xs='eval `resize -u`'
-alias z="echo Rereading $HOME/.bashrc ... ; source $HOME/.bashrc"
+alias z="echo Rereading $HOME/bash/bashrc ... ; source $HOME/bash/bashrc"
 
 # ---------------------------------------------------------------------------
 # X stuff
