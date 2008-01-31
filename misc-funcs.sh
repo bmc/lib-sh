@@ -103,7 +103,7 @@ function mkprompt
 {
     if [[ $TERM == xterm* ]]
     then
-	echo -e "\033]2;${HOST}:${PWD/$HOME/~}\007\c"
+	echo -e "\033]2;${HOST}:${PWD/#$HOME/~}\007\c"
     fi
 
     _prefix='\[\e[1m\]'
