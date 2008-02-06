@@ -32,6 +32,8 @@ alias gzcat='gunzip -c'
 alias ls='ls --color=tty -CF'
 alias psme="ps -ef|grep $USER"
 alias md5=md5sum
+alias mllog="sudo tail -f /var/log/maillog"
+alias mslog="sudo tail -f /var/log/messages"
 alias time='/usr/bin/time --portability'
 
 _vipw=`type -P vipw`
