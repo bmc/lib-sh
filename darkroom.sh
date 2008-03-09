@@ -9,14 +9,15 @@
 
 # ---------------------------------------------------------------------------
 
-usr_local_site="/mnt/condor/site"
 photos=$usr_local_site/public/photos
 export public=$usr_local_site/public
 mnt=$HOME/mnt
+usr_local_site="$mnt/condor-site"
 export condor_home=$mnt/condor-home
 export PERL5LIB=$HOME/lib/perl
 export NETHACKOPTIONS='pickup_types=$!?=/,gender=male,fruit=kiwi'
 export www=$HOME/Sites
+export invsrc=$HOME/src/invitemedia
 
 # ---------------------------------------------------------------------------
 # Java-related environment variables
@@ -112,6 +113,7 @@ alias condor-home='varcd condor_home'
 alias condor_home='varcd condor_home'
 #alias dfspace="dfspace -t ext3 -t ext2"
 alias ftp=ncftp
+alias invsrc='varcd invsrc'
 alias nslookup="$(type -P nslookup) -silent"
 alias www='varcd www'
 alias xine="/Applications/XinePlayer.app/Contents/MacOS/XinePlayer"

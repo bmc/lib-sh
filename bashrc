@@ -160,7 +160,7 @@ load_file	~/bash/$HOST.sh
 
 #cleanpath --rm . PATH
 cleanpath PATH
-cleanpath CLASSPATH LD_LIBRARY_PATH
+cleanpath CLASSPATH LD_LIBRARY_PATH PYTHONPATH
 
 # ***************************************************************************
 # ***************************************************************************
