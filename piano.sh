@@ -12,7 +12,6 @@ export www=/usr/local/www
 export blog="/mnt/condor/site/chroot/apache/usr/local/apache2/htdocs/bmc/blog"
 export APACHE_HOME=$www
 export usr_local_site=/mnt/condor/site
-export PYTHONPATH=$HOME/lib/python2.5/site-packages:$invsrc/dev
 export ERLANG_HOME=/usr/lib/erlang
 export mystuff=$HOME/src/mystuff
 
@@ -21,6 +20,8 @@ export devsrc=$invsrc/dev
 export libsrc=$devsrc/invitemedia/library
 export proxysrc=$devsrc/invitemedia/proxy
 export playground=$invsrc/playground
+
+export PYTHONPATH=$HOME/lib/python2.5/site-packages:$invsrc/dev:$HOME/lib/python
 
 # ---------------------------------------------------------------------------
 
@@ -40,6 +41,7 @@ fi
 export ANT_HOME=$JAVA_ROOT/ant
 
 PATH=\
+$HOME/python/bin:\
 $PATH:\
 $ANT_HOME/bin
 
