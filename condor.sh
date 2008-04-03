@@ -10,8 +10,10 @@ export CVSROOT=/usr/local/src/my-stuff/CVS-tree
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/site/lib
 export CATALINA_HOME=/usr/local/jakarta-tomcat5.0
 export mystuff=$HOME/src/mystuff
+export PYTHONPATH=$HOME/python/lib/python2.5/site-packages
 
 export PATH=\
+$HOME/python/bin:\
 $PATH:\
 /usr/local/site/sbin:\
 /usr/local/sbin:\
