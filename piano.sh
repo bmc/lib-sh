@@ -21,7 +21,7 @@ export libsrc=$devsrc/invitemedia/library
 export proxysrc=$devsrc/invitemedia/proxy
 export playground=$invsrc/playground
 
-export PYTHONPATH=$HOME/lib/python2.5/site-packages:$invsrc/dev:$HOME/lib/python
+export PYTHONPATH=$invsrc/dev:$HOME/lib/python
 
 # ---------------------------------------------------------------------------
 
