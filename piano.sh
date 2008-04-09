@@ -88,6 +88,7 @@ alias mllog="sudo tail -f /var/log/maillog"
 alias mslog="sudo tail -f /var/log/messages"
 alias nslookup="$(type -P nslookup) -silent"
 alias mystuff="varcd mystuff"
+alias top=htop
 
 # ---------------------------------------------------------------------------
 # Local stuff
