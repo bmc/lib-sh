@@ -2,7 +2,7 @@
 
 if [ -z $JAVA_ROOT ]
 then
-    export JAVA_ROOT=/usr/local/java
+    export JAVA_ROOT=$HOME/java
 fi
 
 export JAVAC="$JAVA_HOME/bin/javac"
@@ -17,6 +17,7 @@ if [ -z $ANT_HOME ]
 then
     ANT_HOME=$JAVA_ROOT/ant
 fi
+
 export ANT_HOME
 export ANT_ARGS="-logger org.apache.tools.ant.NoBannerLogger -emacs"
 
@@ -62,8 +63,8 @@ $JAVA_HOME/bin:\
 $PATH:
 
 # IntelliJ Idea
-export IDEA_JDK=/usr/local/java/jdk1.5.0
-export PATH=$PATH:$HOME/Idea/idea/bin
+#export IDEA_JDK=/usr/local/java/jdk1.5.0
+#export PATH=$PATH:$HOME/Idea/idea/bin
 
 case "$JAVAC" in
     jikes*)

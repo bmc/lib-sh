@@ -4,6 +4,8 @@
 # $Id: sunball.sh 6675 2007-04-17 01:19:20Z bmc $
 # ---------------------------------------------------------------------------
 
+load_file ~/bash/ubuntu.sh
+
 # ---------------------------------------------------------------------------
 # Misc. environment variables
 
@@ -26,19 +28,6 @@ export PYTHONPATH=$invsrc/dev:$HOME/lib/python
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
-# Java-related environment variables
-
-export JAVA_ROOT=$HOME/java
-export ANT_HOME=$JAVA_ROOT/ant
-
-if [ -n "$JAVA_HOME" ]
-then
-    rmpath PATH "$JAVA_ROOT/jdk*/bin"
-else
-    export JAVA_HOME=$JAVA_ROOT/jdk
-fi
-
-export ANT_HOME=$JAVA_ROOT/ant
 
 PATH=\
 $HOME/python/bin:\
@@ -75,10 +64,7 @@ $ANT_HOME/bin
 # ---------------------------------------------------------------------------
 # Aliases and functions
 
-alias dfspace="dfspace -t ext3 -t ext2"
 alias ftp=ncftp
-alias gv="kghostview"
-alias ghostview="kghostview"
 alias invsrc='varcd invsrc'
 alias devsrc='varcd devsrc'
 alias libsrc='varcd libsrc'
