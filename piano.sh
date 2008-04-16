@@ -25,6 +25,8 @@ export playground=$invsrc/playground
 
 export PYTHONPATH=$invsrc/dev:$HOME/lib/python
 
+export FORTUNE_FILE=$HOME/lib/games/fortunes
+
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
