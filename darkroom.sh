@@ -18,6 +18,7 @@ export PERL5LIB=$HOME/lib/perl
 export NETHACKOPTIONS='pickup_types=$!?=/,gender=male,fruit=kiwi'
 export www=$HOME/Sites
 export invsrc=$HOME/src/invitemedia
+export FORTUNE_FILE=$HOME/lib/games/fortunes
 
 # ---------------------------------------------------------------------------
 # Java-related environment variables
@@ -94,6 +95,7 @@ alias set-jdk=switch-jdk
 # PATH
 
 export PATH=\
+$HOME/python/bin:\
 $JAVA_HOME/bin:\
 $HOME/bin:\
 /usr/X11R6/bin:\
@@ -140,7 +142,8 @@ $PATH:\
 $ANT_HOME/bin:\
 $MAVEN_HOME/bin:\
 $GROOVY_HOME/bin:\
-$HOME/Eclipse/eclipse
+$HOME/Eclipse/eclipse:\
+$HOME/python/bin
 
 load_file ~/bash/java.sh
 load_file ~/bash/fulltilt.sh
