@@ -11,6 +11,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/site/lib
 export CATALINA_HOME=/usr/local/jakarta-tomcat5.0
 export mystuff=$HOME/src/mystuff
 export PYTHONPATH=$HOME/python/lib/python2.5/site-packages
+export FORTUNE_FILE=$HOME/lib/games/fortunes
 
 export PATH=\
 $HOME/python/bin:\
