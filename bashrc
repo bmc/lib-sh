@@ -53,7 +53,6 @@ export EDITOR=emacs
 export VISUAL=$EDITOR
 export CVSEDITOR=vi
 export SVN_EDITOR=vi
-export ELM_EDITOR="$EDITOR"
 export GZIP="-9"
 
 export HOST=`hostname`

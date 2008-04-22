@@ -82,10 +82,6 @@ export XTERM=~/bin/myxterm
 
 export LESSCHARSET=latin1
 
-# Use smaller version of emacs for elm editor.
-
-export ELM_EDITOR=emacs-no-X
-
 # /etc/man.conf takes care of MANPATH
 unset MANPATH
 
