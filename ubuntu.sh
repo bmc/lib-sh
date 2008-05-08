@@ -5,6 +5,7 @@
 
 alias dfspace="dfspace -t ext3 -t ext2"
 alias pki='dpkg -l'
+alias play=aplay
 
 # ---------------------------------------------------------------------------
 # Environment variables
