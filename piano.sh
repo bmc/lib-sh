@@ -4,8 +4,6 @@
 # $Id: sunball.sh 6675 2007-04-17 01:19:20Z bmc $
 # ---------------------------------------------------------------------------
 
-load_file ~/bash/ubuntu.sh
-
 # ---------------------------------------------------------------------------
 # Misc. environment variables
 
@@ -72,7 +70,7 @@ alias devsrc='varcd devsrc'
 alias libsrc='varcd libsrc'
 alias proxysrc='varcd proxysrc'
 alias playground='varcd playground'
-alias mllog="sudo tail -f /var/log/maillog"
+alias mllog="sudo tail -f /var/log/mail.log"
 alias mslog="sudo tail -f /var/log/messages"
 alias nslookup="$(type -P nslookup) -silent"
 alias mystuff="varcd mystuff"
@@ -85,3 +83,6 @@ export wwwtest="${usr_local_site}/www/apache/wwwtest"
 alias wwwtest='varcd wwwtest'
 
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
+
+load_file ~/bash/ubuntu.sh
+
