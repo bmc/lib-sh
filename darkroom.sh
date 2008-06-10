@@ -127,6 +127,9 @@ alias xinit="/usr/bin/xinit -- -bpp 16"
 export mystuff=$HOME/src/mystuff
 alias mystuff="varcd mystuff"
 
+export mypy=$mystuff/python
+alias mypy='varcd mypy'
+
 export jsrc="$mystuff/java"
 alias jsrc='varcd jsrc'
 

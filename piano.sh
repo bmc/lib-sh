@@ -14,6 +14,7 @@ export APACHE_HOME=$www
 export usr_local_site=/mnt/condor/site
 export ERLANG_HOME=/usr/lib/erlang
 export mystuff=$HOME/src/mystuff
+export mypy=$mystuff/python
 
 export invsrc=$HOME/src/invitemedia
 export devsrc=$invsrc/dev
@@ -74,6 +75,7 @@ alias mllog="sudo tail -f /var/log/mail.log"
 alias mslog="sudo tail -f /var/log/messages"
 alias nslookup="$(type -P nslookup) -silent"
 alias mystuff="varcd mystuff"
+alias mypy='varcd mypy'
 alias top=htop
 
 # ---------------------------------------------------------------------------
