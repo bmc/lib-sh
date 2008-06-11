@@ -50,6 +50,13 @@ $rabbitmq_dir/java/build/lib/rabbitmq-client.jar:\
 $rabbitmq_dir/java/build/lib/rabbitmq-client-tests.jar:\
 $CLASSPATH
 
+export _DJANGO_DEBUG=1
+export _DJANGO_DB_USER=dashboard
+export _DJANGO_DB_PASSWORD=dm28
+export _DJANGO_DB_HOST=localhost
+export _DJANGO_DB_NAME=dashboard
+
+
 # ---------------------------------------------------------------------------
 # PATH
 
