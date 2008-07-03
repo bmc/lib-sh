@@ -25,6 +25,9 @@ export playground=$invsrc/playground
 export PYTHONPATH=$invsrc/dev:$HOME/lib/python
 
 export FORTUNE_FILE=$HOME/lib/games/fortunes
+export CREATIVE_WRAPPER_ROOT=$invsrc/creative_wrapper
+
+export EC2_HOME=$HOME/ec2
 
 # ---------------------------------------------------------------------------
 
@@ -33,7 +36,8 @@ export FORTUNE_FILE=$HOME/lib/games/fortunes
 PATH=\
 $HOME/python/bin:\
 $PATH:\
-$ANT_HOME/bin
+$ANT_HOME/bin:\
+$EC2_HOME/bin
 
 load_file ~/bash/java.sh
 
