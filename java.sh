@@ -1,5 +1,21 @@
 # $Id$
 
+add_dir_contents_to_classpath()
+{
+    p=$1
+    for i in $1/*
+    do
+        if [ -L $i ]
+        then
+            p=$p:$(readlink -f $i)
+        else
+            p=$p:$i
+        fi
+    done
+
+    CLASSPATH=$CLASSPATH:$p
+}
+
 if [ -z $JAVA_ROOT ]
 then
     export JAVA_ROOT=$HOME/java
@@ -46,9 +62,7 @@ JAR=$JAVA_HOME/bin/jar
 alias javac="$JAVAC"
 alias jar="$JAR"
 
-# Note: Some FreeBSD packages also load a "classpath" executable in
-# /usr/local/bin.
-eval `classpath -k -J`
+add_dir_contents_to_classpath $HOME/java/classes
 
 case "$PLATFORM" in
     freebsd)
