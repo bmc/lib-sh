@@ -22,12 +22,14 @@ export libsrc=$devsrc/invitemedia/library
 export proxysrc=$devsrc/invitemedia/proxy
 export playground=$invsrc/playground
 
-export PYTHONPATH=$invsrc/dev:$HOME/lib/python
+export PYTHONPATH=$invsrc/dev:$HOME/lib/python:$HOME/google_appengine
 
 export FORTUNE_FILE=$HOME/lib/games/fortunes
 export CREATIVE_WRAPPER_ROOT=$invsrc/creative_wrapper
 
 export EC2_HOME=$HOME/ec2
+
+export JYTHON_HOME=/home/bmc/jython/dist
 
 # ---------------------------------------------------------------------------
 
@@ -37,7 +39,9 @@ PATH=\
 $HOME/python/bin:\
 $PATH:\
 $ANT_HOME/bin:\
-$EC2_HOME/bin
+$EC2_HOME/bin:\
+$HOME/google_appengine:\
+$JYTHON_HOME/bin
 
 load_file ~/bash/java.sh
 
@@ -52,6 +56,7 @@ export _DJANGO_DB_USER=dashboard
 export _DJANGO_DB_PASSWORD=dm28
 export _DJANGO_DB_HOST=localhost
 export _DJANGO_DB_NAME=dashboard
+export _DJANGO_DB_ENGINE=postgresql_psycopg2
 
 
 # ---------------------------------------------------------------------------
