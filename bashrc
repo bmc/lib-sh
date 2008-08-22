@@ -45,7 +45,7 @@ export PAGER="$pager -s"
 #export LESS='-aEfwiP?f%f:-- More --. ?pB(%pB\%). '
 
 # Newer versions of less
-export LESS='-ME -PM -- More ?PB(%PB\%) :--'
+export LESS='-rME -PM -- More ?PB(%PB\%) :--'
 
 export LESSCHARSET="latin1"
 export editor="ew"
