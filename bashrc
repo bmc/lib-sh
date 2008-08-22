@@ -52,6 +52,7 @@ export editor="ew"
 export EDITOR=emacs
 export VISUAL=$EDITOR
 export CVSEDITOR=vi
+export GIT_EDITOR=vi
 export SVN_EDITOR=vi
 export GZIP="-9"
 
