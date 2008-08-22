@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------------
 # Settings and overrides specific to host "darkroom"
 #
-# $Id: darkroom.sh 7710 2008-06-10 23:05:53Z bmc $
+# $Id$
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -19,7 +19,6 @@ export NETHACKOPTIONS='pickup_types=$!?=/,gender=male,fruit=kiwi'
 export www=$HOME/Sites
 export invsrc=$HOME/src/invitemedia
 export FORTUNE_FILE=$HOME/lib/games/fortunes
-export JYTHON_HOME=/home/bmc/java/jython/jython/dist
 
 # ---------------------------------------------------------------------------
 # Java-related environment variables
@@ -103,7 +102,9 @@ $HOME/bin:\
 /usr/local/mysql/bin:\
 $PATH:\
 $photos:\
-$JYTHON_HOME/bin
+$JAVA_ROOT/jython:\
+$JAVA_ROOT/scala/bin:\
+/opt/local/Library/Frameworks/Python.framework/Versions/2.4/bin
 
 # ---------------------------------------------------------------------------
 # Aliases and functions

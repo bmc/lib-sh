@@ -1,4 +1,4 @@
-# $Id: java.sh 7778 2008-07-10 13:33:12Z bmc $
+# $Id$
 
 add_dir_contents_to_classpath()
 {
@@ -7,7 +7,7 @@ add_dir_contents_to_classpath()
     do
         if [ -L $i ]
         then
-            p=$p:$(readlink -n $i)
+            p=$p:$(readlink -f $i)
         else
             p=$p:$i
         fi
