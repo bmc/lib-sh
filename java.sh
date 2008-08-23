@@ -7,7 +7,7 @@ add_dir_contents_to_classpath()
     do
         if [ -L $i ]
         then
-            p=$p:$(readlink -f $i)
+            p=$p:$(readlink -n $i)
         else
             p=$p:$i
         fi
