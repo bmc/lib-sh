@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------------
 # Settings and overrides specific to host "raft"
 #
-# $Id: sunball.sh 6675 2007-04-17 01:19:20Z bmc $
+# $Id$
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -97,3 +97,7 @@ export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 
 load_file ~/bash/ubuntu.sh
 
+# ---------------------------------------------------------------------------
+# InviteMedia-specific Java stuff
+
+export CLASSPATH=$devsrc/java/InviteJava-dist.jar:$CLASSPATH

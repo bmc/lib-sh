@@ -1,4 +1,4 @@
-# $Id: linux.sh 1710 2005-02-08 14:17:22Z bmc $
+# $Id$
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
