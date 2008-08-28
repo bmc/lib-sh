@@ -98,6 +98,7 @@ export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 load_file ~/bash/ubuntu.sh
 
 # ---------------------------------------------------------------------------
-# InviteMedia-specific Java stuff
+# InviteMedia-specific stuff
 
 export CLASSPATH=$devsrc/java/InviteJava-dist.jar:$CLASSPATH
+export MAXMIND_HOME=/home/bmc/src/invitemedia/MaxMind
