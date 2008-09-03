@@ -26,7 +26,6 @@ export playground=$invsrc/playground
 
 export DJANGO_CONFIG_FILE=/usr/local/invitemedia/configServer/config/run_time_local.cfg
 export JAVA_HOME=/usr/lib/jvm/java-6-sun
-export CLASSPATH=/usr/local/invitemedia/java/lib/InviteJava-dist.jar
 
 
 # ---------------------------------------------------------------------------
@@ -38,8 +37,7 @@ $PATH:\
 $ANT_HOME/bin
 
 load_file ~/bash/java.sh
-
-eval `classpath -k -J`
+export CLASSPATH=/usr/local/invitemedia/java/lib/InviteJava-dist.jar
 
 rabbitmq_dir=$HOME/src/open-source/rabbitmq-1.2.0
 
