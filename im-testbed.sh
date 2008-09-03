@@ -42,15 +42,6 @@ load_file ~/bash/java.sh
 eval `classpath -k -J`
 
 rabbitmq_dir=$HOME/src/open-source/rabbitmq-1.2.0
-export CLASSPATH=$invsrc/playground/rabbit/java:\
-/usr/share/java/junit.jar:\
-/usr/share/java/junit-3.8.2.jar:\
-$rabbitmq_dir/java/test/src:\
-/usr/share/java/commons-io.jar:\
-$rabbitmq_dir/java/lib/junit.jar:\
-$rabbitmq_dir/java/build/lib/rabbitmq-client.jar:\
-$rabbitmq_dir/java/build/lib/rabbitmq-client-tests.jar:\
-$CLASSPATH
 
 # ---------------------------------------------------------------------------
 # PATH
