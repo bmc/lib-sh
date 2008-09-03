@@ -23,11 +23,16 @@ export libsrc=$devsrc/invitemedia/library
 export proxysrc=$devsrc/invitemedia/proxy
 export playground=$invsrc/playground
 
-export PYTHONPATH=$invsrc/dev:$HOME/lib/python
+
+export DJANGO_CONFIG_FILE=/usr/local/invitemedia/configServer/config/run_time_local.cfg
+export JAVA_HOME=/usr/lib/jvm/java-6-sun
+export CLASSPATH=/usr/local/invitemedia/java/lib/InviteJava-dist.jar
+
 
 # ---------------------------------------------------------------------------
 
 PATH=\
+/usr/local/invitemedia/bin:\
 $HOME/python/bin:\
 $PATH:\
 $ANT_HOME/bin
