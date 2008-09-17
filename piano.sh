@@ -29,7 +29,8 @@ export CREATIVE_WRAPPER_ROOT=$invsrc/creative_wrapper
 
 export EC2_HOME=$HOME/ec2
 
-export JYTHON_HOME=/home/bmc/jython/dist
+export JYTHON_HOME=/home/bmc/java/jython/dist
+export JRUBY_HOME=/home/bmc/java/jruby
 
 # ---------------------------------------------------------------------------
 
@@ -41,7 +42,8 @@ $PATH:\
 $ANT_HOME/bin:\
 $EC2_HOME/bin:\
 $HOME/google_appengine:\
-$JYTHON_HOME/bin
+$JYTHON_HOME/bin:\
+$JRUBY_HOME/bin
 
 load_file ~/bash/java.sh
 
