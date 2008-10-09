@@ -38,6 +38,7 @@ alias time='/usr/bin/time --portability'
 
 _vipw=`type -P vipw`
 alias vipw='EDITOR=vi VISUAL=vi sudo $_vipw'
+alias vi='env DISPLAY= vim'
 
 function psf
 {
