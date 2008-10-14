@@ -34,6 +34,11 @@ alias psme="ps -ef|grep $USER"
 alias md5=md5sum
 alias mllog="sudo tail -f /var/log/maillog"
 alias mslog="sudo tail -f /var/log/messages"
+alias sha1='digest sha1'
+alias sha224='digest sha224'
+alias sha256='digest sha256'
+alias sha384='digest sha384'
+alias sha512='digest sha512'
 alias time='/usr/bin/time --portability'
 
 _vipw=`type -P vipw`
