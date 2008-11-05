@@ -7,10 +7,10 @@ add_dir_contents_to_classpath()
     do
         if [ -L $i ]
         then
-            p=$p:$(readlink -n $i)
-        else
-            p=$p:$i
+            i=$(readlink -n -e $i)
         fi
+
+        p=$p:$path
     done
 
     CLASSPATH=$CLASSPATH:$p

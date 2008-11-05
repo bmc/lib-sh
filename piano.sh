@@ -100,6 +100,12 @@ export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 load_file ~/bash/ubuntu.sh
 
 # ---------------------------------------------------------------------------
+# Oracle
+
+export ORACLE_HOME=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME/lib
+export PATH=$PATH:$ORACLE_HOME/bin
+# ---------------------------------------------------------------------------
 # InviteMedia-specific stuff
 
 export CLASSPATH=$devsrc/java/InviteJava-dist.jar:$CLASSPATH
