@@ -20,6 +20,7 @@ export invsrc=$HOME/src/invitemedia
 export devsrc=$invsrc/dev
 export libsrc=$devsrc/invitemedia/library
 export proxysrc=$devsrc/invitemedia/proxy
+export dashsrc=$devsrc/invitemedia/dashboard
 export playground=$invsrc/playground
 
 export PYTHONPATH=$invsrc/dev:$HOME/lib/python:$HOME/google_appengine
@@ -78,6 +79,7 @@ $ANT_HOME/bin
 
 alias ftp=ncftp
 alias invsrc='varcd invsrc'
+alias dashsrc='varcd dashsrc'
 alias devsrc='varcd devsrc'
 alias libsrc='varcd libsrc'
 alias proxysrc='varcd proxysrc'
