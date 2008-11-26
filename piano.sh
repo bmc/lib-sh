@@ -32,6 +32,7 @@ export EC2_HOME=$HOME/ec2
 
 export JYTHON_HOME=/home/bmc/java/jython/dist
 export JRUBY_HOME=/home/bmc/java/jruby
+export SCALA_HOME=/usr/local/scala/scala-2.7.2.final
 
 # ---------------------------------------------------------------------------
 
@@ -44,7 +45,8 @@ $ANT_HOME/bin:\
 $EC2_HOME/bin:\
 $HOME/google_appengine:\
 $JYTHON_HOME/bin:\
-$JRUBY_HOME/bin
+$JRUBY_HOME/bin:\
+$SCALA_HOME/bin
 
 load_file ~/bash/java.sh
 

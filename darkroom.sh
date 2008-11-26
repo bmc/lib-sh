@@ -18,8 +18,11 @@ export PERL5LIB=$HOME/lib/perl
 export NETHACKOPTIONS='pickup_types=$!?=/,gender=male,fruit=kiwi'
 export www=$HOME/Sites
 export invsrc=$HOME/src/invitemedia
+export devsrc=$invsrc/dev
+export libsrc=$invsrc/library
 export FORTUNE_FILE=$HOME/lib/games/fortunes
 export JYTHON_HOME=/home/bmc/java/jython/jython/dist
+export SCALA_HOME=/usr/local/scala/scala-2.7.2.final
 
 # ---------------------------------------------------------------------------
 # Java-related environment variables
@@ -41,7 +44,8 @@ export ANT_HOME=$JAVA_ROOT/ant
 
 export JDK_ROOT=/System/Library/Frameworks/JavaVM.framework/Versions
 #export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.5/Home
+#export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.5/Home
+export JAVA_HOME=/usr/local/soylatte16
 
 eval `classpath -k -J`
 function switch-jdk
@@ -60,7 +64,7 @@ function switch-jdk
 
     case "$1" in
         6|1.6|jdk6|jdk1.6*)
-           _n=$JDK_ROOT/1.6.0/Home
+           _n=/usr/local/soylatte16
            ;;
         5|1.5|jdk5|jdk1.5*)
            _n=$JDK_ROOT/1.5.0/Home
@@ -101,9 +105,11 @@ $JAVA_HOME/bin:\
 $HOME/bin:\
 /usr/X11R6/bin:\
 /usr/local/mysql/bin:\
+/opt/local/lib/postgresql83/bin:\
 $PATH:\
 $photos:\
-$JYTHON_HOME/bin
+$JYTHON_HOME/bin:\
+$SCALA_HOME/bin
 
 # ---------------------------------------------------------------------------
 # Aliases and functions
@@ -115,6 +121,8 @@ alias condor_home='varcd condor_home'
 #alias dfspace="dfspace -t ext3 -t ext2"
 alias ftp=ncftp
 alias invsrc='varcd invsrc'
+alias devsrc='varcd devsrc'
+alias libsrc='varcd libsrc'
 alias nslookup="$(type -P nslookup) -silent"
 alias www='varcd www'
 alias xine="/Applications/XinePlayer.app/Contents/MacOS/XinePlayer"

@@ -4,6 +4,24 @@
 # ===========================================================================
 
 # ---------------------------------------------------------------------------
+# Portable readlink
+
+xreadlink()
+{
+    case "$PLATFORM" in
+        darwin|freebsd)
+            readlink -n $1
+            ;;
+        linux)
+            readlink -n -e $1
+            ;;
+        *)
+            echo "xreadlink: Unknown platform: $PLATFORM" >&2
+            return 1
+    esac
+}
+
+# ---------------------------------------------------------------------------
 # Set X Windows display
 
 xdisplay()
