@@ -18,6 +18,7 @@ export mypy=$mystuff/python
 
 export invsrc=$HOME/src/invitemedia
 export devsrc=$invsrc/dev
+export invpy=$devsrc/invitemedia
 export libsrc=$devsrc/invitemedia/library
 export proxysrc=$devsrc/invitemedia/proxy
 export dashsrc=$devsrc/invitemedia/dashboard
@@ -62,7 +63,8 @@ export _DJANGO_DB_PASSWORD=dm28
 export _DJANGO_DB_HOST=localhost
 export _DJANGO_DB_NAME=dashboard
 export _DJANGO_DB_ENGINE=postgresql_psycopg2
-
+export DJANGO_SETTINGS_MODULE=invitemedia.dashboard.settings
+export DJANGO_SESSION_COOKIE_AGE=86400
 
 # ---------------------------------------------------------------------------
 # PATH
@@ -81,6 +83,7 @@ $ANT_HOME/bin
 
 alias ftp=ncftp
 alias invsrc='varcd invsrc'
+alias invpy='varcd invpy'
 alias dashsrc='varcd dashsrc'
 alias devsrc='varcd devsrc'
 alias libsrc='varcd libsrc'
