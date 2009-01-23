@@ -41,6 +41,7 @@ export SCALA_HOME=/usr/local/scala/scala-2.7.2.final
 
 PATH=\
 $HOME/python/bin:\
+$HOME/src/open-source/java/jython/jython/dist/bin:\
 $PATH:\
 $ANT_HOME/bin:\
 $EC2_HOME/bin:\

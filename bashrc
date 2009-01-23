@@ -19,9 +19,7 @@ export PATH
 PATH=$HOME/bin:$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin
 
 # ---------------------------------------------------------------------------
-# Environment settings.  Done here instead of .login because they're needed
-# before .login is read (and .tcshrc is read before .login).  The .login
-# file is also not read by remotely executed (rsh) commands.
+# Environment settings.
 
 if [ -z $LD_LIBRARY_PATH ]
 then
