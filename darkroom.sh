@@ -22,7 +22,7 @@ export devsrc=$invsrc/dev
 export libsrc=$invsrc/library
 export FORTUNE_FILE=$HOME/lib/games/fortunes
 export JYTHON_HOME=/home/bmc/java/jython/jython/dist
-export SCALA_HOME=/usr/local/scala/scala-2.7.2.final
+export SCALA_HOME=/usr/local/scala/scala
 
 # ---------------------------------------------------------------------------
 # Java-related environment variables
