@@ -81,7 +81,6 @@ alias sha512='digest sha512'
 alias time='/usr/bin/time --portability'
 alias unshar=gunshar
 alias xs='eval `resize -u`'
-alias whois=jwhois
 
 _vipw=`type -P vipw`
 alias vipw='EDITOR=vi VISUAL=vi sudo $_vipw'
