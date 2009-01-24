@@ -33,7 +33,7 @@ export EC2_HOME=$HOME/ec2
 
 export JYTHON_HOME=/home/bmc/java/jython/dist
 export JRUBY_HOME=/home/bmc/java/jruby
-export SCALA_HOME=/usr/local/scala/scala-2.7.2.final
+export SCALA_HOME=/usr/local/scala/scala
 
 # ---------------------------------------------------------------------------
 
