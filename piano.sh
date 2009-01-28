@@ -16,18 +16,18 @@ export ERLANG_HOME=/usr/lib/erlang
 export mystuff=$HOME/src/mystuff
 export mypy=$mystuff/python
 
-export invsrc=$HOME/src/invitemedia
-export devsrc=$invsrc/dev
-export invpy=$devsrc/invitemedia
+export invpy=$HOME/src/invitemedia
+export devsrc=$invpy/dev
+export invsrc=$devsrc/invitemedia
 export libsrc=$devsrc/invitemedia/library
 export proxysrc=$devsrc/invitemedia/proxy
 export dashsrc=$devsrc/invitemedia/dashboard
-export playground=$invsrc/playground
+export playground=$invpy/playground
 
-export PYTHONPATH=$invsrc/dev:$HOME/lib/python:$HOME/google_appengine
+export PYTHONPATH=$invpy/dev:$HOME/lib/python:$HOME/google_appengine
 
 export FORTUNE_FILE=$HOME/lib/games/fortunes
-export CREATIVE_WRAPPER_ROOT=$invsrc/creative_wrapper
+export CREATIVE_WRAPPER_ROOT=$invpy/creative_wrapper
 
 export EC2_HOME=$HOME/ec2
 
