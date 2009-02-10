@@ -101,6 +101,7 @@ stty_erase="^h"
 alias a=alias
 alias back='chdir $OLDPWD'
 alias bytecomp="emacs -batch -f batch-byte-compile"
+alias cd..='cd ..'
 alias cls=clear
 alias d="ls -CF"
 alias e=$editor
