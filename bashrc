@@ -53,7 +53,7 @@ export CVSEDITOR=vi
 export GIT_EDITOR=vi
 export SVN_EDITOR=vi
 export GZIP="-9"
-export NETHACKOPTIONS='pickup_types=$,gender=male,fruit=kiwi'
+export NETHACKOPTIONS='pickup_types=$,gender=male,fruit=kiwi,color'
 
 export HOST=`hostname`
 HOST=${HOST%%.*}
