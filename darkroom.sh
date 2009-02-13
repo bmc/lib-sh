@@ -15,7 +15,6 @@ mnt=$HOME/mnt
 usr_local_site="$mnt/condor-site"
 export condor_home=$mnt/condor-home
 export PERL5LIB=$HOME/lib/perl
-export NETHACKOPTIONS='pickup_types=$,gender=male,fruit=kiwi'
 export www=$HOME/Sites
 export invpy=$HOME/src/invitemedia
 export devsrc=$invpy/dev
