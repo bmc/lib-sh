@@ -17,13 +17,7 @@ export usr_local_site=/mnt/condor/site
 export ERLANG_HOME=/usr/lib/erlang
 export mystuff=$HOME/src/mystuff
 
-export invsrc=$HOME/src/invitemedia
-export devsrc=$invsrc/dev
-export libsrc=$devsrc/invitemedia/library
-export proxysrc=$devsrc/invitemedia/proxy
-export playground=$invsrc/playground
-
-export PYTHONPATH=$invsrc/dev:$HOME/lib/python
+export PYTHONPATH=$HOME/lib/python
 
 # ---------------------------------------------------------------------------
 
@@ -37,7 +31,6 @@ load_file ~/bash/java.sh
 eval `classpath -k -J`
 
 rabbitmq_dir=$HOME/src/open-source/rabbitmq-1.2.0
-export CLASSPATH=$invsrc/playground/rabbit/java:\
 /usr/share/java/junit.jar:\
 /usr/share/java/junit-3.8.2.jar:\
 $rabbitmq_dir/java/test/src:\
@@ -63,11 +56,6 @@ $ANT_HOME/bin
 # Aliases and functions
 
 alias ftp=ncftp
-alias invsrc='varcd invsrc'
-alias devsrc='varcd devsrc'
-alias libsrc='varcd libsrc'
-alias proxysrc='varcd proxysrc'
-alias playground='varcd playground'
 alias mllog="sudo tail -f /var/log/maillog"
 alias mslog="sudo tail -f /var/log/messages"
 alias nslookup="$(type -P nslookup) -silent"
