@@ -1,4 +1,5 @@
 # $Id$
+# OpenSolaris machine
 
 # Path setting
 export PATH=\
