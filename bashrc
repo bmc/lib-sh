@@ -108,6 +108,7 @@ alias e=$editor
 alias enw='emacs -nw'
 alias f=finger
 alias fiel=file
+alias giturl="git config --get remote.origin.url"
 alias h="history"
 alias l=d
 alias lj="fg %-"
