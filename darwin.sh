@@ -73,6 +73,7 @@ alias mslog="sudo tail -f /var/log/system.log"
 alias nsr='netstat -rn -f inet'
 alias routes=nsr
 alias psme='ps -U bmc -ww -ouser,pid,ppid,tty,command'
+alias sgrep=sgrep2
 alias sha1='digest sha1'
 alias sha224='digest sha224'
 alias sha256='digest sha256'
