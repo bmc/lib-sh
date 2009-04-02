@@ -55,9 +55,9 @@ interactive()
 
 load_file()
 {
-    if [ -r $1 ]
+    if [ -r "$1" ]
     then
-        . $1
+        . "$1"
     fi
 }
 
@@ -104,9 +104,12 @@ term()
 
 getHome()
 {
-    builtin cd -P ~
-    eval $1=$PWD
-    cd $OLDPWD
+    # windows-specific
+    eval $1="'$HOME'"
+
+    #builtin cd -P "$HOME"
+    #eval $1="'$PWD'"
+    #cd "$OLDPWD"
 }
 
 # ---------------------------------------------------------------------------

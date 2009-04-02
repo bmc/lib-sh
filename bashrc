@@ -16,12 +16,12 @@ load_file ~/bash/dir-functions.sh
 # Path setting
 
 export PATH
-PATH=$HOME/bin:$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin
+PATH="$HOME/bin:$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin"
 
 # ---------------------------------------------------------------------------
 # Environment settings.
 
-if [ -z $LD_LIBRARY_PATH ]
+if [ -z "$LD_LIBRARY_PATH" ]
 then
     export LD_LIBRARY_PATH="/usr/X11R6/lib"
 fi
@@ -68,7 +68,7 @@ export DOMAIN=`domain`
 
 unset LESSOPEN
 
-if [ -z $MANPATH ]
+if [ -z "$MANPATH" ]
 then
     export MANPATH="/usr/man"
 fi
@@ -129,7 +129,7 @@ alias svnurl="svn info|awk '/^URL:/ {print \$2}'"
 alias which=type
 alias xrdb="xrdb -DHOME='$HOME'"
 alias xs='eval `resize -u`'
-alias z="echo Rereading $HOME/bash/bashrc ... ; source $HOME/bash/bashrc"
+alias z="echo Rereading $HOME/bash/bashrc ... ; source "'"$HOME"'"/bash/bashrc"
 
 # ---------------------------------------------------------------------------
 # X stuff
