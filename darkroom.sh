@@ -41,7 +41,8 @@ export ANT_HOME=$JAVA_ROOT/ant
 export JDK_ROOT=/System/Library/Frameworks/JavaVM.framework/Versions
 #export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
 #export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.5/Home
-export JAVA_HOME=/usr/local/soylatte16
+#export JAVA_HOME=/usr/local/soylatte16
+export JAVA_HOME=/usr/local/openjdk6
 
 eval `classpath -k -J`
 function switch-jdk
@@ -149,7 +150,6 @@ $HOME/Eclipse/eclipse:\
 $HOME/python/bin
 
 load_file ~/bash/java.sh
-load_file ~/bash/fulltilt.sh
 
 # ---------------------------------------------------------------------------
 # Local stuff
