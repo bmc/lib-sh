@@ -143,13 +143,11 @@ export GROOVY_HOME=$JAVA_ROOT/groovy
 
 PATH=\
 $PATH:\
-$ANT_HOME/bin:\
 $MAVEN_HOME/bin:\
-$GROOVY_HOME/bin:\
-$HOME/Eclipse/eclipse:\
-$HOME/python/bin
+$HOME/python/bin:\
+$ANT_HOME/bin
 
-load_file ~/bash/java.sh
+$load_file ~/bash/java.sh
 
 # ---------------------------------------------------------------------------
 # Local stuff
