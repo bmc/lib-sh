@@ -17,7 +17,7 @@ export condor_home=$mnt/condor-home
 export PERL5LIB=$HOME/lib/perl
 export www=$HOME/Sites
 export FORTUNE_FILE=$HOME/lib/games/fortunes
-export JYTHON_HOME=/home/bmc/java/jython/jython/dist
+export JYTHON_HOME=/home/bmc/java/jython
 export SCALA_HOME=/usr/local/scala/scala
 
 # ---------------------------------------------------------------------------
@@ -40,9 +40,9 @@ export ANT_HOME=$JAVA_ROOT/ant
 
 export JDK_ROOT=/System/Library/Frameworks/JavaVM.framework/Versions
 #export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
-#export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.5/Home
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.5/Home
 #export JAVA_HOME=/usr/local/soylatte16
-export JAVA_HOME=/usr/local/openjdk6
+#export JAVA_HOME=/usr/local/openjdk6
 
 eval `classpath -k -J`
 function switch-jdk
@@ -157,4 +157,5 @@ $load_file ~/bash/java.sh
 export wwwtest="${usr_local_site}/www/apache/wwwtest"
 alias wwwtest='varcd wwwtest'
 
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib:/opt/local/lib
+export LD_LIBRARY_PATH=/usr/local/lib:/opt/local/lib:${LD_LIBRARY_PATH}
+export DYLD_LIBRARY_PATH=$LD_LIBRARY_PATH
