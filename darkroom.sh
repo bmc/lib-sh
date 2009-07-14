@@ -147,7 +147,7 @@ $MAVEN_HOME/bin:\
 $HOME/python/bin:\
 $ANT_HOME/bin
 
-$load_file ~/bash/java.sh
+load_file ~/bash/java.sh
 
 # ---------------------------------------------------------------------------
 # Local stuff
