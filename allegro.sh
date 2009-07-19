@@ -3,15 +3,12 @@
 # $Id$
 # ---------------------------------------------------------------------------
 
+load_file ~/bash/java.sh
+
 # ---------------------------------------------------------------------------
 # Misc. environment variables
 
 export PERL5LIB=$HOME/lib/perl
-export www=/usr/local/www
-export blog="/mnt/condor/site/chroot/apache/usr/local/apache2/htdocs/bmc/blog"
-export APACHE_HOME=$www
-export usr_local_site=/mnt/condor/site
-export ERLANG_HOME=/usr/lib/erlang
 export mystuff=$HOME/src/mystuff
 export mypy=$mystuff/python
 
@@ -19,32 +16,28 @@ export PYTHONPATH="$PYTHONPATH:/var/lib/python-support/python2.6:$HOME/lib/pytho
 
 export FORTUNE_FILE=$HOME/lib/games/fortunes
 
-export EC2_HOME=$HOME/ec2
-
-export JYTHON_HOME=/home/bmc/java/jython/dist
-export JRUBY_HOME=/home/bmc/java/jruby
+export JYTHON_HOME=$JAVA_ROOT/jython
+export JRUBY_HOME=$JAVA_ROOT/jruby
 export SCALA_HOME=$HOME/scala/scala
+export SCALA_HOME=$HOME/scala/scala
+export GRADLE_HOME=$JAVA_ROOT/gradle
 
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
 
 PATH=\
-$HOME/python/bin:\
-$HOME/src/open-source/java/jython/jython/dist/bin:\
 $PATH:\
+$HOME/python/bin:\
+$JYTHON_HOME/bin:\
 $ANT_HOME/bin:\
 $EC2_HOME/bin:\
 $HOME/google_appengine:\
-$JYTHON_HOME/bin:\
 $JRUBY_HOME/bin:\
-$SCALA_HOME/bin
-
-load_file ~/bash/java.sh
+$SCALA_HOME/bin:\
+$GRADLE_HOME/bin
 
 eval `classpath -k -J`
-
-rabbitmq_dir=$HOME/src/open-source/rabbitmq-1.2.0
 
 add_dir_contents_to_classpath /usr/share/java
 
