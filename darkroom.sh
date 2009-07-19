@@ -19,6 +19,7 @@ export www=$HOME/Sites
 export FORTUNE_FILE=$HOME/lib/games/fortunes
 export JYTHON_HOME=/home/bmc/java/jython
 export SCALA_HOME=/usr/local/scala/scala
+export GRADLE_HOME=/Users/bmc/java/gradle-0.6.1
 
 # ---------------------------------------------------------------------------
 # Java-related environment variables
@@ -106,7 +107,8 @@ $HOME/bin:\
 $PATH:\
 $photos:\
 $JYTHON_HOME/bin:\
-$SCALA_HOME/bin
+$SCALA_HOME/bin:\
+$GRADLE_HOME/bin
 
 # ---------------------------------------------------------------------------
 # Aliases and functions
@@ -158,4 +160,3 @@ export wwwtest="${usr_local_site}/www/apache/wwwtest"
 alias wwwtest='varcd wwwtest'
 
 export LD_LIBRARY_PATH=/usr/local/lib:/opt/local/lib:${LD_LIBRARY_PATH}
-export DYLD_LIBRARY_PATH=$LD_LIBRARY_PATH
