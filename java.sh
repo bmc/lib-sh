@@ -2,18 +2,35 @@
 
 add_dir_contents_to_classpath()
 {
-    p=$1
-    for i in $1/*
+    dir=$1
+    shift
+    p=$dir
+    # Remaining args, if any, are exclusion patterns.
+    for i in $dir/*
     do
         if [ -L $i ]
         then
             i=$(xreadlink $i)
         fi
 
-        p=$p:$path
-    done
+        keep=1
+        for excl_pattern in $*
+        do
+            # [[ with == does a pattern match
+            if [[ $i == $excl_pattern ]]
+            then
+                keep=
+                break
+            fi
+        done
+        if [ -z "$keep" ]
+        then
+            continue
+        fi
 
-    CLASSPATH=$CLASSPATH:$p
+        p=$p:$i
+    done
+    CLASSPATH=$CLASSPATH:$dir:$p
 }
 
 if [ -z $JAVA_ROOT ]
