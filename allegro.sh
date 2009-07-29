@@ -19,8 +19,8 @@ export FORTUNE_FILE=$HOME/lib/games/fortunes
 export JYTHON_HOME=$JAVA_ROOT/jython
 export JRUBY_HOME=$JAVA_ROOT/jruby
 export SCALA_HOME=$HOME/scala/scala
-export SCALA_HOME=$HOME/scala/scala
 export GRADLE_HOME=$JAVA_ROOT/gradle
+export IZPACK_HOME=$JAVA_ROOT/IzPack
 
 # ---------------------------------------------------------------------------
 
