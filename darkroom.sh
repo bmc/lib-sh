@@ -26,6 +26,7 @@ export GRADLE_HOME=/Users/bmc/java/gradle-0.6.1
 
 export JAVA_ROOT=$HOME/java
 export ANT_HOME=$JAVA_ROOT/ant
+export ASM_HOME=$JAVA_ROOT/asm-3.2
 
 # According to
 # http://adcdownload.apple.com/Java/java_se_6.0_release_1_developer_preview_6/javase6r1dp6releasenotes.html#Switchable_Command_Line_Tools

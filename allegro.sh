@@ -21,6 +21,7 @@ export JRUBY_HOME=$JAVA_ROOT/jruby
 export SCALA_HOME=$HOME/scala/scala
 export GRADLE_HOME=$JAVA_ROOT/gradle
 export IZPACK_HOME=$JAVA_ROOT/IzPack
+export ASM_HOME=$JAVA_ROOT/asm-3.2
 
 # ---------------------------------------------------------------------------
 
