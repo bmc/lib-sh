@@ -93,6 +93,12 @@ function switch-jdk
     PATH=$JAVA_HOME/bin:$PATH
 }
 
+growl()
+{
+    echo -e $'\e]9;'${1}'\007'
+    return
+}
+
 alias set-jdk=switch-jdk
 
 # ---------------------------------------------------------------------------
