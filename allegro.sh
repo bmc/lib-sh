@@ -12,7 +12,7 @@ export PERL5LIB=$HOME/lib/perl
 export mystuff=$HOME/src/mystuff
 export mypy=$mystuff/python
 
-export PYTHONPATH="$PYTHONPATH:/var/lib/python-support/python2.6:$HOME/lib/python:$HOME/google_appengine"
+export PYTHONPATH="$PYTHONPATH:/var/lib/python-support/python2.6:$HOME/lib/python:$HOME/google_appengine:/usr/share/pyshared"
 
 export FORTUNE_FILE=$HOME/lib/games/fortunes
 
