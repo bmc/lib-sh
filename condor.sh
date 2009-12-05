@@ -30,6 +30,7 @@ alias blog='varcd blog'
 alias frm="$(type -P frm) -S"
 alias ftp=ncftp
 alias play="/usr/local/lib/oss/play"
+alias top=htop
 alias vi=vim
 alias www='varcd www'
 alias wwwtest='varcd wwwtest'
