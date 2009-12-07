@@ -120,6 +120,7 @@ getHome()
 # NOTE: 'typeset' will create a local variable, but only if the function
 # is defined with "function name", rather than "name()".
 
+PROMPT_DIRTRIM=3
 function mkprompt
 {
     if [[ $TERM == xterm* ]]
@@ -129,64 +130,67 @@ function mkprompt
 
     _prefix='\[\e[1m\]'
     _suffix='\[\e[m\]'
-    PS1="$_prefix"'($HOST:\u) ${PWD/$HOME/~} '"$_prompt $_suffix"
+    #PS1="$_prefix"'($HOST:\u) ${PWD/$HOME/~} '"$_prompt $_suffix"
+    PS1="$_prefix($HOST:\u) \w $_prompt $_suffix"
 
-    if [ -n "$max_prompt_len" ]
-    then
-        # A maximum prompt length is defined. Determine whether we need
-	# to elide parts of the prompt
+    return
 
-        l=${#PS1}
-        if [ $l -gt $max_prompt_len ]
-	then
-	    # Prompt too long. Ellipsis is necessary.
-
-	    declare pwd=${PWD/$HOME/~}
-	    declare tokens
-	    declare p
-	    declare i
-
-	    # Split the current working directory into space-delimited tokens.
-            # Be sure to account for any existing spaces in the directory name.
-
-            p=$(echo "$pwd" | sed 's/ /?/g')
-	    tokens=(${p//\// })	# array of tokens in prompt
-	    p='('$HOST':'$USER') '
-	    let i=${#tokens[*]}-1 # index of highest token
-
-	    # Figure out which tokens from the path will fit, starting from
-	    # the back and working to the front. The current prompt length
-	    # is length of prefix + prompt character + space + room for
-	    # ellipsis.
-	    let l=${#p}+${#_prompt}+1+3
-	    while [ $l -lt $max_prompt_len -a $i -ge 0 ]
-	    do
-	        let l=$l+${#tokens[$i]}
-		let i=$i-1
-	    done
-
-	    if [ $i -le 0 ]
-	    then
-	        # no ellipsis; prompt small enough
-		:
-	    else
-	        p="$p..."
-
-		# Start one past where "i" left off, and add in the
-		# directory tokens
-
-		let i=$i+1
-		while [ $i -lt ${#tokens[*]} ]
-		do
-		    p="$p/${tokens[$i]}"
-		    let i=$i+1
-		done
-		p="$p $_prompt "
-                p=$(echo "$p" | sed 's/?/ /g')
-		PS1=$_prefix$p"$_suffix"
-	    fi
-        fi
-    fi
+#    if [ -n "$max_prompt_len" ]
+#    then
+#        # A maximum prompt length is defined. Determine whether we need
+#	# to elide parts of the prompt
+#
+#        l=${#PS1}
+#        if [ $l -gt $max_prompt_len ]
+#	then
+#	    # Prompt too long. Ellipsis is necessary.
+#
+#	    declare pwd=${PWD/$HOME/~}
+#	    declare tokens
+#	    declare p
+#	    declare i
+#
+#	    # Split the current working directory into space-delimited tokens.
+#            # Be sure to account for any existing spaces in the directory name.
+#
+#            p=$(echo "$PWD" | sed 's/ /?/g')
+#	    tokens=(${p//\// })	# array of tokens in prompt
+#	    p='('$HOST':'$USER') '
+#	    let i=${#tokens[*]}-1 # index of highest token
+#
+#	    # Figure out which tokens from the path will fit, starting from
+#	    # the back and working to the front. The current prompt length
+#	    # is length of prefix + prompt character + space + room for
+#	    # ellipsis.
+#	    let l=${#p}+${#_prompt}+1+3
+#	    while [ $l -lt $max_prompt_len -a $i -ge 0 ]
+#	    do
+#	        let l=$l+${#tokens[$i]}
+#		let i=$i-1
+#	    done
+#
+#	    if [ $i -le 0 ]
+#	    then
+#	        # no ellipsis; prompt small enough
+#		:
+#	    else
+#	        p="$p..."
+#
+#		# Start one past where "i" left off, and add in the
+#		# directory tokens
+#
+#		let i=$i+1
+#		while [ $i -lt ${#tokens[*]} ]
+#		do
+#		    p="$p/${tokens[$i]}"
+#		    let i=$i+1
+#		done
+#		p="$p $_prompt "
+#                p=$(echo "$p" | sed 's/?/ /g')
+#		PS1=$_prefix$p"$_suffix"
+#	    fi
+#        fi
+#    fi
 }
 
 # ---------------------------------------------------------------------------
