@@ -37,8 +37,6 @@ export SCALA_HOME=/usr/local/scala/scala
 
 # ---------------------------------------------------------------------------
 
-# ---------------------------------------------------------------------------
-
 PATH=\
 $HOME/python/bin:\
 $HOME/src/open-source/java/jython/jython/dist/bin:\
