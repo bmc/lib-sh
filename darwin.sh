@@ -73,11 +73,15 @@ alias mslog="sudo tail -f /var/log/system.log"
 alias nsr='netstat -rn -f inet'
 alias routes=nsr
 alias psme='ps -U bmc -ww -ouser,pid,ppid,tty,command'
+alias sgrep=sgrep2
 alias sha1='digest sha1'
+alias sha224='digest sha224'
+alias sha256='digest sha256'
+alias sha384='digest sha384'
+alias sha512='digest sha512'
 alias time='/usr/bin/time --portability'
 alias unshar=gunshar
 alias xs='eval `resize -u`'
-alias whois=jwhois
 
 _vipw=`type -P vipw`
 alias vipw='EDITOR=vi VISUAL=vi sudo $_vipw'

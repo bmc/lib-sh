@@ -15,16 +15,18 @@ mnt=$HOME/mnt
 usr_local_site="$mnt/condor-site"
 export condor_home=$mnt/condor-home
 export PERL5LIB=$HOME/lib/perl
-export NETHACKOPTIONS='pickup_types=$!?=/,gender=male,fruit=kiwi'
 export www=$HOME/Sites
-export invsrc=$HOME/src/invitemedia
 export FORTUNE_FILE=$HOME/lib/games/fortunes
+export JYTHON_HOME=/home/bmc/java/jython
+export SCALA_HOME=/usr/local/scala/scala
+export GRADLE_HOME=/Users/bmc/java/gradle-0.6.1
 
 # ---------------------------------------------------------------------------
 # Java-related environment variables
 
 export JAVA_ROOT=$HOME/java
 export ANT_HOME=$JAVA_ROOT/ant
+export ASM_HOME=$JAVA_ROOT/asm-3.2
 
 # According to
 # http://adcdownload.apple.com/Java/java_se_6.0_release_1_developer_preview_6/javase6r1dp6releasenotes.html#Switchable_Command_Line_Tools
@@ -41,6 +43,8 @@ export ANT_HOME=$JAVA_ROOT/ant
 export JDK_ROOT=/System/Library/Frameworks/JavaVM.framework/Versions
 #export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.5/Home
+#export JAVA_HOME=/usr/local/soylatte16
+#export JAVA_HOME=/usr/local/openjdk6
 
 eval `classpath -k -J`
 function switch-jdk
@@ -59,7 +63,7 @@ function switch-jdk
 
     case "$1" in
         6|1.6|jdk6|jdk1.6*)
-           _n=$JDK_ROOT/1.6.0/Home
+           _n=/usr/local/soylatte16
            ;;
         5|1.5|jdk5|jdk1.5*)
            _n=$JDK_ROOT/1.5.0/Home
@@ -89,6 +93,12 @@ function switch-jdk
     PATH=$JAVA_HOME/bin:$PATH
 }
 
+growl()
+{
+    echo -e $'\e]9;'${1}'\007'
+    return
+}
+
 alias set-jdk=switch-jdk
 
 # ---------------------------------------------------------------------------
@@ -100,11 +110,12 @@ $JAVA_HOME/bin:\
 $HOME/bin:\
 /usr/X11R6/bin:\
 /usr/local/mysql/bin:\
+/opt/local/lib/postgresql83/bin:\
 $PATH:\
 $photos:\
-$JAVA_ROOT/jython:\
-$JAVA_ROOT/scala/bin:\
-/opt/local/Library/Frameworks/Python.framework/Versions/2.4/bin
+$JYTHON_HOME/bin:\
+$SCALA_HOME/bin:\
+$GRADLE_HOME/bin
 
 # ---------------------------------------------------------------------------
 # Aliases and functions
@@ -115,7 +126,6 @@ alias condor-home='varcd condor_home'
 alias condor_home='varcd condor_home'
 #alias dfspace="dfspace -t ext3 -t ext2"
 alias ftp=ncftp
-alias invsrc='varcd invsrc'
 alias nslookup="$(type -P nslookup) -silent"
 alias www='varcd www'
 alias xine="/Applications/XinePlayer.app/Contents/MacOS/XinePlayer"
@@ -142,14 +152,11 @@ export GROOVY_HOME=$JAVA_ROOT/groovy
 
 PATH=\
 $PATH:\
-$ANT_HOME/bin:\
 $MAVEN_HOME/bin:\
-$GROOVY_HOME/bin:\
-$HOME/Eclipse/eclipse:\
-$HOME/python/bin
+$HOME/python/bin:\
+$ANT_HOME/bin
 
 load_file ~/bash/java.sh
-load_file ~/bash/fulltilt.sh
 
 # ---------------------------------------------------------------------------
 # Local stuff
@@ -159,4 +166,4 @@ load_file ~/bash/fulltilt.sh
 export wwwtest="${usr_local_site}/www/apache/wwwtest"
 alias wwwtest='varcd wwwtest'
 
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib:/opt/local/lib
+export LD_LIBRARY_PATH=/usr/local/lib:/opt/local/lib:${LD_LIBRARY_PATH}
