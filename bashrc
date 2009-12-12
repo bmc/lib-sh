@@ -16,12 +16,14 @@ load_file ~/bash/dir-functions.sh
 # Path setting
 
 export PATH
-PATH="$HOME/bin:$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin"
+PATH=$HOME/bin:$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin
 
 # ---------------------------------------------------------------------------
-# Environment settings.
+# Environment settings.  Done here instead of .login because they're needed
+# before .login is read (and .tcshrc is read before .login).  The .login
+# file is also not read by remotely executed (rsh) commands.
 
-if [ -z "$LD_LIBRARY_PATH" ]
+if [ -z $LD_LIBRARY_PATH ]
 then
     export LD_LIBRARY_PATH="/usr/X11R6/lib"
 fi
@@ -43,7 +45,7 @@ export PAGER="$pager -s"
 #export LESS='-aEfwiP?f%f:-- More --. ?pB(%pB\%). '
 
 # Newer versions of less
-export LESS='-RME -PM -- More ?PB(%PB\%) :--'
+export LESS='-rME -PM -- More ?PB(%PB\%) :--'
 
 export LESSCHARSET="latin1"
 export editor="ew"
@@ -68,7 +70,7 @@ export DOMAIN=`domain`
 
 unset LESSOPEN
 
-if [ -z "$MANPATH" ]
+if [ -z $MANPATH ]
 then
     export MANPATH="/usr/man"
 fi
@@ -101,14 +103,12 @@ stty_erase="^h"
 alias a=alias
 alias back='chdir $OLDPWD'
 alias bytecomp="emacs -batch -f batch-byte-compile"
-alias cd..='cd ..'
 alias cls=clear
 alias d="ls -CF"
 alias e=$editor
 alias enw='emacs -nw'
 alias f=finger
 alias fiel=file
-alias giturl="git config --get remote.origin.url"
 alias h="history"
 alias l=d
 alias lj="fg %-"
@@ -129,7 +129,7 @@ alias svnurl="svn info|awk '/^URL:/ {print \$2}'"
 alias which=type
 alias xrdb="xrdb -DHOME='$HOME'"
 alias xs='eval `resize -u`'
-alias z="echo Rereading $HOME/bash/bashrc ... ; source "'"$HOME"'"/bash/bashrc"
+alias z="echo Rereading $HOME/bash/bashrc ... ; source $HOME/bash/bashrc"
 
 # ---------------------------------------------------------------------------
 # X stuff

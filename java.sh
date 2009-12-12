@@ -2,35 +2,18 @@
 
 add_dir_contents_to_classpath()
 {
-    dir=$1
-    shift
-    p=$dir
-    # Remaining args, if any, are exclusion patterns.
-    for i in $dir/*
+    p=$1
+    for i in $1/*
     do
         if [ -L $i ]
         then
-            i=$(xreadlink $i)
+            p=$p:$(readlink -f $i)
+        else
+            p=$p:$i
         fi
-
-        keep=1
-        for excl_pattern in $*
-        do
-            # [[ with == does a pattern match
-            if [[ $i == $excl_pattern ]]
-            then
-                keep=
-                break
-            fi
-        done
-        if [ -z "$keep" ]
-        then
-            continue
-        fi
-
-        p=$p:$i
     done
-    CLASSPATH=$CLASSPATH:$dir:$p
+
+    CLASSPATH=$CLASSPATH:$p
 }
 
 if [ -z $JAVA_ROOT ]
@@ -74,8 +57,10 @@ export LD_LIBRARY_PATH=$JAVA_HOME/jre/lib/i386:${LD_LIBRARY_PATH}
 #    JAR=$JAVA_HOME/bin/jar
 #fi
 #export JAR
+JAR=$JAVA_HOME/bin/jar
 
 alias javac="$JAVAC"
+alias jar="$JAR"
 
 add_dir_contents_to_classpath $HOME/java/classes
 

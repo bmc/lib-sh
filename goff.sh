@@ -4,6 +4,8 @@
 # $Id$
 # ---------------------------------------------------------------------------
 
+load_file ~/bash/ubuntu.sh
+
 # ---------------------------------------------------------------------------
 # Misc. environment variables
 
@@ -14,7 +16,6 @@ export APACHE_HOME=$www
 export usr_local_site=/mnt/condor/site
 export ERLANG_HOME=/usr/lib/erlang
 export mystuff=$HOME/src/mystuff
-export mypy=$mystuff/python
 
 export invsrc=$HOME/src/invitemedia
 export devsrc=$invsrc/dev
@@ -22,42 +23,29 @@ export libsrc=$devsrc/invitemedia/library
 export proxysrc=$devsrc/invitemedia/proxy
 export playground=$invsrc/playground
 
-export PYTHONPATH=$invsrc/dev:$HOME/lib/python:$HOME/google_appengine
-
-export FORTUNE_FILE=$HOME/lib/games/fortunes
-export CREATIVE_WRAPPER_ROOT=$invsrc/creative_wrapper
-
-export EC2_HOME=$HOME/ec2
-
-export JYTHON_HOME=/home/bmc/jython/dist
-
-# ---------------------------------------------------------------------------
+export PYTHONPATH=$invsrc/dev:$HOME/lib/python
 
 # ---------------------------------------------------------------------------
 
 PATH=\
 $HOME/python/bin:\
 $PATH:\
-$ANT_HOME/bin:\
-$EC2_HOME/bin:\
-$HOME/google_appengine:\
-$JYTHON_HOME/bin
+$ANT_HOME/bin
 
 load_file ~/bash/java.sh
 
 eval `classpath -k -J`
 
 rabbitmq_dir=$HOME/src/open-source/rabbitmq-1.2.0
-
-add_dir_contents_to_classpath /usr/share/java
-
-export _DJANGO_DEBUG=1
-export _DJANGO_DB_USER=dashboard
-export _DJANGO_DB_PASSWORD=dm28
-export _DJANGO_DB_HOST=localhost
-export _DJANGO_DB_NAME=dashboard
-export _DJANGO_DB_ENGINE=postgresql_psycopg2
-
+export CLASSPATH=$invsrc/playground/rabbit/java:\
+/usr/share/java/junit.jar:\
+/usr/share/java/junit-3.8.2.jar:\
+$rabbitmq_dir/java/test/src:\
+/usr/share/java/commons-io.jar:\
+$rabbitmq_dir/java/lib/junit.jar:\
+$rabbitmq_dir/java/build/lib/rabbitmq-client.jar:\
+$rabbitmq_dir/java/build/lib/rabbitmq-client-tests.jar:\
+$CLASSPATH
 
 # ---------------------------------------------------------------------------
 # PATH
@@ -80,12 +68,10 @@ alias devsrc='varcd devsrc'
 alias libsrc='varcd libsrc'
 alias proxysrc='varcd proxysrc'
 alias playground='varcd playground'
-alias mllog="sudo tail -f /var/log/mail.log"
+alias mllog="sudo tail -f /var/log/maillog"
 alias mslog="sudo tail -f /var/log/messages"
 alias nslookup="$(type -P nslookup) -silent"
 alias mystuff="varcd mystuff"
-alias mypy='varcd mypy'
-alias top=htop
 
 # ---------------------------------------------------------------------------
 # Local stuff
@@ -94,6 +80,3 @@ export wwwtest="${usr_local_site}/www/apache/wwwtest"
 alias wwwtest='varcd wwwtest'
 
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
-
-load_file ~/bash/ubuntu.sh
-

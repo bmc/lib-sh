@@ -1,3 +1,5 @@
+# $Id$
+
 # ---------------------------------------------------------------------------
 # Local variables
 
@@ -10,8 +12,6 @@ console_term=cons25
 
 # ---------------------------------------------------------------------------
 # Environment variables
-
-export JAVA_HOME=/usr/local/diablo-jdk1.6.0
 
 # Path setting
 export PATH=$PATH:/usr/sbin:/sbin 
@@ -74,6 +74,7 @@ alias sha1='digest sha1'
 alias time='/usr/bin/time --portability'
 alias unshar=gunshar
 alias xs='eval `resize -u`'
+alias whois=jwhois
 
 _vipw=`type -P vipw`
 alias vipw='EDITOR=vi VISUAL=vi sudo $_vipw'

@@ -130,3 +130,6 @@ alias xinit="$XWINHOME/bin/xinit -- -bpp 16"
 # ---------------------------------------------------------------------------
 # Development stuff
 
+load_file ~/bash/ft-development.sh
+
+export TIBEMS_ROOT=/opt/tibco/ems
