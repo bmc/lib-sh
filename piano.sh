@@ -1,5 +1,5 @@
 # ---------------------------------------------------------------------------
-# Settings and overrides specific to host "tributary"
+# Settings and overrides specific to host "piano"
 # ---------------------------------------------------------------------------
 . /etc/rc.conf
 
@@ -12,25 +12,12 @@ $PATH:\
 /usr/local/site/sbin:\
 /usr/local/sbin:\
 /usr/sbin:\
-/sbin:\
-/usr/X11R6/bin:\
-/usr/local/spamassassin/bin:\
-$photos
+/sbin
 
 # Local aliases
 
-alias blog='varcd blog'
-alias frm="$(type -P frm) -S"
 alias ftp=ncftp
-alias play="/usr/local/lib/oss/play"
 alias top=htop
 alias vi=vim
-alias www='varcd www'
-alias wwwtest='varcd wwwtest'
 alias tar=gtar
 
-# ---------------------------------------------------------------------------
-# Development stuff
-
-export ANT_HOME=/usr/local/ant
-load_file ~/bash/java.sh

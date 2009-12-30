@@ -1,5 +1,5 @@
 # ---------------------------------------------------------------------------
-# Settings and overrides specific to host "tributary"
+# Settings and overrides specific to host "condor"
 # ---------------------------------------------------------------------------
 . /etc/rc.conf
 
