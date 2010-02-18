@@ -75,8 +75,6 @@ export LD_LIBRARY_PATH=$JAVA_HOME/jre/lib/i386:${LD_LIBRARY_PATH}
 #fi
 #export JAR
 
-alias javac="$JAVAC"
-
 add_dir_contents_to_classpath $HOME/java/classes
 
 case "$PLATFORM" in
