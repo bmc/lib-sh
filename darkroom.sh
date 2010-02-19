@@ -52,6 +52,7 @@ function switch-jdk
     case $# in
         0)
             echo $JAVA_HOME
+            return
             ;;
         1)
             ;;
@@ -64,6 +65,9 @@ function switch-jdk
     case "$1" in
         6|1.6|jdk6|jdk1.6*)
            _n=/usr/local/soylatte16
+           ;;
+        apple6|apple-6|apple-jdk-6|apple1.6)
+           _n=$JDK_ROOT/1.6.0/Home
            ;;
         5|1.5|jdk5|jdk1.5*)
            _n=$JDK_ROOT/1.5.0/Home
@@ -91,6 +95,7 @@ function switch-jdk
     fi
     export JAVA_HOME=$_n
     PATH=$JAVA_HOME/bin:$PATH
+    echo $JAVA_HOME
 }
 
 growl()
@@ -100,6 +105,51 @@ growl()
 }
 
 alias set-jdk=switch-jdk
+alias setjdk=switch-jdk
+
+function switch-scala
+{
+    case $# in
+        0)
+            echo $SCALA_HOME
+            return
+            ;;
+        1)
+            ;;
+        *)
+            echo "Usage: switch-scala scala" >&2
+            return 1
+            ;;
+    esac
+
+    case "$1" in
+        2.7|2.7.?)
+           _n=/usr/local/scala/scala-2.7.7
+           ;;
+        2.8|2.8.?|2.8.*|default)
+           _n=/usr/local/scala/scala-2.8.0
+           ;;
+        *)
+           ;;
+    esac
+
+    if [ ! -d $_n ]
+    then
+        echo "No such Scala version -- $1 ($_n)" >&2
+        return 1
+    fi
+
+    export PATH=$(echo $PATH | sed "s+$SCALA_HOME/bin:++g")
+    if [ -n "$SCALA_HOME" ]
+    then
+	rmpath PATH $SCALA_HOME/bin
+    fi
+    export SCALA_HOME=$_n
+    PATH=$SCALA_HOME/bin:$PATH
+    echo $SCALA_HOME
+}
+
+alias set-scala=switch-scala
 
 # ---------------------------------------------------------------------------
 # PATH
