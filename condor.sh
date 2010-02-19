@@ -4,7 +4,7 @@
 . /etc/rc.conf
 
 export blog="$BLOG_CHROOT_TOP/usr/local/apache2/htdocs/bmc/blog"
-export www='/usr/local/site/www/apache'
+export www='/usr/local/site/www'
 export wwwtest="$www/wwwtest"
 export CVSROOT=/usr/local/src/my-stuff/CVS-tree
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/site/lib
