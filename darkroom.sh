@@ -66,6 +66,9 @@ function switch-jdk
         6|1.6|jdk6|jdk1.6*)
            _n=/usr/local/soylatte16
            ;;
+        openjdk*)
+           _n=/usr/local/openjdk6
+           ;;
         apple6|apple-6|apple-jdk-6|apple1.6)
            _n=$JDK_ROOT/1.6.0/Home
            ;;
@@ -106,6 +109,8 @@ growl()
 
 alias set-jdk=switch-jdk
 alias setjdk=switch-jdk
+alias setjava=switch-jdk
+alias set-java=switch-jdk
 
 function switch-scala
 {
