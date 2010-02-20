@@ -18,7 +18,7 @@ export PERL5LIB=$HOME/lib/perl
 export www=$HOME/Sites
 export FORTUNE_FILE=$HOME/lib/games/fortunes
 export JYTHON_HOME=/home/bmc/java/jython
-export SCALA_HOME=/usr/local/scala/scala
+export SCALA_HOME=/usr/local/scala/scala-2.8.0
 export GRADLE_HOME=/Users/bmc/java/gradle-0.6.1
 
 # ---------------------------------------------------------------------------
@@ -41,8 +41,8 @@ export ASM_HOME=$JAVA_ROOT/asm-3.2
 # shell script based invocations of Java tools."
 
 export JDK_ROOT=/System/Library/Frameworks/JavaVM.framework/Versions
-#export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.5/Home
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
+#export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.5/Home
 #export JAVA_HOME=/usr/local/soylatte16
 #export JAVA_HOME=/usr/local/openjdk6
 
@@ -216,4 +216,4 @@ load_file ~/bash/java.sh
 export wwwtest="${usr_local_site}/www/apache/wwwtest"
 alias wwwtest='varcd wwwtest'
 
-export LD_LIBRARY_PATH=/usr/local/lib:/opt/local/lib:${LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH=/usr/local/lib:/opt/local/lib:$HOME/lib:${LD_LIBRARY_PATH}
