@@ -17,41 +17,28 @@ export PYTHONPATH="$PYTHONPATH:/var/lib/python-support/python2.6:$HOME/lib/pytho
 export FORTUNE_FILE=$HOME/lib/games/fortunes
 
 export JYTHON_HOME=$JAVA_ROOT/jython
-export JRUBY_HOME=$JAVA_ROOT/jruby
-export GRADLE_HOME=$JAVA_ROOT/gradle
 export IZPACK_HOME=$JAVA_ROOT/IzPack
 export ASM_HOME=$JAVA_ROOT/asm-3.2
-
-# ---------------------------------------------------------------------------
-
-# ---------------------------------------------------------------------------
-
-PATH=\
-$PATH:\
-$HOME/python/bin:\
-$JYTHON_HOME/bin:\
-$ANT_HOME/bin:\
-$EC2_HOME/bin:\
-$HOME/google_appengine:\
-$JRUBY_HOME/bin:\
-$SCALA_HOME/bin:\
-$GRADLE_HOME/bin
-
-eval `classpath -k -J -x "*gcj*"`
-
-add_dir_contents_to_classpath /usr/share/java "*gcj*"
+export SCALA_HOME=$HOME/scala/scala-2.8.0
 
 # ---------------------------------------------------------------------------
 # PATH
 
 export PATH=\
+/usr/bin:\
+/bin:\
+$HOME/python/bin:\
+$SCALA_HOME/bin:\
 $JAVA_HOME/bin:\
 $PATH:\
 /usr/local/sbin:\
 /usr/sbin:\
 /sbin:\
-$ERLANG_HOME/bin:\
 $ANT_HOME/bin
+
+eval `classpath -k -J -x "*gcj*"`
+
+add_dir_contents_to_classpath /usr/share/java "*gcj*"
 
 # ---------------------------------------------------------------------------
 # Programmatic Completion
@@ -102,16 +89,16 @@ alias top=htop
 export wwwtest="${usr_local_site}/www/apache/wwwtest"
 alias wwwtest='varcd wwwtest'
 
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib:$HOME/lib
 
 load_file ~/bash/ubuntu.sh
 
 # ---------------------------------------------------------------------------
 # Oracle
 
-export ORACLE_HOME=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server/
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME/lib
-export PATH=$PATH:$ORACLE_HOME/bin
+#export ORACLE_HOME=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server/
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME/lib
+#export PATH=$PATH:$ORACLE_HOME/bin
 
 # ---------------------------------------------------------------------------
 # Java
@@ -205,4 +192,3 @@ function switch-scala
 
 alias set-scala=switch-scala
 
-set-scala 2.8 >/dev/null
