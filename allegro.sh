@@ -104,6 +104,7 @@ load_file ~/bash/ubuntu.sh
 # Java
 
 export JAVA6_HOME=/usr/lib/jvm/java-6-sun
+export OPENJDK_HOME=/usr/lib/jvm/java-6-openjdk
 export JAVA5_HOME=/usr/lib/jvm/java-1.5.0-sun
 export JAVA_HOME=$JAVA6_HOME
 
@@ -127,6 +128,9 @@ function switch-jdk
            ;;
         5|1.5|jdk5|jdk1.5*)
            _n=$JAVA5_HOME
+           ;;
+	openjdk)
+           _n=$OPENJDK_HOME
            ;;
         *)
            ;;
