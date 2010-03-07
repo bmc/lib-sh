@@ -175,6 +175,7 @@ then
 
 HISTFILESIZE=1000000000
 HISTSIZE=1000000
+HISTCONTROL=ignoredups
 
 # Don't bother checking mail from the shell. We have nice graphics tools for
 # that.
