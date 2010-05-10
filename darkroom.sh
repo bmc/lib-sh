@@ -21,6 +21,15 @@ export JYTHON_HOME=/home/bmc/java/jython
 export SCALA_HOME=/usr/local/scala/scala-2.8.0
 export GRADLE_HOME=/Users/bmc/java/gradle-0.6.1
 
+# Use xterm1, which avoids the alternate screen buffer. (See /etc/termcap)
+
+case "$TERM" in
+    xterm*)
+        TERM=xterm1
+        #export TERM=xterm
+	;;
+esac
+
 # ---------------------------------------------------------------------------
 # Java-related environment variables
 
@@ -167,7 +176,7 @@ $HOME/bin:\
 /usr/local/mysql/bin:\
 /opt/local/lib/postgresql83/bin:\
 $PATH:\
-$photos:\
+$HOME/.cabal/bin:\
 $JYTHON_HOME/bin:\
 $SCALA_HOME/bin:\
 $GRADLE_HOME/bin
