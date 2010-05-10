@@ -25,10 +25,10 @@ then
 fi
 export TERM
 
-if [[ "$TERM" == xterm* ]]
-then
-    term xterm1
-fi
+#if [[ "$TERM" == xterm* ]]
+#then
+#    term xterm1
+#fi
 
 if [[ -z $PERL5LIB ]]
 then
@@ -67,6 +67,7 @@ alias fetch="$_fetch -p"
 unset _fetch
 
 alias hping2=hping
+alias ldd='otool -L'
 alias ls='/sw/bin/ls --color=tty -CF'
 alias mllog="sudo tail -f /var/log/mail.log"
 alias mslog="sudo tail -f /var/log/system.log"
