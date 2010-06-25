@@ -17,9 +17,9 @@ export FORTUNE_FILE=$HOME/lib/games/fortunes
 # PATH
 
 export PATH=\
+$HOME/python/bin:\
 /usr/bin:\
 /bin:\
-$HOME/python/bin:\
 $PATH:\
 /usr/local/sbin:\
 /usr/sbin:\
