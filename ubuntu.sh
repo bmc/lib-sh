@@ -3,7 +3,6 @@
 # ---------------------------------------------------------------------------
 # Aliases
 
-alias dfspace="dfspace -t ext3 -t ext2"
 alias mllog='sudo tail -f /var/log/mail.log'
 alias pki='dpkg -l'
 alias play=aplay

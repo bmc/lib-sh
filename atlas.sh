@@ -11,7 +11,8 @@ export mystuff=$HOME/src/mystuff
 
 export PYTHONPATH="$PYTHONPATH:/var/lib/python-support/python2.6:$HOME/lib/python:$HOME/google_appengine:/usr/share/pyshared"
 
-export FORTUNE_FILE=$HOME/lib/games/fortunes
+export FORTUNE_FILE=$HOME/src/mystuff/fortunes/fortunes
+export DFSPACE_OPTS='-t vfat'
 
 # ---------------------------------------------------------------------------
 # PATH
@@ -20,6 +21,7 @@ export PATH=\
 $HOME/python/bin:\
 /usr/bin:\
 /bin:\
+$HOME/scala/scala-2.8.0/bin:\
 $PATH:\
 /usr/local/sbin:\
 /usr/sbin:\
