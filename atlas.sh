@@ -14,6 +14,8 @@ export PYTHONPATH="$PYTHONPATH:/var/lib/python-support/python2.6:$HOME/lib/pytho
 export FORTUNE_FILE=$HOME/src/mystuff/fortunes/fortunes
 export DFSPACE_OPTS='-t vfat'
 
+export www=/var/www
+
 # ---------------------------------------------------------------------------
 # PATH
 
@@ -69,6 +71,7 @@ alias nslookup="$(type -P nslookup) -silent"
 alias mystuff="varcd mystuff"
 alias mypy='varcd mypy'
 alias top=htop
+alias www='varcd www'
 
 # ---------------------------------------------------------------------------
 # Local stuff
