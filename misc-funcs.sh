@@ -128,6 +128,12 @@ function mkprompt
 	echo -e "\033]2;${HOST}:${PWD/#$HOME/~}\007\c"
     fi
 
+    # Hack. Fails on FreeBSD. Just returning, though, works fine.
+    if [ "$PLATFORM" = "freebsd" ]
+    then
+        return
+    fi
+
     _prefix='\[\e[1m\]'
     _suffix='\[\e[m\]'
     #PS1="$_prefix"'($HOST:\u) ${PWD/$HOME/~} '"$_prompt $_suffix"
