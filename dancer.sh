@@ -12,10 +12,13 @@ export mystuff=$HOME/src/mystuff
 export FORTUNE_FILE=$HOME/src/mystuff/fortunes/fortunes
 export DFSPACE_OPTS='-t vfat'
 
+export SCALA_HOME=$HOME/scala/scala-2.8.0
+
 # ---------------------------------------------------------------------------
 # PATH
 
 export PATH=\
+$SCALA_HOME/bin:\
 $HOME/python/bin:\
 /usr/bin:\
 /bin:\
