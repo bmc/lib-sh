@@ -129,10 +129,10 @@ function mkprompt
     fi
 
     # Hack. Fails on FreeBSD. Just returning, though, works fine.
-    if [ "$PLATFORM" = "freebsd" ]
-    then
-        return
-    fi
+    #if [ "$PLATFORM" = "freebsd" ]
+    #then
+        #return
+    #fi
 
     _prefix='\[\e[1m\]'
     _suffix='\[\e[m\]'
