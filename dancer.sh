@@ -36,7 +36,7 @@ alias mslog="sudo tail -f /var/log/messages"
 alias nslookup="$(type -P nslookup) -silent"
 alias mystuff="varcd mystuff"
 alias mypy='varcd mypy'
-alias top=htop
+#alias top=htop
 
 # ---------------------------------------------------------------------------
 # Local stuff
