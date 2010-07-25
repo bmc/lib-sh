@@ -13,6 +13,7 @@ export FORTUNE_FILE=$HOME/src/mystuff/fortunes/fortunes
 export DFSPACE_OPTS='-t vfat'
 
 export SCALA_HOME=$HOME/scala/scala-2.8.0
+export CLASSPATH=$CLASSPATH:/usr/local/share/java/classes/sqlitejdbc-native.jar
 
 # ---------------------------------------------------------------------------
 # PATH
@@ -25,7 +26,8 @@ $HOME/python/bin:\
 $PATH:\
 /usr/local/sbin:\
 /usr/sbin:\
-/sbin:
+/sbin:\
+$HOME/sqlshell/bin
 
 # ---------------------------------------------------------------------------
 # Aliases and functions
