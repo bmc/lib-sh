@@ -10,7 +10,6 @@ export PERL5LIB=$HOME/lib/perl
 export mystuff=$HOME/src/mystuff
 
 export FORTUNE_FILE=$HOME/src/mystuff/fortunes/fortunes
-export DFSPACE_OPTS='-t vfat'
 
 export SCALA_HOME=$HOME/scala/scala-2.8.0
 export CLASSPATH=$CLASSPATH:/usr/local/share/java/classes/sqlitejdbc-native.jar
