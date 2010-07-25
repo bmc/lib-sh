@@ -16,6 +16,7 @@ export DFSPACE_OPTS='-t vfat'
 export SCALA_HOME=$HOME/scala/scala-2.8.0
 
 export www=/var/www
+export photos=$HOME/Pictures/photos
 
 # ---------------------------------------------------------------------------
 # PATH
@@ -71,6 +72,7 @@ alias mslog="sudo tail -f /var/log/messages"
 alias nslookup="$(type -P nslookup) -silent"
 alias mystuff="varcd mystuff"
 alias mypy='varcd mypy'
+alias photos='varcd photos'
 alias top=htop
 alias www='varcd www'
 
