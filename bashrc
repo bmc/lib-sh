@@ -1,5 +1,3 @@
-# $Id$
-
 # _read_etc_profile is set in /etc/profile, if it's been read already
 if [ -z "$_read_etc_profile" ]
 then
