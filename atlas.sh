@@ -15,6 +15,14 @@ export FORTUNE_FILE=$HOME/src/mystuff/fortunes/fortunes
 export DFSPACE_OPTS='-t vfat'
 export SCALA_HOME=$HOME/scala/scala-2.8.0
 
+export CLASSPATH=\
+$CLASSPATH:\
+/usr/share/java/hsqldb.jar:\
+/usr/share/java/hsqldbutil.jar:\
+/usr/share/java/mysql-connector-java.jar:\
+$HOME/java/classes/sqlitejdbc-v056-pure.jar:\
+$HOME/java/classes/h2-1.2.129.jar
+
 export www=/var/www
 export photos=$HOME/Pictures/photos
 
