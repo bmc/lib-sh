@@ -20,6 +20,7 @@ $CLASSPATH:\
 /usr/share/java/hsqldb.jar:\
 /usr/share/java/hsqldbutil.jar:\
 /usr/share/java/mysql-connector-java.jar:\
+/usr/share/java/postgresql.jar:\
 $HOME/java/classes/sqlitejdbc-v056-pure.jar:\
 $HOME/java/classes/h2-1.2.129.jar
 
