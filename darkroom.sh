@@ -179,7 +179,8 @@ $PATH:\
 $HOME/.cabal/bin:\
 $JYTHON_HOME/bin:\
 $SCALA_HOME/bin:\
-$GRADLE_HOME/bin
+$GRADLE_HOME/bin:\
+$HOME/.gem/ruby/1.8/bin
 
 # ---------------------------------------------------------------------------
 # Aliases and functions
