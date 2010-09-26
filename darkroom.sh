@@ -170,6 +170,7 @@ alias set-scala=switch-scala
 
 export PATH=\
 $HOME/python/bin:\
+/Library/Frameworks/Python.framework/Versions/2.6/bin:\
 $JAVA_HOME/bin:\
 $HOME/bin:\
 /usr/X11R6/bin:\
