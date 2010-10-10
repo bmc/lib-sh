@@ -32,6 +32,7 @@ export photos=$HOME/Pictures/photos
 
 export PATH=\
 $HOME/python/bin:\
+$HOME/jython/bin:\
 /usr/bin:\
 /bin:\
 $HOME/scala/scala-2.8.0/bin:\
