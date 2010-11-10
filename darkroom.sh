@@ -18,7 +18,7 @@ export PERL5LIB=$HOME/lib/perl
 export www=$HOME/Sites
 export FORTUNE_FILE=$HOME/src/mystuff/fortunes/fortunes
 export JYTHON_HOME=/home/bmc/java/jython
-export SCALA_HOME=/usr/local/scala/scala-2.8.0
+export SCALA_HOME=/usr/local/scala/scala
 export GRADLE_HOME=/Users/bmc/java/gradle-0.6.1
 
 # Use xterm1, which avoids the alternate screen buffer. (See /etc/termcap)
@@ -141,7 +141,7 @@ function switch-scala
            _n=/usr/local/scala/scala-2.7.7
            ;;
         2.8|2.8.?|2.8.*|default)
-           _n=/usr/local/scala/scala-2.8.0
+           _n=/usr/local/scala/scala-2.8.1
            ;;
         *)
            ;;
