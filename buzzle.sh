@@ -38,7 +38,8 @@ $HOME/scala/scala-2.8.0/bin:\
 $PATH:\
 /usr/local/sbin:\
 /usr/sbin:\
-/sbin:
+/sbin:\
+$HOME/.gem/ruby/1.8/bin
 
 # ---------------------------------------------------------------------------
 # Programmatic Completion
