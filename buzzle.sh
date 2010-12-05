@@ -32,6 +32,7 @@ export photos=$HOME/Pictures/photos
 
 export PATH=\
 $HOME/.gem/ruby/1.8/bin:\
+$HOME/.cabal/bin:\
 $HOME/python/bin:\
 /usr/bin:\
 /bin:\
