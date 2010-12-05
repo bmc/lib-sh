@@ -13,4 +13,6 @@ case "$TERM" in
         ;;
 esac
 
-load_file $HOME/bash/wincommon.sh
+load_file "$HOME/bash/wincommon.sh"
+
+PATH="$HOME/python/bin:$PATH"

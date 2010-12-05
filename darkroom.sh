@@ -220,7 +220,8 @@ PATH=\
 $PATH:\
 $MAVEN_HOME/bin:\
 $HOME/python/bin:\
-$ANT_HOME/bin
+$ANT_HOME/bin:\
+/usr/local/texlive/2010/bin/universal-darwin
 
 load_file ~/bash/java.sh
 
