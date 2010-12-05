@@ -31,6 +31,7 @@ export photos=$HOME/Pictures/photos
 # PATH
 
 export PATH=\
+$HOME/.cabal/bin:\
 $HOME/python/bin:\
 $HOME/jython/bin:\
 /usr/bin:\
