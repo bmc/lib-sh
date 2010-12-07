@@ -31,6 +31,8 @@ export photos=$HOME/Pictures/photos
 # PATH
 
 export PATH=\
+$HOME/.gem/ruby/1.8/bin:\
+$HOME/.cabal/bin:\
 $HOME/python/bin:\
 /usr/bin:\
 /bin:\
@@ -38,8 +40,7 @@ $HOME/scala/scala-2.8.0/bin:\
 $PATH:\
 /usr/local/sbin:\
 /usr/sbin:\
-/sbin:\
-$HOME/.gem/ruby/1.8/bin
+/sbin
 
 # ---------------------------------------------------------------------------
 # Programmatic Completion
