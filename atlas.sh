@@ -33,7 +33,7 @@ export photos=$HOME/Pictures/photos
 export PATH=\
 $HOME/.cabal/bin:\
 $HOME/.gem/ruby/1.8/bin:\
-/var/lib/gems/1.8/gems/jekyll-0.7.0/bin:\
+/var/lib/gems/1.8/bin:\
 $HOME/python/bin:\
 $HOME/jython/bin:\
 /usr/bin:\
