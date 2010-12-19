@@ -14,6 +14,7 @@ export PYTHONPATH="$PYTHONPATH:/var/lib/python-support/python2.6:$HOME/lib/pytho
 export FORTUNE_FILE=$HOME/src/mystuff/fortunes/fortunes
 export DFSPACE_OPTS='-t vfat'
 export SCALA_HOME=$HOME/scala/scala-2.8.0
+export JYTHOM_HOME=$HOME/jython
 
 export CLASSPATH=\
 $CLASSPATH:\
@@ -34,6 +35,7 @@ export PATH=\
 $HOME/.gem/ruby/1.8/bin:\
 $HOME/.cabal/bin:\
 $HOME/python/bin:\
+$HOME/jython/bin:\
 /usr/bin:\
 /bin:\
 $HOME/scala/scala-2.8.0/bin:\
