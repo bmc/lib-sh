@@ -17,9 +17,10 @@ export condor_home=$mnt/condor-home
 export PERL5LIB=$HOME/lib/perl
 export www=$HOME/Sites
 export FORTUNE_FILE=$HOME/src/mystuff/fortunes/fortunes
-export JYTHON_HOME=/home/bmc/java/jython
+export JYTHON_HOME=$HOME/jython
 export SCALA_HOME=/usr/local/scala/scala
 export GRADLE_HOME=/Users/bmc/java/gradle-0.6.1
+export GEM_HOME=$HOME/.gem/ruby/1.8
 
 # Use xterm1, which avoids the alternate screen buffer. (See /etc/termcap)
 
@@ -169,6 +170,8 @@ alias set-scala=switch-scala
 # PATH
 
 export PATH=\
+$HOME/.gem/ruby/1.8/bin:\
+$HOME/.cabal/bin:\
 $HOME/python/bin:\
 /Library/Frameworks/Python.framework/Versions/2.6/bin:\
 $JAVA_HOME/bin:\
@@ -177,11 +180,8 @@ $HOME/bin:\
 /usr/local/mysql/bin:\
 /opt/local/lib/postgresql83/bin:\
 $PATH:\
-$HOME/.cabal/bin:\
 $JYTHON_HOME/bin:\
 $SCALA_HOME/bin:\
-$GRADLE_HOME/bin:\
-$HOME/.gem/ruby/1.8/bin
 
 # ---------------------------------------------------------------------------
 # Aliases and functions
@@ -218,6 +218,7 @@ export GROOVY_HOME=$JAVA_ROOT/groovy
 
 PATH=\
 $PATH:\
+$HOME/jython/bin:\
 $MAVEN_HOME/bin:\
 $HOME/python/bin:\
 $ANT_HOME/bin:\
