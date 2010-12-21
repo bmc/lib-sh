@@ -51,7 +51,7 @@ then
 # $SSH_ENV
     else
         . $SSH_ENV > /dev/null
-        ps -ef | grep $SSH_AGENT_PID | grep ssh-agent > /dev/null
+        $ps | grep $SSH_AGENT_PID | grep ssh-agent > /dev/null
         if [ $? -eq 0 ]
         then
             test_ssh_identities
