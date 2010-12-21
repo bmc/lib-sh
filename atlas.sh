@@ -144,4 +144,5 @@ set-scala default
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib:$HOME/lib
 
 load_file ~/bash/ubuntu.sh
+load_file ~/bash/ssh.sh
 

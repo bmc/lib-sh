@@ -44,3 +44,4 @@ alias top=htop
 
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib:$HOME/lib
 
+load_file ~/bash/ssh.sh
