@@ -1,3 +1,5 @@
+# See http://help.github.com/working-with-key-passphrases/
+
 SSH_ENV="$HOME/.ssh/environment"
 
 # start the ssh-agent
