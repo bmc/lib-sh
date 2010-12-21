@@ -235,3 +235,5 @@ export wwwtest="${usr_local_site}/www/apache/wwwtest"
 alias wwwtest='varcd wwwtest'
 
 export LD_LIBRARY_PATH=/usr/local/lib:/opt/local/lib:$HOME/lib:${LD_LIBRARY_PATH}
+
+load_file ~/bash/ssh.sh
