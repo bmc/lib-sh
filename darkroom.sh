@@ -236,4 +236,5 @@ alias wwwtest='varcd wwwtest'
 
 export LD_LIBRARY_PATH=/usr/local/lib:/opt/local/lib:$HOME/lib:${LD_LIBRARY_PATH}
 
-load_file ~/bash/ssh.sh
+# Not necessary on Mac OS X; Mac OS X starts an integrated one.
+#load_file ~/bash/ssh.sh
