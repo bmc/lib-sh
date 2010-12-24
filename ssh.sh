@@ -1,3 +1,5 @@
+# See http://help.github.com/working-with-key-passphrases/
+
 SSH_ENV="$HOME/.ssh/environment"
 
 # start the ssh-agent
@@ -26,37 +28,42 @@ function test_ssh_identities
     fi
 }
 
-case "$PLATFORM" in
-    darwin|*bsd)
-        ps='ps -agux'
-        ;;
-    solaris|linux)
-        ps='ps -ef'
-        ;;
-    *)
-        echo "Don't know how to run ps(1) on this $PLATFORM system."
-        ps=
-        ;;
-esac
-
-if [ -n "$ps" ]
+if interactive
 then
-    # check for running ssh-agent with proper $SSH_AGENT_PID
-    $ps | grep $SSH_AGENT_PID | grep ssh-agent > /dev/null
-    if [ $? -eq 0 ]
-    then
-        test_ssh_identities
 
-# if $SSH_AGENT_PID is not properly set, we might be able to load one from
-# $SSH_ENV
-    else
-        . $SSH_ENV > /dev/null
+    case "$PLATFORM" in
+        darwin|*bsd)
+            ps='ps -agux'
+            ;;
+        solaris|linux)
+            ps='ps -ef'
+            ;;
+        *)
+            echo "Don't know how to run ps(1) on this $PLATFORM system."
+            ps=
+            ;;
+    esac
+
+    if [ -n "$ps" ]
+    then
+        # check for running ssh-agent with proper $SSH_AGENT_PID
         $ps | grep $SSH_AGENT_PID | grep ssh-agent > /dev/null
         if [ $? -eq 0 ]
         then
             test_ssh_identities
+
+# if $SSH_AGENT_PID is not properly set, we might be able to load one from
+# $SSH_ENV
         else
-            start_ssh_agent
+            . $SSH_ENV > /dev/null
+            $ps | grep $SSH_AGENT_PID | grep ssh-agent > /dev/null
+            if [ $? -eq 0 ]
+            then
+                test_ssh_identities
+            else
+                start_ssh_agent
+            fi
         fi
     fi
+
 fi
