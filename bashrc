@@ -214,6 +214,10 @@ complete -X 'CVS' -A directory cd
 complete -X '*/CVS' -A directory cd
 complete -X '.svn' -A directory cd
 
+# Ruby RVM
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 fi # interactive
 
 # ***************************************************************************
