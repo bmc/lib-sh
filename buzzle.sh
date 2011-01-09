@@ -138,6 +138,12 @@ alias set-scala=switch-scala
 switch-scala default
 
 # ---------------------------------------------------------------------------
+# Android
+
+export ANDROID_SDK=$HOME/Android/android-sdk-linux_86
+PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
+
+# ---------------------------------------------------------------------------
 # Local stuff
 
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib:$HOME/lib

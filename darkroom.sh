@@ -238,3 +238,9 @@ export LD_LIBRARY_PATH=/usr/local/lib:/opt/local/lib:$HOME/lib:${LD_LIBRARY_PATH
 
 # Not necessary on Mac OS X; Mac OS X starts an integrated one.
 #load_file ~/bash/ssh.sh
+
+# ---------------------------------------------------------------------------
+# Android
+
+export ANDROID_SDK=$HOME/Android/android-sdk-mac_86
+PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
