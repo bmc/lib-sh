@@ -239,6 +239,8 @@ export LD_LIBRARY_PATH=/usr/local/lib:/opt/local/lib:$HOME/lib:${LD_LIBRARY_PATH
 # Not necessary on Mac OS X; Mac OS X starts an integrated one.
 #load_file ~/bash/ssh.sh
 
+export RAILS_ENV=briandev
+
 # ---------------------------------------------------------------------------
 # Android
 
