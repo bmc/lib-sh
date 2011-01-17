@@ -3,6 +3,7 @@
 
 export TERM=xterm1
 . ~/bash/ssh.sh
+export DFSPACE_OPTS="-t rootfs -t vfat"
 
 # ---------------------------------------------------------------------------
 # Aliases
