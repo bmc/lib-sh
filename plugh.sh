@@ -2,6 +2,7 @@
 # Environment variables
 
 export TERM=xterm1
+. ~/bash/ssh.sh
 
 # ---------------------------------------------------------------------------
 # Aliases
