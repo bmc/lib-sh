@@ -20,7 +20,6 @@ export FORTUNE_FILE=$HOME/src/mystuff/fortunes/fortunes
 export JYTHON_HOME=$HOME/jython
 export SCALA_HOME=/usr/local/scala/scala
 export GRADLE_HOME=/Users/bmc/java/gradle-0.6.1
-export GEM_HOME=$HOME/.gem/ruby/1.8
 
 # Use xterm1, which avoids the alternate screen buffer. (See /etc/termcap)
 
@@ -170,7 +169,6 @@ alias set-scala=switch-scala
 # PATH
 
 export PATH=\
-$HOME/.gem/ruby/1.8/bin:\
 $HOME/.cabal/bin:\
 $HOME/python/bin:\
 /Library/Frameworks/Python.framework/Versions/2.6/bin:\
@@ -225,6 +223,14 @@ $ANT_HOME/bin:\
 /usr/local/texlive/2010/bin/universal-darwin
 
 load_file ~/bash/java.sh
+
+# ---------------------------------------------------------------------------
+# Ruby
+
+export GEM_HOME=$HOME/.gem/ruby/1.8
+PATH=$PATH:$HOME/.gem/ruby/1.8/bin:
+
+rvm 1.8.7
 
 # ---------------------------------------------------------------------------
 # Local stuff
