@@ -137,7 +137,7 @@ alias z="echo Rereading $HOME/bash/bashrc ... ; source "'"$HOME"'"/bash/bashrc"
 
 export LOGIN_RHOST=`login-from | sed 's/\..*$//'`
 
-if [ -z "$DISPLAY" ]
+if [ -z $DISPLAY ]
 then
     case "$LOGIN_RHOST" in
         localhost|""|$HOST.$DOMAIN)

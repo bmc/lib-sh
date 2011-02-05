@@ -198,6 +198,8 @@ function mkprompt
     fi
 }
 
+alias stp=mkprompt
+
 # ---------------------------------------------------------------------------
 # Format man page on the fly
 
