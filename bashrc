@@ -152,6 +152,10 @@ fi
 # ---------------------------------------------------------------------------
 # Other files
 
+# Ruby RVM
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 load_file	~/bash/$PLATFORM.sh
 load_file	~/bash/$DOMAIN.sh
 load_file	~/bash/$HOST.sh
@@ -213,10 +217,6 @@ stty erase $stty_erase kill '^u' intr '^c' echok echoe -istrip
 complete -X 'CVS' -A directory cd
 complete -X '*/CVS' -A directory cd
 complete -X '.svn' -A directory cd
-
-# Ruby RVM
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 fi # interactive
 
