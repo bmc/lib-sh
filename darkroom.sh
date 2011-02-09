@@ -30,6 +30,15 @@ case "$TERM" in
 	;;
 esac
 
+export PATH=\
+$HOME/.cabal/bin:\
+$HOME/python/bin:\
+/Library/Frameworks/Python.framework/Versions/2.6/bin:\
+$HOME/bin:\
+$PATH:\
+$JYTHON_HOME/bin:\
+$SCALA_HOME/bin:\
+
 # ---------------------------------------------------------------------------
 # Java-related environment variables
 
@@ -164,22 +173,6 @@ function switch-scala
 }
 
 alias set-scala=switch-scala
-
-# ---------------------------------------------------------------------------
-# PATH
-
-export PATH=\
-$HOME/.cabal/bin:\
-$HOME/python/bin:\
-/Library/Frameworks/Python.framework/Versions/2.6/bin:\
-$JAVA_HOME/bin:\
-$HOME/bin:\
-/usr/X11R6/bin:\
-/usr/local/mysql/bin:\
-/opt/local/lib/postgresql83/bin:\
-$PATH:\
-$JYTHON_HOME/bin:\
-$SCALA_HOME/bin:\
 
 # ---------------------------------------------------------------------------
 # Aliases and functions
