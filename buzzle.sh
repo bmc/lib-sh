@@ -144,6 +144,11 @@ export ANDROID_SDK=$HOME/Android/android-sdk-linux_86
 PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
 
 # ---------------------------------------------------------------------------
+# Ruby
+
+rvm 1.8.7-p330@boomerangmail
+
+# ---------------------------------------------------------------------------
 # Local stuff
 
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib:$HOME/lib
