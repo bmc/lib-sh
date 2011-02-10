@@ -147,6 +147,10 @@ PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
 # Ruby
 
 rvm 1.8.7-p330@boomerangmail
+if interactive
+then
+    echo "Using Ruby $(rvm current)"
+fi
 
 # ---------------------------------------------------------------------------
 # Local stuff
