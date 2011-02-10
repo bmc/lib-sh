@@ -24,6 +24,7 @@
 
 alias cd=chdir
 alias up="cd .."
+PROMPT_COMMAND=mkprompt
 
 chdir()
 {
