@@ -144,13 +144,16 @@ export ANDROID_SDK=$HOME/Android/android-sdk-linux_86
 PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
 
 # ---------------------------------------------------------------------------
-# Ruby
+# Ruby and Hozzle Rocket
 
 rvm 1.8.7-p330@boomerangmail
 if interactive
 then
     echo "Using Ruby $(rvm current)"
 fi
+
+export boom=$HOME/src/consulting/hozzle-rocket/boomerangmail
+alias boom="varcd boom"
 
 # ---------------------------------------------------------------------------
 # Local stuff
