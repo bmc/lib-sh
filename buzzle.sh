@@ -146,7 +146,7 @@ PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
 # ---------------------------------------------------------------------------
 # Ruby and Hozzle Rocket
 
-rvm 1.8.7-p330@boomerangmail
+rvm 1.8.7-p334@boomerangmail
 if interactive
 then
     echo "Using Ruby $(rvm current)"
