@@ -10,6 +10,6 @@ alias play=aplay
 # ---------------------------------------------------------------------------
 # Environment variables
 
-export JAVA_HOME=/usr/lib/jvm/java-6-sun
+export JAVA_HOME=/usr/lib/jvm/java-6-openjdk
 export ANT_HOME=/usr/share/ant
 export PYTHONPATH=$PYTHONPATH:/usr/share/pyshared
