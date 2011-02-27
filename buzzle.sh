@@ -14,7 +14,7 @@ export PYTHONPATH="$PYTHONPATH:/var/lib/python-support/python2.6:$HOME/lib/pytho
 export FORTUNE_FILE=$HOME/src/mystuff/fortunes/fortunes
 export DFSPACE_OPTS='-t vfat'
 export SCALA_HOME=$HOME/scala/scala-2.8.0
-export JYTHOM_HOME=$HOME/jython
+export JYTHON_HOME=$HOME/jython
 
 export CLASSPATH=\
 $CLASSPATH:\
@@ -24,6 +24,8 @@ $CLASSPATH:\
 /usr/share/java/postgresql.jar:\
 $HOME/java/classes/sqlitejdbc-v056-pure.jar:\
 $HOME/java/classes/h2-1.2.129.jar
+
+export JAVA_HOME=/usr/lib/jvm/java-6-openjdk
 
 export www=/var/www
 export photos=$HOME/Pictures/photos
@@ -144,13 +146,16 @@ export ANDROID_SDK=$HOME/Android/android-sdk-linux_86
 PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
 
 # ---------------------------------------------------------------------------
-# Ruby
+# Ruby and Hozzle Rocket
 
-rvm 1.8.7-p330@boomerangmail
+rvm 1.8.7-p334@boomerangmail
 if interactive
 then
     echo "Using Ruby $(rvm current)"
 fi
+
+export boom=$HOME/src/consulting/hozzle-rocket/boomerangmail
+alias boom="varcd boom"
 
 # ---------------------------------------------------------------------------
 # Local stuff

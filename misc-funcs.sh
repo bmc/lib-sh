@@ -53,11 +53,15 @@ interactive()
 # ---------------------------------------------------------------------------
 # Load arbitrary file
 
+let _lf=0
 load_file()
 {
     if [ -r "$1" ]
     then
+        let _lf=${_lf}+1
+        #echo "($_lf) Loading $1..."
         . "$1"
+        let _lf=${_lf}-1
     fi
 }
 
