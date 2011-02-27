@@ -13,7 +13,7 @@ set console_vt_pattern = "tty[0-9]"
 set console_term       = linux
 
 # Path setting
-export PATH=$PATH:/usr/X11R6/bin:/usr/sbin:/sbin:/usr/games/bin
+export PATH=$PATH:/usr/sbin:/sbin:/usr/games/bin
 
 # ---------------------------------------------------------------------------
 # Linux-specific aliases

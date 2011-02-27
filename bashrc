@@ -19,14 +19,8 @@ PATH="$HOME/bin:$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin"
 # ---------------------------------------------------------------------------
 # Environment settings.
 
-if [ -z "$LD_LIBRARY_PATH" ]
-then
-    export LD_LIBRARY_PATH="/usr/X11R6/lib"
-fi
-
 # Ensure that $HOME is set to the real thing, even if what's in /etc/passwd
 # specifies a symlink
-
 
 getHome HOME
 export HOME
