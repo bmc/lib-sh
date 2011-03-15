@@ -152,7 +152,7 @@ fi
 
 # PythonBrew (similar to RVM, but for Python)
 
-[[ -s "$HOME/.pythonbew/etc/bashrc" ]] && . "$HOME/.pythonbrew/etc/bashrc"
+[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && . "$HOME/.pythonbrew/etc/bashrc"
 
 load_file	~/bash/$PLATFORM.sh
 load_file	~/bash/$DOMAIN.sh
