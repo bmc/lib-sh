@@ -150,6 +150,10 @@ fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+# PythonBrew (similar to RVM, but for Python)
+
+[[ -s "$HOME/.pythonbew/etc/bashrc" ]] && . "$HOME/.pythonbrew/etc/bashrc"
+
 load_file	~/bash/$PLATFORM.sh
 load_file	~/bash/$DOMAIN.sh
 load_file	~/bash/$HOST.sh
