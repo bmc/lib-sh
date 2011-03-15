@@ -226,6 +226,11 @@ PATH=$PATH:$HOME/.gem/ruby/1.8/bin:
 rvm 1.8.7
 
 # ---------------------------------------------------------------------------
+# Python
+
+pythonbrew use 2.7.1
+
+# ---------------------------------------------------------------------------
 # Local stuff
 
 # Change public directory, then reload domain stuff
