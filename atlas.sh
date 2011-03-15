@@ -145,6 +145,11 @@ $HOME/.gem/ruby/1.8/bin:\
 rvm 1.8.7
 
 # ---------------------------------------------------------------------------
+# Python stuff
+
+pythonbrew use 2.7.1
+
+# ---------------------------------------------------------------------------
 # Local stuff
 
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib:$HOME/lib
