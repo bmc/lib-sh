@@ -158,6 +158,11 @@ export boom=$HOME/src/consulting/hozzle-rocket/boomerangmail
 alias boom="varcd boom"
 
 # ---------------------------------------------------------------------------
+# Python stuff
+
+pythonbrew use 2.7.1 >/dev/null 2>&1
+
+# ---------------------------------------------------------------------------
 # Local stuff
 
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib:$HOME/lib
