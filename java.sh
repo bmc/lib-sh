@@ -38,14 +38,6 @@ then
     export JAVA_ROOT=$HOME/java
 fi
 
-export JAVAC="$JAVA_HOME/bin/javac"
-#export JAVAC="jikes +E"
-
-# Shujit has some problems. rssget will cause it to dump. Using OpenJIT for now.
-#export JAVA_COMPILER=shujit
-#export JAVA_COMPILER_OPT=quiet
-#export JAVA_COMPILER=OpenJIT
-
 if [ -z $ANT_HOME ]
 then
     ANT_HOME=$JAVA_ROOT/ant
@@ -59,6 +51,8 @@ then
     export JAVA_HOME=$JAVA_ROOT/jdk
 fi
 
+export JAVAC="$JAVA_HOME/bin/javac"
+
 if [ -n $JAVA_HOME ]
 then
     rmpath PATH "$JAVA_ROOT/jdk*/bin"
@@ -68,74 +62,60 @@ fi
 
 export LD_LIBRARY_PATH=$JAVA_HOME/jre/lib/i386:${LD_LIBRARY_PATH}
 
-#JAR=$(type -p fastjar)
-#if [ -z $JAR ]
-#then
-#    JAR=$JAVA_HOME/bin/jar
-#fi
-#export JAR
-
 add_dir_contents_to_classpath $HOME/java/classes
 
-case "$PLATFORM" in
-    freebsd)
-	# Use the javavmwrapper, instead of the native JDK java
-	PATH=$PATH:/usr/local/bin
-	;;
-esac
+function switch-jdk
+{
+    case $# in
+        0)
+            echo $JAVA_HOME
+            return
+            ;;
+        1)
+            ;;
+        *)
+            echo "Usage: switch-jdk jdk" >&2
+            return 1
+            ;;
+    esac
 
-export PATH=\
-$ANT_HOME/bin:\
-$JAVA_HOME/bin:\
-$PATH:
+    case "$1" in
+        6|1.6|jdk6|jdk1.6*)
+           _n=/usr/local/soylatte16
+           ;;
+        openjdk*)
+           _n=/usr/local/openjdk6
+           ;;
+        apple6|apple-6|apple-jdk-6|apple1.6)
+           _n=$JDK_ROOT/1.6.0/Home
+           ;;
+        5|1.5|jdk5|jdk1.5*)
+           _n=$JDK_ROOT/1.5.0/Home
+           ;;
+        4|1.4|1.4.2|jdk4|jdk1.4*)
+           _n=$JDK_ROOT/1.4.2/Home
+           ;;
+        3|1.3|jdk3|jdk1.3*)
+           _n=$JDK_ROOT/1.3/Home
+           ;;
+        *)
+           ;;
+    esac
 
-# IntelliJ Idea
-#export IDEA_JDK=/usr/local/java/jdk1.5.0
-#export PATH=$PATH:$HOME/Idea/idea/bin
+    if [ ! -d $_n ]
+    then
+        echo "No such JDK -- $1 ($_n)" >&2
+        return 1
+    fi
 
-case "$JAVAC" in
-    jikes*)
-	# For Jikes: Must also include path to JDK's classes, so Jikes knows
-	# what JDK its compiling against. Setting EXTDIRS tells Jikes where to
-	# find the Java extensions, since it's not part of the JDK.
-
-	# WARNING: Putting rt.jar in the classpath screws things up royally
-	# on JDK 1.4, because that JDK ships with a version of the org.w3c
-	# interfaces that is incompatible with the version in XMLC. Leave
-	# rt.jar out of CLASSPATH, and make sure it's in -bootclasspath,
-	# and all seems to be well.
-
-        java_version=`java -version 2>&1 | sed -e 's/"//g' -e 's/^java version //' -e 1q`
-        case "$java_version" in
-	    1.4*)
-	        JIKESPATH=
-		sep=
-		for i in jce.jar jsse.jar
-		  do
-		  if [ -f $JAVA_HOME/jre/lib/$i ]
-		      then
-		      JIKESPATH="$JIKESPATH$sep$JAVA_HOME/jre/lib/$i"
-		      sep=:
-		  fi
-		done
-		unset sep
-		JIKESPATH=$CLASSPATH:$JIKESPATH
-		export JIKESPATH
-		export CLASSPATH=$JIKESPATH
-                export EXTDIRS=$JAVA_HOME/jre/lib/ext
-		;;
-	    1.3*)
-	        export JIKESPATH=$JAVA_HOME/jre/lib/rt.jar:$CLASSPATH
-		export CLASSPATH=$JIKESPATH
-                export EXTDIRS=$JAVA_HOME/jre/lib/ext
-		;;
-	esac
-
-	# the following seems to be necessary for jikes
-	export JAVAC_EXTRA_FLAGS_ENV="-bootclasspath $JAVA_HOME/jre/lib/rt.jar +Pno-shadow +Pno-switchcheck +Pno-serial"
-	;;
-esac
-
-cleanpath JIKESPATH
+    export PATH=$(echo $PATH | sed "s+$JAVA_HOME/bin:++g")
+    if [ -n "$JAVA_HOME" ]
+    then
+	rmpath PATH $JAVA_HOME/bin
+    fi
+    export JAVA_HOME=$_n
+    PATH=$JAVA_HOME/bin:$PATH
+    echo $JAVA_HOME
+}
 
 _java_sh=1

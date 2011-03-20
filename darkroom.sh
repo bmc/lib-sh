@@ -60,64 +60,11 @@ export ASM_HOME=$JAVA_ROOT/asm-3.2
 
 export JDK_ROOT=/System/Library/Frameworks/JavaVM.framework/Versions
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
-#export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.5/Home
-#export JAVA_HOME=/usr/local/soylatte16
-#export JAVA_HOME=/usr/local/openjdk6
 
 eval `classpath -k -J`
-function switch-jdk
-{
-    case $# in
-        0)
-            echo $JAVA_HOME
-            return
-            ;;
-        1)
-            ;;
-        *)
-            echo "Usage: switch-jdk jdk" >&2
-            return 1
-            ;;
-    esac
 
-    case "$1" in
-        6|1.6|jdk6|jdk1.6*)
-           _n=/usr/local/soylatte16
-           ;;
-        openjdk*)
-           _n=/usr/local/openjdk6
-           ;;
-        apple6|apple-6|apple-jdk-6|apple1.6)
-           _n=$JDK_ROOT/1.6.0/Home
-           ;;
-        5|1.5|jdk5|jdk1.5*)
-           _n=$JDK_ROOT/1.5.0/Home
-           ;;
-        4|1.4|1.4.2|jdk4|jdk1.4*)
-           _n=$JDK_ROOT/1.4.2/Home
-           ;;
-        3|1.3|jdk3|jdk1.3*)
-           _n=$JDK_ROOT/1.3/Home
-           ;;
-        *)
-           ;;
-    esac
-
-    if [ ! -d $_n ]
-    then
-        echo "No such JDK -- $1 ($_n)" >&2
-        return 1
-    fi
-
-    export PATH=$(echo $PATH | sed "s+$JAVA_HOME/bin:++g")
-    if [ -n "$JAVA_HOME" ]
-    then
-	rmpath PATH $JAVA_HOME/bin
-    fi
-    export JAVA_HOME=$_n
-    PATH=$JAVA_HOME/bin:$PATH
-    echo $JAVA_HOME
-}
+load_file ~/bash/java.sh
+load_file ~/bash/scala.sh
 
 growl()
 {
@@ -129,50 +76,6 @@ alias set-jdk=switch-jdk
 alias setjdk=switch-jdk
 alias setjava=switch-jdk
 alias set-java=switch-jdk
-
-function switch-scala
-{
-    case $# in
-        0)
-            echo $SCALA_HOME
-            return
-            ;;
-        1)
-            ;;
-        *)
-            echo "Usage: switch-scala scala" >&2
-            return 1
-            ;;
-    esac
-
-    case "$1" in
-        2.7|2.7.?)
-           _n=/usr/local/scala/scala-2.7.7
-           ;;
-        2.8|2.8.?|2.8.*|default)
-           _n=/usr/local/scala/scala-2.8.1
-           ;;
-        *)
-           ;;
-    esac
-
-    if [ ! -d $_n ]
-    then
-        echo "No such Scala version -- $1 ($_n)" >&2
-        return 1
-    fi
-
-    export PATH=$(echo $PATH | sed "s+$SCALA_HOME/bin:++g")
-    if [ -n "$SCALA_HOME" ]
-    then
-	rmpath PATH $SCALA_HOME/bin
-    fi
-    export SCALA_HOME=$_n
-    PATH=$SCALA_HOME/bin:$PATH
-    echo $SCALA_HOME
-}
-
-alias set-scala=switch-scala
 
 # ---------------------------------------------------------------------------
 # Aliases and functions
