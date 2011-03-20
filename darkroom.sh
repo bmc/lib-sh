@@ -72,6 +72,54 @@ growl()
     return
 }
 
+function switch-jdk
+{
+    case $# in
+        0)
+            echo $JAVA_HOME
+            return
+            ;;
+        1)
+            ;;
+        *)
+            echo "Usage: switch-jdk jdk" >&2
+            return 1
+            ;;
+    esac
+
+    case "$1" in
+        soy|soy6|soylatte|soylatte6|soylatte16)
+            _n=/usr/local/soylatte16
+            ;;
+        openjdk*)
+            _n=/usr/local/openjdk6
+            ;;
+        apple6|apple-6|apple-jdk-6|apple1.6|6|1.6|jdk6|jdk1.6*|default)
+            _n=$JDK_ROOT/1.6.0/Home
+            ;;
+        5|1.5|jdk5|jdk1.5*)
+            _n=$JDK_ROOT/1.5.0/Home
+            ;;
+        *)
+            ;;
+    esac
+
+    if [ ! -d $_n ]
+    then
+        echo "No such JDK -- $1 ($_n)" >&2
+        return 1
+    fi
+
+    export PATH=$(echo $PATH | sed "s+$JAVA_HOME/bin:++g")
+    if [ -n "$JAVA_HOME" ]
+    then
+	rmpath PATH $JAVA_HOME/bin
+    fi
+    export JAVA_HOME=$_n
+    PATH=$JAVA_HOME/bin:$PATH
+    echo $JAVA_HOME
+}
+
 alias set-jdk=switch-jdk
 alias setjdk=switch-jdk
 alias setjava=switch-jdk
