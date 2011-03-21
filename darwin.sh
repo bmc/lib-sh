@@ -12,9 +12,8 @@ console_term=cons25
 # Environment variables
 
 # Path setting
-export PATH=/opt/local/bin:/usr/local/bin:/sw/bin:$PATH:/usr/sbin:/sbin
-#export PKG_CONFIG_PATH=/sw/lib/pkgconfig:/usr/local/lib/pkgconfig:/opt/local/lib/pkgconfig
-export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/local/lib/pkgconfig
+export PATH=/usr/local/bin:$PATH:/usr/sbin:/sbin
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 export MAIL=/var/mail/$USER
 
 if [[ -z $?TERM ]]
@@ -58,7 +57,7 @@ fi
 # Aliases and functions
 
 # Assume that all OS X machines have the fileutils port installed.
-eval `dircolors ~/.dir_colors`
+eval `gdircolors ~/.dir_colors`
 
 _fetch=$(type -P fetch)
 alias fetch="$_fetch -p"
@@ -66,7 +65,7 @@ unset _fetch
 
 alias hping2=hping
 alias ldd='otool -L'
-alias ls='/sw/bin/ls --color=tty -CF'
+alias ls='gls --color=tty -CF'
 alias mllog="sudo tail -f /var/log/mail.log"
 alias mslog="sudo tail -f /var/log/system.log"
 alias nsr='netstat -rn -f inet'

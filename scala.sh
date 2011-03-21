@@ -69,7 +69,10 @@ function switch-scala
     fi
     export SCALA_HOME=$_n
     PATH=$SCALA_HOME/bin:$PATH
-    echo $SCALA_HOME
+    if interactive
+    then
+        echo $SCALA_HOME
+    fi
 }
 
 alias set-scala=switch-scala
