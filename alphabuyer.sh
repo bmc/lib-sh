@@ -9,8 +9,6 @@
 export PERL5LIB=$HOME/lib/perl
 export mystuff=$HOME/src/mystuff
 
-export PYTHONPATH="$PYTHONPATH:/var/lib/python-support/python2.6:$HOME/lib/python:$HOME/google_appengine:/usr/share/pyshared"
-
 export FORTUNE_FILE=$HOME/src/mystuff/fortunes/fortunes
 export DFSPACE_OPTS='-t vfat'
 export SCALA_HOME=$HOME/scala/scala-2.8.0
