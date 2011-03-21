@@ -26,7 +26,7 @@ $HOME/java/classes/h2-1.2.129.jar
 export JAVA_HOME=/usr/lib/jvm/java-6-openjdk
 
 export www=/var/www
-export photos=$HOME/Pictures/photos
+export alphacode=$HOME/src/consulting/alphabuyer
 
 # ---------------------------------------------------------------------------
 # PATH
@@ -79,6 +79,7 @@ $PATH:\
 # ---------------------------------------------------------------------------
 # Aliases and functions
 
+alias alphacode='varcd alphacode'
 alias ftp=ncftp
 alias mllog="sudo tail -f /var/log/mail.log"
 alias mslog="sudo tail -f /var/log/messages"
