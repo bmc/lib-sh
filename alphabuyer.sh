@@ -32,6 +32,7 @@ export alphacode=$HOME/src/consulting/alphabuyer
 # PATH
 
 export PATH=\
+$HOME/bin:\
 $HOME/.gem/ruby/1.8/bin:\
 $HOME/.cabal/bin:\
 $HOME/python/bin:\
