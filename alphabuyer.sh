@@ -9,8 +9,6 @@
 export PERL5LIB=$HOME/lib/perl
 export mystuff=$HOME/src/mystuff
 
-export PYTHONPATH="$PYTHONPATH:/var/lib/python-support/python2.6:$HOME/lib/python:$HOME/google_appengine:/usr/share/pyshared"
-
 export FORTUNE_FILE=$HOME/src/mystuff/fortunes/fortunes
 export DFSPACE_OPTS='-t vfat'
 export SCALA_HOME=$HOME/scala/scala-2.8.0
@@ -28,12 +26,13 @@ $HOME/java/classes/h2-1.2.129.jar
 export JAVA_HOME=/usr/lib/jvm/java-6-openjdk
 
 export www=/var/www
-export photos=$HOME/Pictures/photos
+export alphacode=$HOME/src/consulting/alphabuyer
 
 # ---------------------------------------------------------------------------
 # PATH
 
 export PATH=\
+$HOME/bin:\
 $HOME/.gem/ruby/1.8/bin:\
 $HOME/.cabal/bin:\
 $HOME/python/bin:\
@@ -81,6 +80,7 @@ $PATH:\
 # ---------------------------------------------------------------------------
 # Aliases and functions
 
+alias alphacode='varcd alphacode'
 alias ftp=ncftp
 alias mllog="sudo tail -f /var/log/mail.log"
 alias mslog="sudo tail -f /var/log/messages"
@@ -106,7 +106,7 @@ fi
 # ---------------------------------------------------------------------------
 # Python stuff
 
-pythonbrew use 2.7.1 >/dev/null 2>&1
+pythonbrew use 2.6.6 >/dev/null 2>&1
 
 # ---------------------------------------------------------------------------
 # Local stuff
