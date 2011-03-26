@@ -112,6 +112,8 @@ fi
 export boom=$HOME/src/consulting/hozzle-rocket/boomerangmail
 alias boom="varcd boom"
 
+alias man='gem man -s'
+
 # ---------------------------------------------------------------------------
 # Python stuff
 
