@@ -19,7 +19,6 @@ export www=$HOME/Sites
 export FORTUNE_FILE=$HOME/src/mystuff/fortunes/fortunes
 export JYTHON_HOME=$HOME/jython
 export SCALA_HOME=/usr/local/scala/scala
-export GRADLE_HOME=/Users/bmc/java/gradle-0.6.1
 
 # Use xterm1, which avoids the alternate screen buffer. (See /etc/termcap)
 
@@ -174,7 +173,7 @@ load_file ~/bash/java.sh
 export GEM_HOME=$HOME/.gem/ruby/1.8
 PATH=$PATH:$HOME/.gem/ruby/1.8/bin:
 
-rvm 1.8.7
+rvm 1.8.7@ardentex
 
 alias man='gem man -s'
 
