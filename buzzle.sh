@@ -103,6 +103,9 @@ PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
 # ---------------------------------------------------------------------------
 # Ruby and Hozzle Rocket
 
+export RAILS_ENV=briandev
+export RAILS_GEM_VERSION=2.3.11
+
 rvm 1.8.7-p334@boomerangmail
 if interactive
 then
@@ -111,6 +114,8 @@ fi
 
 export boom=$HOME/src/consulting/hozzle-rocket/boomerangmail
 alias boom="varcd boom"
+
+alias man='gem man -s'
 
 # ---------------------------------------------------------------------------
 # Python stuff
@@ -125,6 +130,4 @@ export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib:$HOME/lib
 load_file ~/bash/ubuntu.sh
 # Not necessary on Ubuntu; Ubuntu starts one that's integrated into Gnome.
 #load_file ~/bash/ssh.sh
-
-export RAILS_ENV=briandev
 
