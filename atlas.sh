@@ -45,34 +45,7 @@ $PATH:\
 # ---------------------------------------------------------------------------
 # Programmatic Completion
 
-#unset -f _get_vpn_completions
-#_get_vpn_completions()
-#{
-#    local cur prev possibles
-#    # "cur" is the current word (the one being completed)
-#    cur="${COMP_WORDS[COMP_CWORD]}"
-#    # prev is the previous word type. We don't use that here.
-#    prev="${COMP_WORDS[COMP_CWORD-1]}"
-#
-#    # COMPREPLY is a bash array in which the responses are returned
-#    COMPREPLY=()
-#
-#    # Generate the list of possible matches (i.e., the directories under
-#    # $HOME/openvpn
-#    possibles=
-#    for f in $HOME/openvpn/*
-#    do
-#        if [ -d $f ]
-#        then
-#            possibles="$possibles $(basename $f)"
-#        fi
-#    done
-#
-#    # Now, use the compgen built-in to generate the matches
-#    COMPREPLY=( $(compgen -W "$possibles" -- $cur) )
-#}
-## enable completions on command "vpn"
-#complete -F _get_vpn_completions vpn
+#. ~/bash/openvpn.sh
 
 # ---------------------------------------------------------------------------
 # Aliases and functions
@@ -97,7 +70,7 @@ PATH=$PATH:\
 $HOME/.gem/ruby/1.8/bin:\
 /var/lib/gems/1.8/bin:\
 
-rvm 1.8.7
+rvm 1.8.7@ardentex
 
 alias man='gem man -s'
 
