@@ -1,1 +1,1 @@
-export TERM=xterm
+export TERM=xterm1
