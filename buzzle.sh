@@ -103,7 +103,7 @@ PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
 # ---------------------------------------------------------------------------
 # Ruby and Hozzle Rocket
 
-export RAILS_ENV=briandev
+export RAILS_ENV=briandev2
 export RAILS_GEM_VERSION=2.3.11
 
 rvm 1.8.7-p334@boomerangmail

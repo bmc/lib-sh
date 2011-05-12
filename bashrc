@@ -1,3 +1,5 @@
+#                                                               -*- sh -*-
+
 # _read_etc_profile is set in /etc/profile, if it's been read already
 if [ -z "$_read_etc_profile" ]
 then
@@ -154,9 +156,10 @@ fi
 
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && . "$HOME/.pythonbrew/etc/bashrc"
 
-load_file	~/bash/$PLATFORM.sh
-load_file	~/bash/$DOMAIN.sh
-load_file	~/bash/$HOST.sh
+load_file ~/bash/$PLATFORM.sh
+load_file ~/bash/$DOMAIN.sh
+load_file ~/bash/$HOST.sh
+load_file ~/bash/ssh.sh
 
 #cleanpath --rm . PATH
 cleanpath PATH

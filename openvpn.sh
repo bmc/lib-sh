@@ -2,13 +2,18 @@
 #
 # Sourcing this file enables completions on the $VPN_START command.
 #
+# Assumption:
+#     The $VPN_START command takes one parameter: The name of the VPN,
+#     which corresponds to a directory containing all the OpenVPN client
+#     configuration files for the VPN.
+#
 # Variables:
 #
-# VPN_START          name of VPN start script. Default "vpn"
+#     VPN_START          name of VPN start script. Default "vpn"
 #
-# OPENVPN_CONF_ROOT  directory containing OpenVPN configuration subdirectories.
-#                    The subdirectory names are what the completion logic uses.
-#                    Default: $HOME/openvpn
+#     OPENVPN_CONF_ROOT  directory containing OpenVPN configuration 
+#                        subdirectories. The subdirectory names are what
+#                        the completion logic uses. Default: $HOME/openvpn
 # ---------------------------------------------------------------------------
 
 : ${OPENVPN_CONF_ROOT:=$HOME/openvpn}
