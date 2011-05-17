@@ -1,4 +1,6 @@
 SCALA_LOCATIONS="$HOME/scala /usr/local/scala"
+SCALA_DEFAULT=2.9.0
+
 function find_scala
 {
     _scala=
@@ -25,13 +27,13 @@ function switch-scala
 {
     case $# in
         0)
-            echo $SCALA_HOME
-            return
+            ver=$SCALA_DEFAULT
             ;;
         1)
+            ver=$1
             ;;
         *)
-            echo "Usage: switch-scala scala" >&2
+            echo "Usage: switch-scala version|show" >&2
             return 1
             ;;
     esac
@@ -42,11 +44,13 @@ function switch-scala
         return 1
     fi
 
-    case "$1" in
+    case "$ver" in
+        show)
+            ;;
         2.7|2.7.?)
            _n=$HOME/scala/scala-2.7.7
            ;;
-        2.8|2.8.?|2.8.*|default)
+        2.8|2.8.?|2.8.*)
            _n=$HOME/scala/scala-2.8.1
            ;;
         2.9|2.9.0)
@@ -58,7 +62,7 @@ function switch-scala
 
     if [ ! -d $_n ]
     then
-        echo "No such Scala version -- $1 ($_n)" >&2
+        echo "No such Scala version -- $ver ($_n)" >&2
         return 1
     fi
 
@@ -76,4 +80,5 @@ function switch-scala
 }
 
 alias set-scala=switch-scala
+alias use-scala=switch-scala
 switch-scala default
