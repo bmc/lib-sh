@@ -174,8 +174,21 @@ export GEM_HOME=$HOME/.gem/ruby/1.8
 PATH=$PATH:$HOME/.gem/ruby/1.8/bin:
 
 rvm 1.8.7@ardentex
+if interactive
+then
+    echo "Using Ruby $(rvm current)"
+fi
 
 alias man='gem man -s'
+
+# ---------------------------------------------------------------------------
+# Hozzle Rocket
+
+export RAILS_ENV=briandev
+export RAILS_GEM_VERSION=2.3.11
+
+export boom=$HOME/src/consulting/hozzle-rocket/boomerangmail
+alias boom="varcd boom"
 
 # ---------------------------------------------------------------------------
 # Python
@@ -195,6 +208,7 @@ export LD_LIBRARY_PATH=/usr/local/lib:/opt/local/lib:$HOME/lib:${LD_LIBRARY_PATH
 # Not necessary on Mac OS X; Mac OS X starts an integrated one.
 #load_file ~/bash/ssh.sh
 
+export RAILS_GEM_VERSION=2.3.11
 export RAILS_ENV=briandev
 
 # ---------------------------------------------------------------------------

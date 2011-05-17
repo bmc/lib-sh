@@ -81,6 +81,9 @@ fi
 
 pythonbrew use 2.6.6 >/dev/null 2>&1
 
+# Default PYTHONPATH screws with PythonBrew setup.
+unset PYTHONPATH
+
 # ---------------------------------------------------------------------------
 # Local stuff
 

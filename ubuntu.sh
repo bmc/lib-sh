@@ -12,4 +12,3 @@ alias play=aplay
 
 export JAVA_HOME=/usr/lib/jvm/java-6-openjdk
 export ANT_HOME=/usr/share/ant
-export PYTHONPATH=$PYTHONPATH:/usr/share/pyshared
