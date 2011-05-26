@@ -39,6 +39,7 @@ function switch-scala
     esac
 
     _scala=$(find_scala)
+
     if [ -z $_scala ]
     then
         return 1
@@ -46,31 +47,38 @@ function switch-scala
 
     case "$ver" in
         show)
+            _n=
+            ;;
+        default)
+            _n=$_scala/scala-$SCALA_DEFAULT
             ;;
         2.7|2.7.?)
-           _n=$HOME/scala/scala-2.7.7
+           _n=$_scala/scala-2.7.7
            ;;
         2.8|2.8.?|2.8.*)
-           _n=$HOME/scala/scala-2.8.1
+           _n=$_scala/scala-2.8.1
            ;;
         2.9|2.9.0)
-           _n=$HOME/scala/scala-2.9.0
+           _n=$_scala/scala-2.9.0
            ;;
         *)
            ;;
     esac
 
-    if [ ! -d $_n ]
+    if [ -n "$_n" ]
     then
-        echo "No such Scala version -- $ver ($_n)" >&2
-        return 1
+        if [ ! -d $_n ]
+        then
+            echo "No such Scala version -- $ver ($_n)" >&2
+            return 1
+        fi
+
+        if [ -n "$SCALA_HOME" ]
+        then
+	    rmpath PATH $SCALA_HOME/bin
+        fi
     fi
 
-    export PATH=$(echo $PATH | sed "s+$SCALA_HOME/bin:++g")
-    if [ -n "$SCALA_HOME" ]
-    then
-	rmpath PATH $SCALA_HOME/bin
-    fi
     export SCALA_HOME=$_n
     PATH=$SCALA_HOME/bin:$PATH
     if interactive

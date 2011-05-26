@@ -34,6 +34,7 @@ alias psme="ps -ef|grep $USER"
 alias md5=md5sum
 alias mllog="sudo tail -f /var/log/maillog"
 alias mslog="sudo tail -f /var/log/messages"
+alias open="xdg-open"
 alias sha1='digest sha1'
 alias sha224='digest sha224'
 alias sha256='digest sha256'
