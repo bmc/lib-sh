@@ -1,5 +1,6 @@
 SCALA_LOCATIONS="$HOME/scala /usr/local/scala"
 SCALA_DEFAULT=2.9.0
+SBT_VERSION=0.7.7
 
 function find_scala
 {
