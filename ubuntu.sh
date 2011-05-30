@@ -4,6 +4,7 @@
 # Aliases
 
 alias mllog='sudo tail -f /var/log/mail.log'
+alias mslog='sudo tail -f /var/log/syslog'
 alias pki='dpkg -l'
 alias play=aplay
 
