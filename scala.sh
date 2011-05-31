@@ -1,5 +1,5 @@
 SCALA_LOCATIONS="$HOME/scala /usr/local/scala"
-SCALA_DEFAULT=2.9.0
+SCALA_DEFAULT=2.9.0.1
 
 function find_scala
 {
@@ -59,7 +59,7 @@ function switch-scala
            _n=$_scala/scala-2.8.1
            ;;
         2.9|2.9.0)
-           _n=$_scala/scala-2.9.0
+           _n=$_scala/scala-2.9.0.1
            ;;
         *)
            ;;
