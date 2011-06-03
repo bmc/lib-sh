@@ -15,7 +15,6 @@ set console_term       = linux
 # Path setting
 PATH=$PATH:\
 /usr/local/bin:\
-/usr/local/gcc4/bin:\
 /usr/sbin:\
 /sbin:\
 /usr/games/bin
