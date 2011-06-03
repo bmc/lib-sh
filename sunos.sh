@@ -36,6 +36,7 @@ alias gzcat='gunzip -c'
 alias ls='ls --color=tty -CF'
 alias psme="ps -ef|grep $USER"
 alias md5=md5sum
+alias ftp=ncftp
 alias time='/usr/bin/time --portability'
 
 _vipw=`type -P vipw`
