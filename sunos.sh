@@ -13,8 +13,8 @@ set console_vt_pattern = "tty[0-9]"
 set console_term       = linux
 
 # Path setting
-$PATH:\
-/usr/X11R6/bin:\
+PATH=$PATH:\
+/usr/local/bin:\
 /usr/sbin:\
 /sbin:\
 /usr/games/bin
