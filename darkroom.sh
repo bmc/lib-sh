@@ -134,6 +134,7 @@ alias condor_home='varcd condor_home'
 #alias dfspace="dfspace -t ext3 -t ext2"
 alias ftp=ncftp
 alias nslookup="$(type -P nslookup) -silent"
+alias top=htop
 alias www='varcd www'
 alias xine="/Applications/XinePlayer.app/Contents/MacOS/XinePlayer"
 alias xinit="/usr/bin/xinit -- -bpp 16"
