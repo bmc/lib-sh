@@ -15,6 +15,7 @@ set console_term       = linux
 # Path setting
 PATH=$PATH:\
 /usr/local/bin:\
+/usr/local/gcc4/bin:\
 /usr/sbin:\
 /sbin:\
 /usr/games/bin
@@ -53,27 +54,13 @@ then
 fi
 export TERM
 
-# Use xterm1, which avoids the alternate screen buffer. (See /etc/termcap)
-
 case "$TERM" in
     xterm*)
-        TERM=xterm1
+        TERM=xterm
 	;;
 esac
 
 # ---------------------------------------------------------------------------
-# Linux-specific environment settings
-
-# Note: Setting the default geometry in the .Xdefaults file screws up the
-#       xterm menus.  Setting it explicitly on the command line, or resizing
-#       an xterm after it comes up, does not.  (Go figure.)  So, instead of
-#	including the following line in .Xdefaults, we specify the geometry
-#	explicitly on the command line via this XTERM variable.  xlogin and
-#	xtelnet will honor that variable, though xterm(1) proper won't.
-#
-#		XTerm*geometry:	80x44
-export XTERM=~/bin/myxterm
-#export XTERM=xterm
 
 # xterm uses two text pages.  To prevent loss of last page of less'd output,
 # tell less(1) to pause once at EOF.
