@@ -39,6 +39,11 @@ $JYTHON_HOME/bin:\
 $SCALA_HOME/bin:\
 
 # ---------------------------------------------------------------------------
+# Node.js, et al
+
+export NODE_PATH=/usr/local/lib/node
+
+# ---------------------------------------------------------------------------
 # Java-related environment variables
 
 export JAVA_ROOT=$HOME/java
