@@ -38,6 +38,7 @@ $HOME/.gem/ruby/1.8/bin:\
 $HOME/.cabal/bin:\
 $HOME/python/bin:\
 $HOME/jython/bin:\
+$HOME/local/bin:\
 /usr/bin:\
 /bin:\
 $HOME/scala/scala-2.8.0/bin:\
