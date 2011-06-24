@@ -32,6 +32,7 @@ export photos=$HOME/Pictures/photos
 
 export PATH=\
 $HOME/local/bin:\
+/usr/local/ghc7/bin:\
 $HOME/.cabal/bin:\
 $HOME/python/bin:\
 $HOME/jython/bin:\
