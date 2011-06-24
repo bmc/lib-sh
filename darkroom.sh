@@ -31,6 +31,7 @@ esac
 
 export PATH=\
 $HOME/.cabal/bin:\
+$HOME/Library/Haskell/bin:\
 $HOME/python/bin:\
 /Library/Frameworks/Python.framework/Versions/2.6/bin:\
 $HOME/bin:\
