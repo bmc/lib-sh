@@ -37,14 +37,13 @@ alias ls='ls --color=tty -CF'
 alias psme="ps -ef|grep $USER"
 alias md5=md5sum
 alias ftp=ncftp
-alias time='/usr/bin/time --portability'
 
 _vipw=`type -P vipw`
 alias vipw='EDITOR=vi VISUAL=vi sudo $_vipw'
 
 function psf
 {
-    ps -efww|grep $*
+    ps -ef|grep $*
 }
 
 if [[ -z "$TERM" ]]
