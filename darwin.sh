@@ -12,7 +12,7 @@ console_term=cons25
 # Environment variables
 
 # Path setting
-export PATH=/usr/local/bin:$PATH:/usr/sbin:/sbin
+export PATH=/Developer/usr/bin:/usr/local/bin:$PATH:/usr/sbin:/sbin
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 export MAIL=/var/mail/$USER
 
