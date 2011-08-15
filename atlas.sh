@@ -66,6 +66,11 @@ load_file ~/bash/java.sh
 load_file ~/bash/scala.sh
 
 # ---------------------------------------------------------------------------
+# Local Java stuff
+
+PATH=$PATH:$HOME/java/apache-maven/bin
+
+# ---------------------------------------------------------------------------
 # Ruby stuff
 
 PATH=$PATH:\
