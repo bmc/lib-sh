@@ -84,7 +84,10 @@ load_file ~/bash/scala.sh
 export jmv=$HOME/src/consulting/jmv
 alias jmv='varcd jmv'
 
-PATH=$HOME/Applications/maven/bin:$PATH
+export M2_HOME=$HOME/Applications/maven
+export M2=$M2_HOME/bin
+PATH=$M2:$PATH
+export MAVEN_OPTS="-Xms256m -Xmx512m"
 
 # ---------------------------------------------------------------------------
 # Ruby
