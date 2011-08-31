@@ -52,17 +52,15 @@ function switch-scala
         default)
             _n=$_scala/scala-$SCALA_DEFAULT
             ;;
-        2.7|2.7.?)
-           _n=$_scala/scala-2.7.7
-           ;;
-        2.8|2.8.?|2.8.*)
-           _n=$_scala/scala-2.8.1
-           ;;
-        2.9|2.9.0)
-           _n=$_scala/scala-2.9.0.1
-           ;;
         *)
-           ;;
+            if [ -d $_scala/scala-$ver ]
+            then
+                _n=$_scala/scala-$ver
+            else
+                echo "Can't find Scala version $ver." >&2
+                return 1
+            fi
+            ;;
     esac
 
     if [ -n "$_n" ]
