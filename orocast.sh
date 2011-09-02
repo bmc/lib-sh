@@ -89,10 +89,18 @@ export M2=$M2_HOME/bin
 PATH=$M2:$PATH
 export MAVEN_OPTS="-Xms256m -Xmx512m"
 
+export XMLBEANS_HOME=$HOME/Applications/xmlbeans
+PATH=$PATH:$XMLBEANS_HOME/bin
+
+export CLASSPATH=\
+$XMLBEANS_HOME/lib/xbean.jar:\
+$XMLBEANS_HOME/lib/jsr173_1.0_api.jar:\
+$CLASSPATH
+
 # ---------------------------------------------------------------------------
 # Ruby
 
-rvm 1.8.7-p352
+rvm 1.9.2@orocast
 if interactive
 then
     echo "Using Ruby $(rvm current)"
