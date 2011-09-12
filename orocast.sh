@@ -79,23 +79,12 @@ load_file ~/bash/java.sh
 load_file ~/bash/scala.sh
 
 # ---------------------------------------------------------------------------
-# JMV consulting
+# Orocast
 
-export jmv=$HOME/src/consulting/jmv
-alias jmv='varcd jmv'
-
-export M2_HOME=$HOME/Applications/maven
-export M2=$M2_HOME/bin
-PATH=$M2:$PATH
-export MAVEN_OPTS="-Xms256m -Xmx512m"
-
-export XMLBEANS_HOME=$HOME/Applications/xmlbeans
-PATH=$PATH:$XMLBEANS_HOME/bin
-
-export CLASSPATH=\
-$XMLBEANS_HOME/lib/xbean.jar:\
-$XMLBEANS_HOME/lib/jsr173_1.0_api.jar:\
-$CLASSPATH
+# Node.js
+export NODE_HOM=$HOME/local/node
+export NODE_PATH=${NODE_HOME}:${NODE_HOME}/lib/node_modules
+export PATH=$PATH:$NODE_HOME/bin
 
 # ---------------------------------------------------------------------------
 # Ruby
