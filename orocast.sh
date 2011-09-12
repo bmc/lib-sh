@@ -82,7 +82,7 @@ load_file ~/bash/scala.sh
 # Orocast
 
 # Node.js
-export NODE_HOM=$HOME/local/node
+export NODE_HOME=$HOME/local/node
 export NODE_PATH=${NODE_HOME}:${NODE_HOME}/lib/node_modules
 export PATH=$PATH:$NODE_HOME/bin
 
