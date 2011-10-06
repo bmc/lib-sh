@@ -12,7 +12,7 @@ console_term=cons25
 # Environment variables
 
 # Path setting
-export PATH=/Developer/usr/bin:/usr/local/bin:$PATH:/usr/sbin:/sbin
+export PATH=/usr/local/bin:$PATH:/usr/sbin:/sbin
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 export MAIL=/var/mail/$USER
 
@@ -93,4 +93,8 @@ function psf
 {
     ps -axww -opid,ppid,vsz,rss,user,tty,command|egrep "PID|$1"
 }
+
+if [ -f `brew --prefix`/etc/autojump ]; then
+  . `brew --prefix`/etc/autojump
+fi
 

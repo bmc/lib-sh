@@ -47,6 +47,25 @@ export NODE_PATH=/usr/local/lib/node
 PATH=${PATH}:/usr/local/lib/node_modules/coffee-script/bin
 
 # ---------------------------------------------------------------------------
+# Python
+
+pythonbrew use 2.7.1 >/dev/null 2>&1
+
+# ---------------------------------------------------------------------------
+# Ruby
+
+export GEM_HOME=$HOME/.gem/ruby/1.8
+PATH=$PATH:$HOME/.gem/ruby/1.8/bin:
+
+rvm 1.8.7@ardentex
+if interactive
+then
+    echo "Using Ruby $(rvm current)"
+fi
+
+alias man='gem man -s'
+
+# ---------------------------------------------------------------------------
 # Java-related environment variables
 
 export JAVA_ROOT=$HOME/java
@@ -177,20 +196,6 @@ $ANT_HOME/bin:\
 load_file ~/bash/java.sh
 
 # ---------------------------------------------------------------------------
-# Ruby
-
-export GEM_HOME=$HOME/.gem/ruby/1.8
-PATH=$PATH:$HOME/.gem/ruby/1.8/bin:
-
-rvm 1.8.7@ardentex
-if interactive
-then
-    echo "Using Ruby $(rvm current)"
-fi
-
-alias man='gem man -s'
-
-# ---------------------------------------------------------------------------
 # Hozzle Rocket
 
 export RAILS_ENV=briandev
@@ -198,11 +203,6 @@ export RAILS_GEM_VERSION=2.3.11
 
 export boom=$HOME/src/consulting/hozzle-rocket/boomerangmail
 alias boom="varcd boom"
-
-# ---------------------------------------------------------------------------
-# Python
-
-pythonbrew use 2.7.1 >/dev/null 2>&1
 
 # ---------------------------------------------------------------------------
 # Local stuff
