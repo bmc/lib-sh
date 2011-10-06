@@ -65,6 +65,11 @@ alias www='varcd www'
 load_file ~/bash/java.sh
 load_file ~/bash/scala.sh
 
+if [ -f $HOME/local/etc/autojump/autojump.bash ]
+then
+    . $HOME/local/etc/autojump/autojump.bash
+fi
+
 # ---------------------------------------------------------------------------
 # Local Java stuff
 
