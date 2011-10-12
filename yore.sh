@@ -133,3 +133,6 @@ PATH=$PATH:$SCALA_HOME/bin
 
 [[ -s "/home/bmc/.rvm/scripts/rvm" ]] && source "/home/bmc/.rvm/scripts/rvm"
 rvm 1.8.7@main
+
+source /home/bmc/local/etc/autojump/autojump.bash
+PATH=$PATH:$HOME/local/bin
