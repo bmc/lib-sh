@@ -130,3 +130,6 @@ alias xinit="$XWINHOME/bin/xinit -- -bpp 16"
 export JAVA_HOME=/usr/lib/jvm/java-6-openjdk
 export SCALA_HOME=/usr/local/scala/default
 PATH=$PATH:$SCALA_HOME/bin
+
+[[ -s "/home/bmc/.rvm/scripts/rvm" ]] && source "/home/bmc/.rvm/scripts/rvm"
+rvm 1.8.7@boomerangmail
