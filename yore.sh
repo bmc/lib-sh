@@ -132,4 +132,4 @@ export SCALA_HOME=/usr/local/scala/default
 PATH=$PATH:$SCALA_HOME/bin
 
 [[ -s "/home/bmc/.rvm/scripts/rvm" ]] && source "/home/bmc/.rvm/scripts/rvm"
-rvm 1.8.7@boomerangmail
+rvm 1.8.7@main
