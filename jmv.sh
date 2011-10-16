@@ -80,6 +80,11 @@ load_file ~/bash/java.sh
 export SCALA_DEFAULT=2.9.1
 load_file ~/bash/scala.sh
 
+if [ -f $HOME/local/etc/autojump/autojump.bash ]
+then
+    . $HOME/local/etc/autojump/autojump.bash
+fi
+
 # ---------------------------------------------------------------------------
 # JMV consulting
 
