@@ -37,7 +37,7 @@ $SCALA_HOME/bin:\
 
 export NODE_PATH=/usr/local/lib/node
 
-PATH=${PATH}:/usr/local/lib/node_modules/coffee-script/bin
+PATH=${PATH}:$HOME/node_modules/coffee-script/bin
 
 # ---------------------------------------------------------------------------
 # Python
