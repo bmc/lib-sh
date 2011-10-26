@@ -91,6 +91,8 @@ export NODE_HOME=$HOME/local/node
 export NODE_PATH=${NODE_HOME}:${NODE_HOME}/lib/node_modules
 export PATH=$PATH:$NODE_HOME/bin
 
+export RAILS_ENV=bmc
+
 # ---------------------------------------------------------------------------
 # Ruby
 
