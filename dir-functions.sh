@@ -15,8 +15,8 @@
 #    rsd, rrotd  - rotate entire directory stack right one element
 #    dirs        - print out current directory stack
 #
-# $Revision$
-# $Date: 2006-11-22 12:31:14 -0500 (Wed, 22 Nov 2006) $
+# If BASH_CD_HOOKS is defined, then these commands look for .on-entry.bash and
+# .on-exit.bash files, which are source upon entry and exit in a directory.
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -30,6 +30,7 @@ chdir()
 {
     _rc=0
 
+    _run_cd_exit_hook
     if [ $# = 0 ]
     then
 	builtin cd -P ~
@@ -46,9 +47,11 @@ chdir()
 	    _rc=1
 	fi
     fi
+
     owd=$OLDPWD
     cwd=$PWD
     mkprompt
+    _run_cd_entry_hook
     return $_rc
 }
 
@@ -83,13 +86,16 @@ varcd()
 
 function popd
 {
+    _run_cd_entry_hook
     builtin popd $*
     owd=$OLDPWD
     mkprompt
+    _run_cd_exit_hook
 }
 
 function pushd
 {
+    _run_cd_exit_hook
     case $# in
         0)
             builtin pushd
@@ -98,8 +104,10 @@ function pushd
             builtin pushd "$@"
             ;;
     esac
+
     owd=$OLDPWD
     mkprompt
+    _run_cd_entry_hook
 }
 
 function lrotd
@@ -166,4 +174,14 @@ function abspath
         fi
     fi
     cd $here
+}
+
+function _run_cd_entry_hook
+{
+    [[ -n "$BASH_CD_HOOKS" && -f ./.on-entry.bash ]] && source ./.on-entry.bash
+}
+
+function _run_cd_exit_hook
+{
+    [[ -n "$BASH_CD_HOOKS" && -f ./.on-exit.bash ]] && source ./.on-exit.bash
 }

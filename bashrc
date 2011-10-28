@@ -89,6 +89,11 @@ shopt -s cdspell
 
 stty_erase="^h"
 
+# BASH_CD_HOOKS enables .on-entry.bash and .on-exit.bash scripts. See
+# dir-functions.sh
+
+BASH_CD_HOOKS=1
+
 # ---------------------------------------------------------------------------
 # Aliases and functions that implement aliases
 
