@@ -157,6 +157,9 @@ fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+load_file ~/bash/stack.sh
+load_file ~/bash/ruby.sh
+
 # PythonBrew (similar to RVM, but for Python)
 
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && . "$HOME/.pythonbrew/etc/bashrc"

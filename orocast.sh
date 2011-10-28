@@ -106,7 +106,11 @@ alias man='gem man -s'
 # ---------------------------------------------------------------------------
 # Python stuff
 
-pythonbrew use 2.7.1 >/dev/null 2>&1
+if [ -f $HOME/.pythonbrew/etc/bashrc ]
+then
+    source $HOME/.pythonbrew/etc/bashrc
+    pythonbrew use 2.7.2 >/dev/null 2>&1
+fi
 
 # ---------------------------------------------------------------------------
 # Local stuff
