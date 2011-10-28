@@ -7,7 +7,7 @@
 # ---------------------------------------------------------------------------
 # Misc. environment variables
 
-# ---------------------------------------------------------------------------
+. /usr/sbin/envvars
 
 mnt=$HOME/mnt
 usr_local_site="$mnt/condor-site"
@@ -26,6 +26,9 @@ case "$TERM" in
 esac
 
 export PATH=\
+/usr/local/ActivePerl-5.14/bin:\
+/usr/local/ActivePerl-5.14/site/bin:\
+/opt/subversion/bin:\
 $HOME/.cabal/bin:\
 $HOME/Library/Haskell/bin:\
 $HOME/bin:\
