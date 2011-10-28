@@ -148,7 +148,8 @@ function no_such_stack
 function stack_exists
 {
     : ${1?'Missing stack name'}
-    eval 'let _i=$'"_stack_$1_i"
+
+    eval '_i=$'"_stack_$1_i"
     if [[ -z "$_i" ]]
     then
         return 1
