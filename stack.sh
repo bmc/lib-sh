@@ -74,10 +74,10 @@ function stack_print
     fi
 
     tmp=""
-    eval 'let _i=$'"_stack_$1_i"
+    eval 'let _i=$'_stack_$1_i
     while (( $_i > 0 ))
     do
-        let _i=$_i-1
+        let _i=${_i}-1
         eval 'e=$'"{_stack_$1[$_i]}"
         tmp="$tmp $e"
     done
@@ -140,8 +140,9 @@ function no_such_stack
 {
     : ${1?'Missing stack name'}
     stack_exists $1
+    ret=$?
     declare -i x
-    let x="1 - $?"
+    let x="1-$ret"
     return $x
 }
 
