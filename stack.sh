@@ -84,6 +84,8 @@ function stack_print
     echo "(" $tmp ")"
 }
 
+alias stack_show=stack_print
+
 # Get the size of a stack
 #
 # Usage: stack_size name var
@@ -134,6 +136,25 @@ function stack_pop
     eval "_stack_$1_i=$_i"
     unset _i
     return 0
+}
+
+function stack_clear
+{
+    : ${1?'Missing stack name'}
+    if no_such_stack $1
+    then
+        echo "No such stack -- $1" >&2
+        return 1
+    fi
+
+    declare -i i
+    declare tmp
+    stack_size $1 i
+    while (( $i > 0 ))
+    do
+        stack_pop $1 tmp
+        stack_size $1 i
+    done
 }
 
 function no_such_stack
