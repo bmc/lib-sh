@@ -15,8 +15,3 @@ unsetenv()
 {
     eval unset $1
 }
-
-source()
-{
-    . $1
-}
