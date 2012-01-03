@@ -116,7 +116,7 @@ which()
     : ${1?'Missing command to find'}
     if is_zsh
     then
-        type -p "$1"
+        whence -p "$1"
     else
         type -P "$1"
     fi
