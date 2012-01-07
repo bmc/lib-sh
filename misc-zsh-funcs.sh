@@ -68,12 +68,3 @@ mkprompt()
 {
     # No-op
 }
-
-# For some reason, ZSH 'cd', as run in my environment, is pushing directories
-# on the stack, which I don't want. It might be a plugin doing it, but I am
-# unable to figure out which one. So, undo all that.
-cd()
-{
-    builtin cd "$@"
-    dir -c # clear the directory stack unconditionally.
-}
