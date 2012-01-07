@@ -48,31 +48,33 @@ varcd()
     unset _dir _i
 }
 
-function popd
-{
-    _run_cd_entry_hook
-    builtin popd $*
-    owd=$OLDPWD
-    mkprompt
-    _run_cd_exit_hook
-}
+if is_bash; then
+    function popd
+    {
+        _run_cd_entry_hook
+        builtin popd $*
+        owd=$OLDPWD
+        mkprompt
+        _run_cd_exit_hook
+    }
 
-function pushd
-{
-    _run_cd_exit_hook
-    case $# in
-        0)
-            builtin pushd
-            ;;
-        *)
-            builtin pushd "$@"
-            ;;
-    esac
+    function pushd
+    {
+        _run_cd_exit_hook
+        case $# in
+            0)
+                builtin pushd
+                ;;
+            *)
+                builtin pushd "$@"
+                ;;
+        esac
 
-    owd=$OLDPWD
-    mkprompt
-    _run_cd_entry_hook
-}
+        owd=$OLDPWD
+        mkprompt
+        _run_cd_entry_hook
+    }
+fi
 
 function lrotd
 {
@@ -88,16 +90,9 @@ function rrotd
     mkprompt
 }		
 
-function exchd
-{
-    pushd
-    owd=$OLDPWD
-    mkprompt
-}
-
 # Simple aliases for the above beasties.
 
-alias xd=exchd
+alias xd=pushd
 alias pd=pushd
 alias pu=pushd
 alias po=popd
@@ -138,14 +133,4 @@ function abspath
         fi
     fi
     cd $here
-}
-
-function _run_cd_entry_hook
-{
-    [[ -n "$BASH_CD_HOOKS" && -f ./.on-entry.bash ]] && source ./.on-entry.bash
-}
-
-function _run_cd_exit_hook
-{
-    [[ -n "$BASH_CD_HOOKS" && -f ./.on-exit.bash ]] && source ./.on-exit.bash
 }

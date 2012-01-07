@@ -63,3 +63,8 @@ dir_trim()
 
     echo $dir_string
 }
+
+mkprompt()
+{
+    # No-op
+}
