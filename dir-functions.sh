@@ -51,16 +51,13 @@ varcd()
 if is_bash; then
     function popd
     {
-        _run_cd_entry_hook
         builtin popd $*
         owd=$OLDPWD
         mkprompt
-        _run_cd_exit_hook
     }
 
     function pushd
     {
-        _run_cd_exit_hook
         case $# in
             0)
                 builtin pushd
@@ -72,7 +69,6 @@ if is_bash; then
 
         owd=$OLDPWD
         mkprompt
-        _run_cd_entry_hook
     }
 fi
 
