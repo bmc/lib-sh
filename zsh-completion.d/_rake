@@ -1,0 +1,46 @@
+#compdef rake
+
+# Rake completion. Adapted from
+# http://railscasts.com/episodes/309-a-shell-scripting-story
+#
+# Uses cache files in /tmp, so local directories don't end up littered
+# with cache files.
+#
+# 1. Assumes the existence of a $PLATFORM environment variable, set to the
+#    equivalent of $(uname -s | tr '[A-Z]' '[a-z]'). You can just substitute
+#    that command, if you want.
+# 2. Assumes the existence of a "stat" command. BSD, Mac OS X and Linux
+#    all have this command, though the syntax is slightly different.
+#    (BSD and Mac OS X, not surprisingly, use one variant. Linux uses another.)
+
+get_completions()
+{
+    local stat=${1?'Missing stat command'}
+
+    if [[ -f Rakefile ]]; then
+        local cache=${TMPDIR:-/tmp}/rake-tasks-$(eval $stat .)
+        local make=
+        if [[ ! -f $cache ]]; then
+            make=true
+        else
+            local recent=$(ls -t $cache Rakefile **/*.rake | head -n 1)
+            if [[ $recent != $cache ]]; then
+                make=true
+            fi
+        fi
+
+        [[ -n $make ]] && rake --tasks | cut -d ' ' -f 2 >$cache
+        compadd $(cat $cache)
+    fi
+}
+
+case "$PLATFORM" in
+    linux)
+        get_completions "stat -c '%i-%d'"
+        ;;
+    darwin|bsd)
+        get_completions "stat -f '%i-%d'"
+        ;;
+    *)
+        ;;
+esac
