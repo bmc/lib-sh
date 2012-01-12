@@ -11,7 +11,6 @@ chdir()
 {
     _rc=0
 
-    _run_cd_exit_hook
     if [ $# = 0 ]
     then
     builtin cd -P ~
@@ -32,6 +31,5 @@ chdir()
     owd=$OLDPWD
     cwd=$PWD
     mkprompt
-    _run_cd_entry_hook
     return $_rc
 }
