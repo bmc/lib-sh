@@ -21,6 +21,10 @@ get_completions()
         local cache=${TMPDIR:-/tmp}/rake-tasks-$(eval $stat .)
         local recent=$(ls -t $cache Rakefile **/*.rake 2>/dev/null | head -n 1)
         if [[ $recent != $cache ]]; then
+            # This can take awhile, especially for Rails Rakefiles. Issue
+            # a message using the completion system's messaging function.
+            # See http://goo.gl/PRcVi
+            _message -r "Regenerating cache. Please wait..."
             rake --tasks | cut -d ' ' -f 2 >$cache
         fi
         compadd $(cat $cache)
