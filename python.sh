@@ -3,6 +3,7 @@
 if [ -d $HOME/python ]
 then
     export PATH=$HOME/python/bin:$PATH
+    unset PYTHONPATH
 else
     pythonbrew use $python_version >/dev/null 2>&1
     pybin=$(whence python)
