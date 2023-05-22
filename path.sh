@@ -15,54 +15,14 @@ function cleanpath
 
     if interactive
     then
-        verbose="1"
+        verbose="-v"
     fi
 
     declare i=
     for i in $*
     do
-        [[ -n "$verbose" ]] && echo "Cleaning $i"
-        _clean_one_path $i
+        pathclean $verbose -p $i
     done
-}
-
-function _clean_one_path
-{
-    : ${1?'Missing name of variable'}
-
-    declare pathvar=$1
-    oldIFS=$IFS
-    IFS=:
-    eval 'set -- $'$pathvar
-    IFS=$oldIFS
-
-    declare new_path=
-    declare sep=
-    declare -A seen
-    declare i=
-
-    for i in "$@"
-    do
-        # Skip blank entries.
-        if [[ -z "$i" ]]
-        then
-            continue
-        fi
-
-        # Replace all / in the path with something else, because we're using
-        # it as a hash key, and bash will bitch if there are slashes in the
-        # hash key (i.e., subscript)
-        j=${i//\//@}
-        if [[ -n "${seen[$j]}" ]]
-        then
-            # Already saw this one. Skip it.
-            continue
-        fi
-        seen[$j]=1
-        new_path="${new_path}${sep}${i}"
-        sep=:
-    done
-    eval $pathvar='"'$new_path'"'
 }
 
 # ---------------------------------------------------------------------------
