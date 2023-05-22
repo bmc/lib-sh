@@ -21,7 +21,7 @@ function cleanpath
     declare i=
     for i in $*
     do
-        pathclean $verbose -p $i
+        eval $(pathclean $verbose -p $i)
     done
 }
 
