@@ -111,7 +111,7 @@ xreadlink()
 # "which": Like the old BSD "which" command, sort of. Really, it's a portable
 # way to do either "type -p" (zsh) or "type -P" (bash).
 
-which()
+function which()
 {
     : ${1?'Missing command to find'}
     if is_zsh

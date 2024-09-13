@@ -13,10 +13,11 @@ function cleanpath
 
     typeset verbose=
 
-    if interactive
-    then
-        verbose="-v"
-    fi
+    #if interactive
+    #then
+    #    verbose="-v"
+    #fi
+    verbose=
 
     declare i=
     for i in $*
